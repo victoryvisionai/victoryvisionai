@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlock Your Dream Deal with AI: A Free Presentation by Victory Vision</title>
+    <meta name="description" content="Discover how AI can help you accomplish your dream deal in this exclusive presentation by Victory Vision. Learn from industry experts and enhance your deal-making capabilities.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0a3161;
+            --accent: #bb133e;
+            --white: #FFFFFF;
+            --off-white: #FAFBFC;
+            --text-dark: #1a1a1a;
+            --text-mid: #4a5568;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            background-color: var(--off-white);
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 800;
+            color: var(--primary);
+        }
+        h1 {
+            font-size: clamp(36px, 5vw, 64px);
+        }
+        h2 {
+            font-size: clamp(28px, 4vw, 42px);
+        }
+        h3 {
+            font-size: clamp(20px, 3vw, 28px);
+        }
+        p {
+            font-size: 18px;
+            color: var(--text-mid);
+        }
+        .container {
+            max-width: 1200px;
+            padding: 0 24px;
+            margin: 0 auto;
+        }
+        .container-narrow {
+            max-width: 760px;
+            padding: 0 24px;
+            margin: 0 auto;
+        }
+        .top-bar {
+            position: sticky;
+            top: 0;
+            background-color: var(--white);
+            border-bottom: 1px solid #e2e8f0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 24px;
+        }
+        .logo {
+            height: 36px;
+        }
+        .cta-button {
+            display: inline-flex;
+            min-height: 44px;
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 4px 14px rgba(187, 19, 62, 0.25);
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(187, 19, 62, 0.35);
+        }
+        .hero {
+            padding: 80px 0 100px;
+            background-color: var(--white);
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .hero-subhead {
+            font-size: 20px;
+            color: var(--text-mid);
+            line-height: 1.5;
+        }
+        .section {
+            padding: 80px 0;
+        }
+        .section-alt {
+            background-color: var(--off-white);
+        }
+        .whats-inside-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+        .inside-item {
+            transition: transform 0.2s, box-shadow 0.2s;
+            padding: 16px;
+            background-color: var(--white);
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.05);
+        }
+        .inside-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+            border-color: var(--accent);
+        }
+        .inside-number {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            background-color: var(--accent);
+            color: var(--white);
+            border-radius: 50%;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        .who-section {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 80px 0;
+        }
+        .founder-section {
+            background-color: var(--off-white);
+            padding: 80px 0;
+        }
+        .founder-card {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.05);
+        }
+        .founder-image {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 4px solid var(--primary);
+            object-fit: cover;
+        }
+        .cta-section {
+            background-color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+        }
+        .footer {
+            background-color: var(--primary);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 48px 0 32px;
+            text-align: center;
+        }
+        .footer-links {
+            margin-bottom: 16px;
+        }
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            margin: 0 8px;
+            font-size: 14px;
+        }
+        .footer-copy {
+            font-size: 14px;
+        }
+        @media (max-width: 820px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+            .whats-inside-grid {
+                grid-template-columns: 1fr;
+            }
+            .founder-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .section, .cta-section {
+                padding: 60px 0;
+            }
+        }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18090497137"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-18090497137');
+    </script>
+    <script>
+        (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"97225334"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+    </script>
+    <script type="text/javascript">
+        _linkedin_partner_id = "8929812";
+        window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+        window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script>
+    <script type="text/javascript">
+        (function(l) {
+            if (!l){ window.lintrk = function(a,b){window.lintrk.q.push([a,b])};window.lintrk.q=[]}
+            var s = document.getElementsByTagName("script")[0];
+            var b = document.createElement("script");
+            b.type = "text/javascript";b.async = true;
+            b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+            s.parentNode.insertBefore(b, s);})(window.lintrk);
+    </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18090497137"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","AW-18090497137");</script><script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[];f=function(){var o={ti:"97225334"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")};n=d.createElement(t);n.src=r;n.async=1;n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!="loaded"&&s!="complete"||(f(),n.onload=n.onreadystatechange=null)};i=d.getElementsByTagName(t)[0];i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><script type="text/javascript">_linkedin_partner_id="8929812";window._linkedin_data_partner_ids=window._linkedin_data_partner_ids||[];window._linkedin_data_partner_ids.push(_linkedin_partner_id);</script><script type="text/javascript">(function(l){if(!l){window.lintrk=function(a,b){window.lintrk.q.push([a,b])};window.lintrk.q=[]}var s=document.getElementsByTagName("script")[0];var b=document.createElement("script");b.type="text/javascript";b.async=true;b.src="https://snap.licdn.com/li.lms-analytics/insight.min.js";s.parentNode.insertBefore(b,s)})(window.lintrk);</script><script>(function(){var CID="glaze@vvdoh.com",SLUG="aideal",PTYPE="lead_magnet";var TRACK="https://victoryvision.app.n8n.cloud/webhook/engagement/track";try{var params=new URLSearchParams(window.location.search);var utm={utm_source:params.get("utm_source")||"",utm_medium:params.get("utm_medium")||"",utm_campaign:params.get("utm_campaign")||"",utm_content:params.get("utm_content")||"",utm_term:params.get("utm_term")||""};window.__VV_GADS__={"send_to":"AW-18090497137/LZ6qCNmUuqEcEPGonLJD","value":250};/*VV-GADS-WIN*/var vid=localStorage.getItem("vv_vid");if(!vid){vid="v-"+Math.random().toString(36).slice(2,10)+"-"+Date.now();localStorage.setItem("vv_vid",vid);}if(Object.values(utm).some(function(v){return v;}))sessionStorage.setItem("vv_utm",JSON.stringify(utm));var stored=sessionStorage.getItem("vv_utm");if(stored)utm=JSON.parse(stored);fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"page_view",visitor_id:vid,utm:utm,referrer:document.referrer,user_agent:navigator.userAgent,url:window.location.href})}).catch(function(){});document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("form").forEach(function(f){["utm_source","utm_medium","utm_campaign","utm_content","utm_term","visitor_id","slug"].forEach(function(n){var exists=false;for(var k=0;k<f.elements.length;k++){if(f.elements[k].name===n){exists=true;break;}}if(exists)return;var i=document.createElement("input");i.type="hidden";i.name=n;i.value=n==="visitor_id"?vid:(n==="slug"?SLUG:(utm[n]||""));f.appendChild(i);});f.addEventListener("submit",function(){if(window.__VV_GADS__&&typeof gtag==="function"&&window.__VV_GADS__.send_to){try{gtag("event","conversion",{send_to:window.__VV_GADS__.send_to,value:window.__VV_GADS__.value||0,currency:"USD"});}catch(e){}}fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"form_submit",visitor_id:vid,utm:utm,url:window.location.href})}).catch(function(){});});});document.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"link_click",visitor_id:vid,utm:utm,url:a.href})}).catch(function(){});});});});}catch(e){}})();</script></head>
+<body>
+    <div class="top-bar">
+        <img src="https://res.cloudinary.com/dv94te4zt/image/upload/v1753320422/sd4auec2bgofhaleur7o.jpg" alt="Victory Vision Logo" class="logo">
+        <a href="#cta-form" class="cta-button">Get the Free Presentation</a>
+    </div>
+    <section class="hero">
+        <div class="container hero-grid">
+            <div>
+                <h1>Achieve Your Dream Deal Using AI</h1>
+                <p class="hero-subhead">Discover how AI-powered tools from Victory Vision can revolutionize your deal-making process. This free presentation by Andrew Glaze, CFA, reveals the secrets to leveraging AI for better outcomes.</p>
+                <a href="#cta-form" class="cta-button">Get the Free Presentation</a>
+            </div>
+        </div>
+    </section>
+    <section class="section section-alt">
+        <div class="container-narrow">
+            <h2>What's Inside</h2>
+            <div class="whats-inside-grid">
+                <div class="inside-item">
+                    <div class="inside-number">1</div>
+                    <h3>AI in Deal Sourcing</h3>
+                    <p>Learn how AI can automate your sourcing process, targeting the right companies and decision-makers effortlessly.</p>
+                </div>
+                <div class="inside-item">
+                    <div class="inside-number">2</div>
+                    <h3>Real-Time Coaching</h3>
+                    <p>Discover the benefits of having a live AI coach during calls, offering insights and tactical nudges that enhance negotiations.</p>
+                </div>
+                <div class="inside-item">
+                    <div class="inside-number">3</div>
+                    <h3>Pipeline Optimization</h3>
+                    <p>Understand how to maintain a robust pipeline with AI-driven analytics and forecasting tools designed for deal-makers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container-narrow">
+            <h2>What You'll Be Able to Do</h2>
+            <ul class="benefits-list">
+                <li class="benefit-item">
+                    <div class="benefit-icon">1</div>
+                    <div class="benefit-content">
+                        <h3>Expand Deal Flow</h3>
+                        <p>Increase your deal pipeline significantly without adding headcount, leveraging AI to source proprietary opportunities.</p>
+                    </div>
+                </li>
+                <li class="benefit-item">
+                    <div class="benefit-icon">2</div>
+                    <div class="benefit-content">
+                        <h3>Enhance Negotiations</h3>
+                        <p>Use AI-driven insights to negotiate smarter and close deals faster, with tailored strategies for each opportunity.</p>
+                    </div>
+                </li>
+                <li class="benefit-item">
+                    <div class="benefit-icon">3</div>
+                    <div class="benefit-content">
+                        <h3>Optimize Your Pipeline</h3>
+                        <p>Utilize AI analytics to streamline your operations, focusing on high-probability deals and efficient resource allocation.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="who-section">
+        <div class="container-narrow">
+            <p>This presentation is ideal for Partners, Directors, or Principals at boutique M&A advisory firms, search fund searchers, family office Direct Investment leads, and PE associates/VPs who are actively sourcing proprietary deals and managing their own pipeline generation. Perfect for those who value efficiency, precision, and leveraging technology for competitive advantage.</p>
+        </div>
+    </section>
+    <section class="founder-section">
+        <div class="container-narrow">
+            <div class="founder-card">
+                <img src="https://res.cloudinary.com/dv94te4zt/image/upload/v1753320422/sd4auec2bgofhaleur7o.jpg" alt="Andrew Glaze" class="founder-image">
+                <div class="founder-content">
+                    <h3>Andrew Glaze, CFA</h3>
+                    <p>As a West Point graduate and seasoned deal-maker with a multi-billion dollar advisory book, Andrew Glaze built Victory Vision to empower fellow professionals. Every feature is rigorously tested to ensure it delivers real-world results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cta-section" id="cta-form">
+        <div class="container-narrow">
+            <h2>Ready to Transform Your Deal-Making?</h2>
+            <p>Get instant access to our free presentation and start using AI to achieve your dream deals. No spam, just actionable insights.</p>
+            <form action="https://victoryvision.app.n8n.cloud/webhook/engagement/lead-submit" method="POST">
+                <input type="hidden" name="customer_id" value="glaze@vvdoh.com">
+                <input type="hidden" name="slug" value="aideal">
+                <input type="hidden" name="source" value="lead_magnet">
+                <div style="margin-bottom: 16px;">
+                    <input type="text" name="name" placeholder="Full Name" required style="padding: 10px; width: 100%; border: 1px solid #e2e8f0; border-radius: 4px; margin-bottom: 8px;">
+                    <input type="email" name="email" placeholder="Email Address" required style="padding: 10px; width: 100%; border: 1px solid #e2e8f0; border-radius: 4px;">
+                </div>
+                <button type="submit" class="cta-button">Get the Free Presentation</button>
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="footer-copy">
+            &copy; <span id="year"></span> Victory Vision. All rights reserved.
+        </div>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
