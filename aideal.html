@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unlock Your Dream Deal with AI: A Free Presentation by Victory Vision</title>
-    <meta name="description" content="Discover how AI can help you accomplish your dream deal in this exclusive presentation by Victory Vision. Learn from industry experts and enhance your deal-making capabilities.">
+    <title>Unlock the Power of AI for Your Dream Deal | Victory Vision</title>
+    <meta name="description" content="Discover how AI can revolutionize your deal-making process with our free presentation. Victory Vision empowers dealmakers with AI tools to achieve their dream deals.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -18,12 +20,11 @@
         body {
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            background-color: var(--off-white);
+            background: var(--off-white);
             -webkit-font-smoothing: antialiased;
         }
         h1, h2, h3 {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-weight: 800;
             color: var(--primary);
         }
         h1 {
@@ -46,19 +47,18 @@
         }
         .container-narrow {
             max-width: 760px;
-            padding: 0 24px;
             margin: 0 auto;
         }
         .top-bar {
             position: sticky;
             top: 0;
-            background-color: var(--white);
-            border-bottom: 1px solid #e2e8f0;
+            background: var(--white);
+            border-bottom: 1px solid var(--text-mid);
             z-index: 100;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 8px 24px;
+            padding: 12px 24px;
         }
         .logo {
             height: 36px;
@@ -66,23 +66,24 @@
         .cta-button {
             display: inline-flex;
             min-height: 44px;
-            background-color: var(--accent);
-            color: var(--white);
+            background: var(--accent);
+            color: white;
             padding: 12px 28px;
             border-radius: 50px;
             font-weight: 600;
             box-shadow: 0 4px 14px rgba(187, 19, 62, 0.25);
-            cursor: pointer;
             text-decoration: none;
+            align-items: center;
+            justify-content: center;
             transition: transform 0.2s, box-shadow 0.2s;
         }
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 18px rgba(187, 19, 62, 0.35);
+            box-shadow: 0 6px 16px rgba(187, 19, 62, 0.35);
         }
         .hero {
             padding: 80px 0 100px;
-            background-color: var(--white);
+            background: var(--white);
         }
         .hero-grid {
             display: grid;
@@ -99,7 +100,7 @@
             padding: 80px 0;
         }
         .section-alt {
-            background-color: var(--off-white);
+            background: var(--white);
         }
         .whats-inside-grid {
             display: grid;
@@ -108,74 +109,81 @@
         }
         .inside-item {
             transition: transform 0.2s, box-shadow 0.2s;
-            padding: 16px;
-            background-color: var(--white);
-            border: 1px solid #e2e8f0;
+            padding: 20px;
+            background: var(--white);
+            border: 1px solid transparent;
             border-radius: 8px;
-            box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.05);
         }
         .inside-item:hover {
             transform: translateY(-4px);
-            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 14px rgba(187, 19, 62, 0.25);
             border-color: var(--accent);
         }
         .inside-number {
-            display: flex;
-            justify-content: center;
-            align-items: center;
             width: 36px;
             height: 36px;
-            background-color: var(--accent);
+            background: var(--accent);
             color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border-radius: 50%;
-            font-size: 16px;
+            margin-bottom: 12px;
+        }
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .benefit-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+        .benefit-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--accent);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
             font-weight: 600;
-            margin-bottom: 16px;
         }
         .who-section {
-            background-color: var(--primary);
+            background: var(--primary);
             color: var(--white);
             padding: 80px 0;
         }
         .founder-section {
-            background-color: var(--off-white);
+            background: var(--off-white);
             padding: 80px 0;
-        }
-        .founder-card {
-            display: flex;
-            gap: 24px;
-            align-items: center;
-            background-color: var(--white);
-            border-radius: 8px;
-            padding: 24px;
-            box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.05);
         }
         .founder-image {
             width: 140px;
             height: 140px;
             border-radius: 50%;
             border: 4px solid var(--primary);
-            object-fit: cover;
+            margin-right: 24px;
+        }
+        .founder-content {
+            max-width: 600px;
+            margin: 0 auto;
         }
         .cta-section {
-            background-color: var(--white);
-            padding: 100px 0;
+            background: var(--white);
             text-align: center;
+            padding: 100px 0;
         }
         .footer {
-            background-color: var(--primary);
+            background: var(--primary);
             color: rgba(255, 255, 255, 0.7);
-            padding: 48px 0 32px;
             text-align: center;
+            padding: 48px 0 32px;
         }
         .footer-links {
             margin-bottom: 16px;
-        }
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            margin: 0 8px;
-            font-size: 14px;
         }
         .footer-copy {
             font-size: 14px;
@@ -187,12 +195,10 @@
             .whats-inside-grid {
                 grid-template-columns: 1fr;
             }
-            .founder-card {
+            .founder-section {
+                display: flex;
                 flex-direction: column;
-                text-align: center;
-            }
-            .section, .cta-section {
-                padding: 60px 0;
+                align-items: center;
             }
         }
     </style>
@@ -203,17 +209,19 @@
         gtag('js', new Date());
         gtag('config', 'AW-18090497137');
     </script>
-    <script>
-        (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"97225334"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+    <script type="text/javascript">
+        (function(w,d,t,r,u){
+            var f,n,i;
+            w[u]=w[u]||[],f=function(){var o={ti:"97225334"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
     </script>
     <script type="text/javascript">
         _linkedin_partner_id = "8929812";
         window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
         window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-    </script>
-    <script type="text/javascript">
+    </script><script type="text/javascript">
         (function(l) {
-            if (!l){ window.lintrk = function(a,b){window.lintrk.q.push([a,b])};window.lintrk.q=[]}
+            if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+            window.lintrk.q=[]}
             var s = document.getElementsByTagName("script")[0];
             var b = document.createElement("script");
             b.type = "text/javascript";b.async = true;
@@ -224,17 +232,19 @@
 <body>
     <div class="top-bar">
         <img src="https://res.cloudinary.com/dv94te4zt/image/upload/v1753320422/sd4auec2bgofhaleur7o.jpg" alt="Victory Vision Logo" class="logo">
-        <a href="#cta-form" class="cta-button">Get the Free Presentation</a>
+        <a href="#cta" class="cta-button">Get the Free Resource</a>
     </div>
+
     <section class="hero">
         <div class="container hero-grid">
             <div>
-                <h1>Achieve Your Dream Deal Using AI</h1>
-                <p class="hero-subhead">Discover how AI-powered tools from Victory Vision can revolutionize your deal-making process. This free presentation by Andrew Glaze, CFA, reveals the secrets to leveraging AI for better outcomes.</p>
-                <a href="#cta-form" class="cta-button">Get the Free Presentation</a>
+                <h1>Unlock the Power of AI for Your Dream Deal</h1>
+                <p class="hero-subhead">Explore how AI can transform your deal-making process and help you secure the dream deal you've been aiming for.</p>
+                <a href="#cta" class="cta-button">Get the Free Resource</a>
             </div>
         </div>
     </section>
+
     <section class="section section-alt">
         <div class="container-narrow">
             <h2>What's Inside</h2>
@@ -242,21 +252,22 @@
                 <div class="inside-item">
                     <div class="inside-number">1</div>
                     <h3>AI in Deal Sourcing</h3>
-                    <p>Learn how AI can automate your sourcing process, targeting the right companies and decision-makers effortlessly.</p>
+                    <p>Learn how AI can autonomously source target companies that match your deal thesis.</p>
                 </div>
                 <div class="inside-item">
                     <div class="inside-number">2</div>
-                    <h3>Real-Time Coaching</h3>
-                    <p>Discover the benefits of having a live AI coach during calls, offering insights and tactical nudges that enhance negotiations.</p>
+                    <h3>Nurture Sequences</h3>
+                    <p>Discover AI-driven nurture sequences that re-warm stale prospects based on financial triggers.</p>
                 </div>
                 <div class="inside-item">
                     <div class="inside-number">3</div>
-                    <h3>Pipeline Optimization</h3>
-                    <p>Understand how to maintain a robust pipeline with AI-driven analytics and forecasting tools designed for deal-makers.</p>
+                    <h3>Real-Time Meeting Coaching</h3>
+                    <p>Understand how AI can provide tactical nudges during meetings to optimize your deal conversations.</p>
                 </div>
             </div>
         </div>
     </section>
+
     <section class="section">
         <div class="container-narrow">
             <h2>What You'll Be Able to Do</h2>
@@ -264,71 +275,69 @@
                 <li class="benefit-item">
                     <div class="benefit-icon">1</div>
                     <div class="benefit-content">
-                        <h3>Expand Deal Flow</h3>
-                        <p>Increase your deal pipeline significantly without adding headcount, leveraging AI to source proprietary opportunities.</p>
+                        <h3>Increase Deal Flow</h3>
+                        <p>Leverage AI to source more proprietary deal flow and stay in front of target sellers longer.</p>
                     </div>
                 </li>
                 <li class="benefit-item">
                     <div class="benefit-icon">2</div>
                     <div class="benefit-content">
-                        <h3>Enhance Negotiations</h3>
-                        <p>Use AI-driven insights to negotiate smarter and close deals faster, with tailored strategies for each opportunity.</p>
+                        <h3>Enhance Conversations</h3>
+                        <p>Use AI insights to carry more valuable conversations and close more LP commitments.</p>
                     </div>
                 </li>
                 <li class="benefit-item">
                     <div class="benefit-icon">3</div>
                     <div class="benefit-content">
-                        <h3>Optimize Your Pipeline</h3>
-                        <p>Utilize AI analytics to streamline your operations, focusing on high-probability deals and efficient resource allocation.</p>
+                        <h3>Streamline Your Pipeline</h3>
+                        <p>Get a unified view of your pipeline with close probability and revenue forecasting.</p>
                     </div>
                 </li>
             </ul>
         </div>
     </section>
+
     <section class="who-section">
         <div class="container-narrow">
-            <p>This presentation is ideal for Partners, Directors, or Principals at boutique M&A advisory firms, search fund searchers, family office Direct Investment leads, and PE associates/VPs who are actively sourcing proprietary deals and managing their own pipeline generation. Perfect for those who value efficiency, precision, and leveraging technology for competitive advantage.</p>
+            <p>This resource is tailored for Partners, Directors, or Principals at boutique M&A advisory firms, search fund searchers, family office Direct Investment leads, and PE associates/VPs who personally handle origination. Ideal for those who manage pipeline generation, directly respond to communications, and seek to elevate their deal flow beyond 60+ active conversations.</p>
         </div>
     </section>
+
     <section class="founder-section">
-        <div class="container-narrow">
-            <div class="founder-card">
+        <div class="container">
+            <div class="founder-content">
                 <img src="https://res.cloudinary.com/dv94te4zt/image/upload/v1753320422/sd4auec2bgofhaleur7o.jpg" alt="Andrew Glaze" class="founder-image">
-                <div class="founder-content">
-                    <h3>Andrew Glaze, CFA</h3>
-                    <p>As a West Point graduate and seasoned deal-maker with a multi-billion dollar advisory book, Andrew Glaze built Victory Vision to empower fellow professionals. Every feature is rigorously tested to ensure it delivers real-world results.</p>
-                </div>
+                <h3>Why I Built This</h3>
+                <p>Andrew Glaze, CFA, founded Victory Vision to empower dealmakers with AI tools that enhance their sales operations without the need for large teams. Every feature is rigorously tested within our own pipeline to ensure it delivers real value.</p>
             </div>
         </div>
     </section>
-    <section class="cta-section" id="cta-form">
-        <div class="container-narrow">
-            <h2>Ready to Transform Your Deal-Making?</h2>
-            <p>Get instant access to our free presentation and start using AI to achieve your dream deals. No spam, just actionable insights.</p>
-            <form action="https://victoryvision.app.n8n.cloud/webhook/engagement/lead-submit" method="POST">
-                <input type="hidden" name="customer_id" value="glaze@vvdoh.com">
-                <input type="hidden" name="slug" value="aideal">
-                <input type="hidden" name="source" value="lead_magnet">
-                <div style="margin-bottom: 16px;">
-                    <input type="text" name="name" placeholder="Full Name" required style="padding: 10px; width: 100%; border: 1px solid #e2e8f0; border-radius: 4px; margin-bottom: 8px;">
-                    <input type="email" name="email" placeholder="Email Address" required style="padding: 10px; width: 100%; border: 1px solid #e2e8f0; border-radius: 4px;">
-                </div>
-                <button type="submit" class="cta-button">Get the Free Presentation</button>
-            </form>
-        </div>
+
+    <section class="cta-section" id="cta">
+        <h2>Get Started with AI-Driven Deal Making</h2>
+        <p>Sign up now to access your free presentation. No spam, just actionable insights.</p>
+        <form action="https://victoryvision.app.n8n.cloud/webhook/engagement/lead-submit" method="POST">
+            <input type="hidden" name="customer_id" value="glaze@vvdoh.com">
+            <input type="hidden" name="slug" value="aideal">
+            <input type="hidden" name="source" value="lead_magnet">
+            <input type="text" name="name" placeholder="Your Name" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc; margin-right: 10px;">
+            <input type="email" name="email" placeholder="Your Email" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc; margin-right: 10px;">
+            <button type="submit" class="cta-button">Get the Free Resource</button>
+        </form>
     </section>
+
     <footer class="footer">
         <div class="footer-links">
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-            <a href="#">Contact</a>
+            <a href="#" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; margin-right: 16px;">Privacy</a>
+            <a href="#" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; margin-right: 16px;">Terms</a>
+            <a href="#" style="color: rgba(255, 255, 255, 0.7); text-decoration: none;">Contact</a>
         </div>
         <div class="footer-copy">
-            &copy; <span id="year"></span> Victory Vision. All rights reserved.
+            &copy; <span id="year"></span> Victory Vision
         </div>
     </footer>
     <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
+        document.getElementById("year").textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
