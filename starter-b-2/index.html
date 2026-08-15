@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operator's Edge + Victory Vision Starter | Victory Vision</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+--primary: #0a3161;
+--accent: #bb133e;
+--ink: #121a2b;
+--ink-soft: #5a6679;
+--bg: #ffffff;
+--bg-alt: #f7f9fc;
+--on-dark: #ffffff;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+color: var(--ink);
+background: var(--bg);
+line-height: 1.6;
+-webkit-font-smoothing: antialiased;
+}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 24px;
+}
+
+.container-narrow {
+max-width: 900px;
+margin: 0 auto;
+padding: 0 24px;
+}
+
+header {
+position: sticky;
+top: 0;
+background: var(--bg);
+border-bottom: 1px solid #e5e7eb;
+z-index: 1000;
+}
+
+header .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-top: 16px;
+padding-bottom: 16px;
+}
+
+header img {
+height: 40px;
+width: auto;
+}
+
+.btn {
+display: inline-block;
+padding: 14px 32px;
+font-weight: 600;
+font-size: 16px;
+text-decoration: none;
+border-radius: 6px;
+transition: all 0.2s ease;
+border: none;
+cursor: pointer;
+text-align: center;
+}
+
+.btn-primary {
+background: var(--accent);
+color: var(--bg);
+}
+
+.btn-primary:hover {
+background: #9a0f33;
+transform: translateY(-1px);
+box-shadow: 0 4px 12px rgba(187, 19, 62, 0.3);
+}
+
+.btn-secondary {
+background: transparent;
+color: var(--primary);
+border: 2px solid var(--primary);
+padding: 12px 30px;
+}
+
+.btn-secondary:hover {
+background: var(--primary);
+color: var(--on-dark);
+}
+
+.btn-white {
+background: var(--bg);
+color: var(--primary);
+}
+
+.btn-white:hover {
+background: var(--bg-alt);
+}
+
+.eyebrow {
+font-size: 13px;
+font-weight: 700;
+letter-spacing: 1.5px;
+text-transform: uppercase;
+color: var(--accent);
+margin-bottom: 16px;
+display: block;
+}
+
+h1 {
+font-family: 'Inter', sans-serif;
+font-size: 56px;
+font-weight: 800;
+line-height: 1.1;
+color: var(--primary);
+margin-bottom: 24px;
+}
+
+h1 .highlight {
+color: var(--accent);
+}
+
+h2 {
+font-family: 'Inter', sans-serif;
+font-size: 42px;
+font-weight: 700;
+line-height: 1.2;
+color: var(--primary);
+margin-bottom: 24px;
+}
+
+h3 {
+font-family: 'Inter', sans-serif;
+font-size: 24px;
+font-weight: 700;
+line-height: 1.3;
+color: var(--primary);
+margin-bottom: 12px;
+}
+
+.lead {
+font-size: 20px;
+line-height: 1.6;
+color: var(--ink-soft);
+margin-bottom: 32px;
+}
+
+section {
+padding: 96px 0;
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+.hero {
+position: relative;
+padding: 120px 0 96px;
+background: var(--bg-alt);
+overflow: hidden;
+}
+
+.hero-video-container {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+overflow: hidden;
+z-index: 0;
+}
+
+.hero-video-container::after {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(135deg, rgba(10, 49, 97, 0.85) 0%, rgba(10, 49, 97, 0.7) 100%);
+}
+
+.hero video {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.hero-content {
+position: relative;
+z-index: 1;
+max-width: 800px;
+}
+
+.hero-with-video {
+background: var(--primary);
+}
+
+.hero-with-video h1,
+.hero-with-video .lead,
+.hero-with-video .eyebrow,
+.hero-with-video .price,
+.hero-with-video .supporting-line,
+.hero-with-video .microcopy {
+color: var(--on-dark);
+}
+
+.hero-with-video h1 .highlight {
+color: var(--accent);
+}
+
+.price {
+font-size: 48px;
+font-weight: 800;
+color: var(--primary);
+margin: 24px 0;
+}
+
+.supporting-line {
+font-size: 18px;
+color: var(--ink-soft);
+margin-bottom: 32px;
+}
+
+.hero-cta {
+display: flex;
+gap: 16px;
+align-items: center;
+flex-wrap: wrap;
+margin-bottom: 16px;
+}
+
+.microcopy {
+font-size: 14px;
+color: var(--ink-soft);
+font-style: italic;
+}
+
+.bg-alt {
+background: var(--bg-alt);
+}
+
+.bg-primary {
+background: var(--primary);
+}
+
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary p,
+.bg-primary li,
+.bg-primary .lead {
+color: var(--on-dark);
+}
+
+.text-center {
+text-align: center;
+}
+
+.grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 32px;
+margin-top: 48px;
+}
+
+.grid-2 {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.card {
+background: var(--bg);
+padding: 32px;
+border-radius: 8px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+transform: translateY(-4px);
+box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+margin-top: 16px;
+}
+
+.card p {
+color: var(--ink-soft);
+line-height: 1.6;
+}
+
+.icon {
+width: 48px;
+height: 48px;
+}
+
+.process-flow {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 16px;
+margin: 48px 0;
+flex-wrap: wrap;
+font-size: 18px;
+font-weight: 600;
+color: var(--primary);
+}
+
+.process-flow span {
+color: var(--accent);
+}
+
+.problem-list {
+list-style: none;
+margin: 32px 0;
+}
+
+.problem-list li {
+padding: 16px 0;
+font-size: 20px;
+font-weight: 600;
+color: var(--primary);
+border-bottom: 1px solid #e5e7eb;
+}
+
+.problem-list li:last-child {
+border-bottom: none;
+}
+
+.step-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 24px;
+margin-top: 48px;
+}
+
+.step {
+text-align: center;
+}
+
+.step-number {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 56px;
+height: 56px;
+background: var(--accent);
+color: var(--on-dark);
+border-radius: 50%;
+font-size: 24px;
+font-weight: 700;
+margin-bottom: 16px;
+}
+
+.step h4 {
+font-size: 16px;
+font-weight: 700;
+color: var(--primary);
+margin-bottom: 8px;
+}
+
+.step p {
+font-size: 14px;
+color: var(--ink-soft);
+}
+
+.value-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 24px;
+margin: 48px 0;
+}
+
+.value-box {
+background: var(--bg);
+padding: 32px 24px;
+border-radius: 8px;
+text-align: center;
+border: 2px solid var(--primary);
+}
+
+.value-amount {
+font-size: 36px;
+font-weight: 800;
+color: var(--accent);
+}
+
+.form-section {
+background: var(--bg-alt);
+}
+
+.form-container {
+max-width: 600px;
+margin: 48px auto 0;
+background: var(--bg);
+padding: 48px;
+border-radius: 8px;
+box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+margin-bottom: 24px;
+}
+
+.form-group label {
+display: block;
+font-weight: 600;
+color: var(--primary);
+margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+width: 100%;
+padding: 12px 16px;
+border: 2px solid #e5e7eb;
+border-radius: 6px;
+font-size: 16px;
+font-family: 'Inter', sans-serif;
+transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+outline: none;
+border-color: var(--primary);
+}
+
+.form-group textarea {
+resize: vertical;
+min-height: 120px;
+}
+
+.thank-you {
+display: none;
+text-align: center;
+padding: 48px;
+background: #d4edda;
+border: 2px solid #28a745;
+border-radius: 8px;
+color: #155724;
+}
+
+.thank-you.visible {
+display: block;
+}
+
+.faq {
+max-width: 800px;
+margin: 48px auto 0;
+}
+
+.faq-item {
+margin-bottom: 32px;
+padding-bottom: 32px;
+border-bottom: 1px solid #e5e7eb;
+}
+
+.faq-item:last-child {
+border-bottom: none;
+}
+
+.faq-item h3 {
+color: var(--primary);
+margin-bottom: 12px;
+}
+
+.faq-item p {
+color: var(--ink-soft);
+}
+
+.founder {
+display: flex;
+gap: 48px;
+align-items: center;
+max-width: 900px;
+margin: 48px auto 0;
+}
+
+.founder-image {
+width: 200px;
+height: 200px;
+border-radius: 50%;
+background: var(--bg-alt);
+flex-shrink: 0;
+}
+
+.founder-content h3 {
+margin-bottom: 16px;
+}
+
+.founder-content ul {
+list-style: none;
+margin-top: 16px;
+}
+
+.founder-content li {
+padding: 8px 0;
+color: var(--ink-soft);
+position: relative;
+padding-left: 24px;
+}
+
+.founder-content li::before {
+content: '✓';
+position: absolute;
+left: 0;
+color: var(--accent);
+font-weight: 700;
+}
+
+footer {
+background: var(--primary);
+color: var(--on-dark);
+padding: 48px 0;
+}
+
+footer .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 24px;
+}
+
+footer a {
+color: var(--on-dark);
+text-decoration: none;
+margin-left: 24px;
+}
+
+footer a:hover {
+text-decoration: underline;
+}
+
+.disclosure {
+background: var(--bg-alt);
+padding: 48px 0;
+}
+
+.disclosure p {
+font-size: 14px;
+color: var(--ink-soft);
+line-height: 1.8;
+max-width: 900px;
+margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+h1 {
+font-size: 42px;
+}
+
+h2 {
+font-size: 36px;
+}
+
+.grid,
+.grid-2 {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.step-grid,
+.value-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.founder {
+flex-direction: column;
+text-align: center;
+}
+}
+
+@media (max-width: 768px) {
+h1 {
+font-size: 32px;
+}
+
+h2 {
+font-size: 28px;
+}
+
+.lead {
+font-size: 18px;
+}
+
+section {
+padding: 64px 0;
+}
+
+.hero {
+padding: 80px 0 64px;
+}
+
+.grid,
+.grid-2,
+.step-grid,
+.value-grid {
+grid-template-columns: 1fr;
+}
+
+.hero-cta {
+flex-direction: column;
+align-items: stretch;
+}
+
+.btn {
+width: 100%;
+}
+
+.form-container {
+padding: 32px 24px;
+}
+
+.process-flow {
+font-size: 14px;
+gap: 8px;
+}
+
+.price {
+font-size: 36px;
+}
+
+header .btn {
+padding: 10px 20px;
+font-size: 14px;
+}
+}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18090497137"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-18090497137');</script>
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:'97225334'};o.q=w[u],w[u]=new UET(o),w[u].push('pageLoad')},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=='loaded'&&s!=='complete'||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,'script','//bat.bing.com/bat.js','uetq');</script>
+<script type="text/javascript">_linkedin_partner_id='8929812';window._linkedin_data_partner_ids=window._linkedin_data_partner_ids||[];window._linkedin_data_partner_ids.push(_linkedin_partner_id);</script><script type="text/javascript">(function(l){if(!l){window.lintrk=function(a,b){window.lintrk.q.push([a,b])};window.lintrk.q=[]}var s=document.getElementsByTagName('script')[0];var b=document.createElement('script');b.type='text/javascript';b.async=true;b.src='https://snap.licdn.com/li.lms-analytics/insight.min.js';s.parentNode.insertBefore(b,s);})(window.lintrk);</script>
+<style>[data-variant="B"] .cta-button,[data-variant="B"] a.btn,[data-variant="B"] button{border-radius:8px !important} [data-variant="B"] .hero h1{letter-spacing:-0.5px}</style></head>
+<body data-variant="B">
+
+<header>
+<div class="container">
+<img src="https://res.cloudinary.com/dv94te4zt/image/upload/v1753320422/sd4auec2bgofhaleur7o.jpg" alt="Victory Vision logo">
+<a href="#join" class="btn btn-primary">Join Now</a>
+</div>
+</header>
+
+<section class="hero hero-with-video visible">
+<div class="hero-video-container">
+<video autoplay muted loop playsinline>
+<source src="https://res.cloudinary.com/dv94te4zt/video/upload/v1786818081/viral_campaign_nocid_1786818081432_1786818081.mp4" type="video/mp4">
+</video>
+</div>
+<div class="container">
+<div class="hero-content">
+<span class="eyebrow">OPERATOR'S EDGE + VICTORY VISION STARTER</span>
+<h1>Turn Your Network Into <span class="highlight">Booked Meetings</span></h1>
+<p class="lead">Learn a practical system for identifying the right people, creating stronger outreach, improving calls, and building a repeatable business-development engine — then use Victory Vision Starter to put the system into practice.</p>
+<div class="price">$990/year</div>
+<p class="supporting-line">Includes live teaching, office hours, practical workbooks, accountability, community, and Victory Vision Starter access.</p>
+<div class="hero-cta">
+<a href="#join" class="btn btn-primary">Join Now for $990/year</a>
+<a href="https://calendly.com/victoryvision/45-mins" class="btn btn-white">Schedule a consultation</a>
+</div>
+<p class="microcopy">No sales call required. Start immediately.</p>
+</div>
+</div>
+</section>
+
+<section class="problem">
+<div class="container-narrow">
+<span class="eyebrow">THE CHALLENGE</span>
+<h2>You Probably Already Know Your Next Great Client</h2>
+<p class="lead">Most experienced professionals already have hundreds or thousands of potentially valuable relationships:</p>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 32px 0; font-size: 16px; color: var(--ink-soft);">
+<div>• former clients</div>
+<div>• LinkedIn connections</div>
+<div>• referral partners</div>
+<div>• investors</div>
+<div>• candidates</div>
+<div>• prospects</div>
+<div>• advisers</div>
+<div>• operators</div>
+<div>• industry contacts</div>
+</div>
+<p class="lead" style="margin-top: 48px;">The problem is not simply finding more names.</p>
+<p class="lead" style="margin-bottom: 24px;">The problem is knowing:</p>
+<ul class="problem-list">
+<li>Who should I contact?</li>
+<li>Why now?</li>
+<li>What should I say?</li>
+<li>Should I email, message, or call?</li>
+<li>How should I follow up?</li>
+<li>What is actually working?</li>
+</ul>
+</div>
+</section>
+
+<section class="system bg-alt">
+<div class="container">
+<span class="eyebrow" style="text-align: center; display: block;">THE SYSTEM</span>
+<h2 class="text-center">Build Your AI Meeting Engine</h2>
+<div class="process-flow">
+<span>GOAL</span> → <span>ICP</span> → <span>OFFER</span> → <span>TARGET</span> → <span>OUTREACH</span> → <span>CALL</span> → <span>MEETING</span> → <span>LEARN</span>
+</div>
+<div class="container-narrow" style="margin-top: 48px;">
+<p class="lead">Operator's Edge gives members a practical business-development framework for turning relationships into measurable commercial activity.</p>
+<p style="color: var(--ink-soft); margin-top: 24px;">Members learn how to:</p>
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 24px;">
+<div style="padding: 16px; background: var(--bg); border-radius: 6px;">
+<p style="color: var(--ink); font-weight: 600;">• define the right ICP</p>
+</div>
+<div style="padding: 16px; background: var(--bg); border-radius: 6px;">
+<p style="color: var(--ink); font-weight: 600;">• sharpen the offer</p>
+</div>
+<div style="padding: 16px; background: var(--bg); border-radius: 6px;">
+<p style="color: var(--ink); font-weight: 600;">• prioritize relationships</p>
+</div>
+<div style="padding: 16px; background: var(--bg); border-radius: 6px;">
+<p style="color: var(--ink); font-weight: 600;">• create relevant outreach</p>
+</div>
+<div style="padding: 16px; background: var(--bg); border-radius: 6px;">
+<p style="color: var(--ink); font-weight: 600;">• improve calls</p>
+</div>
+<div style="padding: 16px; background: var(--bg); border-radius: 6px;">
+<p style="color: var(--ink); font-weight: 600;">• run better meetings</p>
+</div>
+<div style="padding: 16px; background: var(--bg); border-radius: 6px;">
+<p style="color: var(--ink); font-weight: 600;">• track outcomes</p>
+</div>
+<div style="padding: 16px; background: var(--bg); border-radius: 6px;">
+<p style="color: var(--ink); font-weight: 600;">• improve the system over time</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="what-you-get">
+<div class="container">
+<span class="eyebrow" style="text-align: center; display: block;">WHAT'S INCLUDED</span>
+<h2 class="text-center">More Than a Course</h2>
+<div class="grid">
+<div class="card">
+<svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#0a3161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2 17L12 22L22 17" stroke="#bb133e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2 12L12 17L22 12" stroke="#0a3161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<h3>Live Teaching</h3>
+<p>Practical sessions focused on real business-development problems.</p>
+</div>
+<div class="card">
+<svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="12" cy="12" r="10" stroke="#0a3161" stroke-width="2"/>
+<path d="M12 6V12L16 14" stroke="#bb133e" stroke-width="2" stroke-linecap="round"/>
+</svg>
+<h3>Office Hours</h3>
+<p>Bring real questions about AI, growth, business development, corporate finance, capital raising, M&A, financing, and strategy.</p>
+</div>
+<div class="card">
+<svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="#0a3161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14 2V8H20" stroke="#bb133e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<h3>Practical Workbooks</h3>
+<p>Build real ICPs, offers, target lists, campaigns, outreach, call plans, and scorecards.</p>
+</div>
+<div class="card">
+<svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999" stroke="#0a3161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22 4L12 14.01L9 11.01" stroke="#bb133e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<h3>Accountability</h3>
+<p>Work with other members to keep real experiments moving.</p>
+</div>
+<div class="card">
+<svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="#0a3161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="9" cy="7" r="4" stroke="#bb133e" stroke-width="2"/>
+<path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="#0a3161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="#bb133e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<h3>Community</h3>
+<p>Learn from founders, executives, recruiters, advisers, investors, and other relationship-driven professionals.</p>
+</div>
+<div class="card">
+<svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="#bb133e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<h3>Victory Vision Starter</h3>
+<p>Put the methodology into practice using AI-powered targeting, campaign creation, outreach drafting, call preparation, landing pages, social content, and business-development intelligence.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="platform bg-alt">
+<div class="container">
+<span class="eyebrow" style="text-align: center; display: block;">THE PLATFORM</span>
+<h2 class="text-center">Learn the System. Use the Platform.</h2>
+<p class="lead text-center" style="max-width: 800px; margin: 0 auto 48px;">Operator's Edge teaches the strategy. Victory Vision Starter helps members put that strategy into action.</p>
+<div class="grid">
+<div class="card">
+<h3>Build a target universe</h3>
+<p>Organize and segment your existing relationships and identify new prospects that match your ideal customer profile.</p>
+</div>
+<div class="card">
+<h3>Organize high-value contacts</h3>
+<p>Enrich and prioritize your network based on fit, timing, and opportunity value.</p>
+</div>
+<div class="card">
+<h3>Source lookalike prospects</h3>
+<p>Use AI to identify prospects similar to your best existing clients and relationships.</p>
+</div>
+<div class="card">
+<h3>Create campaigns</h3>
+<p>Design multi-touch outreach sequences that combine email, social, and calling.</p>
+</div>
+<div class="card">
+<h3>Generate personalized messages</h3>
+<p>Draft individualized outreach that references specific context, mutual connections, and relevant value.</p>
+</div>
+<div class="card">
+<h3>Prepare call scripts</h3>
+<p>Build call plans and talking points based on prospect research and your offer.</p>
+</div>
+<div class="card">
+<h3>Create landing pages</h3>
+<p>Generate simple, focused pages that support your outreach and campaigns.</p>
+</div>
+<div class="card">
+<h3>Generate social content</h3>
+<p>Create LinkedIn posts, articles, and commentary that position your expertise.</p>
+</div>
+<div class="card">
+<h3>Review activity and next actions</h3>
+<p>Track what is working, what is not, and what to do next based on real engagement data.</p>
+</div>
+</div>
+<div class="container-narrow" style="margin-top: 48px;">
+<p style="color: var(--ink-soft); text-align: center; font-style: italic;">Victory Vision Starter is designed to help members practice and prove the system before moving into more advanced Victory Vision execution.</p>
+</div>
+</div>
+</section>
+
+<section class="first-30-days">
+<div class="container">
+<span class="eyebrow" style="text-align: center; display: block;">YOUR FIRST 30 DAYS</span>
+<h2 class="text-center">What You Can Build in Your First 30 Days</h2>
+<div class="step-grid">
+<div class="step">
+<div class="step-number">1</div>
+<h4>Week 1</h4>
+<p>Define one goal, one ICP, and one offer.</p>
+</div>
+<div class="step">
+<div class="step-number">2</div>
+<h4>Week 2</h4>
+<p>Build your first 25–50 person target universe.</p>
+</div>
+<div class="step">
+<div class="step-number">3</div>
+<h4>Week 3</h4>
+<p>Create and launch real outreach and call experiments.</p>
+</div>
+<div class="step">
+<div class="step-number">4</div>
+<h4>Week 4</h4>
+<p>Review what worked, what did not, and what to change next.</p>
+</div>
+</div>
+<p class="lead text-center" style="margin-top: 48px;">The objective is not to finish content. The objective is to make your business-development system measurably better.</p>
+</div>
+</section>
+
+<section class="economic-frame bg-primary">
+<div class="container">
+<span class="eyebrow" style="text-align: center; display: block;">THE VALUE</span>
+<h2 class="text-center">What Is One Great New Relationship Worth?</h2>
+<div class="value-grid">
+<div class="value-box">
+<div class="value-amount">$5K</div>
+</div>
+<div class="value-box">
+<div class="value-amount">$25K</div>
+</div>
+<div class="value-box">
+<div class="value-amount">$100K</div>
+</div>
+<div class="value-box">
+<div class="value-amount">$1M+</div>
+</div>
+</div>
+<div class="container-narrow" style="margin-top: 48px;">
+<p class="lead text-center">Operator's Edge is designed for professionals where one successful client, mandate, placement, engagement, referral, investor relationship, or transaction can have meaningful economic value.</p>
+<p class="text-center" style="margin-top: 24px;">One additional win does not need to be guaranteed for the economics of stronger business development to matter.</p>
+</div>
+</div>
+</section>
+
+<section class="who-for">
+<div class="container">
+<span class="eyebrow" style="text-align: center; display: block;">WHO THIS IS FOR</span>
+<h2 class="text-center">Built for Relationship-Driven Professionals</h2>
+<div class="grid">
+<div class="card">
+<svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 21V19C16 17.9391 15.5786 16.9217 14.8284 16.1716C14.0783 15.4214 13.0609 15 12 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="#0a3161" stroke-width="2"/>
+<circle cx="8.5" cy="7" r="4" stroke="#bb133e" stroke-width="2"/>
+<path d="M20 8V14M23 11H17" stroke="#0a3161" stroke-width="2" stroke-linecap="round"/>
+</svg>
+<h3>Executive recruiters</h3>
+<p>Build stronger relationships with hiring managers, candidates, and referral sources to increase placements and search mandates.</p>
+</div>
+<div class="card">
+<svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 16V8C20.9996 7.64927 20.9071 7.30481 20.7315 7.00116C20.556 6.69751 20.3037 6.44536 20 6.27L13 2.27C12.696 2.09446 12.3511 2.00205 12 2.00205C11.6489 2.00205 11.304 2.09446 11 2.27L4 6.27C3.69626 6.44536 3.44398 6.69751 3.26846 7.00116C3.09294 7.30481 3.00036 7.64927 3 8V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3025 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.9979 12 21.9979C12.3511 21.9979 12.696 21.9055 13 21.73L20 17.73C20.3037 17.5546 20.556 17.3025 20.7315 16.9988C20.9071 16.6952 20.9996 16.3507 21 16Z" stroke="#0a3161" stroke-width="2"/>
+<path d="M12 12L12 22" stroke="#bb133e" stroke-width="2"/>
+</svg>
+<h3>Consultants and advisers</h3>
+<p>Turn expertise into engagements through systematic outreach to ideal clients and referral partners.</p>
+</div>
+<div class="card">
+<svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="12" cy="12" r="10" stroke="#0a3161" stroke-width="2"/>
+<path d="M12 6V12L16 14" stroke="#bb133e" stroke-width="2" stroke-linecap="round"/>
+</svg>
+<h3>Founders and CEOs</h3>
+<p>Build pipeline, recruit talent, raise capital, and develop partnerships through your existing network.</p>
+</div>
+<div class="card">
+<svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#0a3161" stroke-width="2"/>
+<path d="M2 17L12 22L22 17" stroke="#bb133e" stroke-width="2"/>
+<path d="M2 12L12 17L22 12" stroke="#0a3161" stroke-width="2"/>
+</svg>
+<h3>Investors and private-market professionals</h3>
+<p>Source better deals, build LP relationships, and develop portfolio-company networks.</p>
+</div>
+<div class="card">
+<svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="#0a3161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7 10L12 15L17 10" stroke="#bb133e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 15V3" stroke="#0a3161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<h3>Wealth and insurance professionals</h3>
+<p>Develop client relationships, generate referrals, and build centers of influence systematically.</p>
+</div>
+<div class="card">
+<svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 20V10" stroke="#0a3161" stroke-width="2" stroke-linecap="round"/>
+<path d="M12 20V4" stroke="#bb133e" stroke-width="2" stroke-linecap="round"/>
+<path d="M6 20V14" stroke="#0a3161" stroke-width="2" stroke-linecap="round"/>
+</svg>
+<h3>Business-development leaders</h3>
+<p>Build predictable pipeline through relationship activation, targeted outreach, and performance tracking.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="founder bg-alt">
+<div class="container">
+<span class="eyebrow" style="text-align: center; display: block;">THE FOUNDER</span>
+<h2 class="text-center">Built by an Operator, Investor, and Technologist</h2>
+<div class="founder">
+<div class="founder-image"></div>
+<div class="founder-content">
+<h3>Andrew Glaze, CFA</h3>
+<p style="color: var(--ink-soft); margin-bottom: 16px;">Andrew brings decades of experience across technology, finance, and operations to Victory Vision and Operator's Edge.</p>
+<ul>
+<li>West Point computer science background</li>
+<li>Columbia MBA</li>
+<li>Investment banking and investing experience</li>
+<li>Public-company board experience</li>
+<li>Operating experience building and scaling businesses</li>
+<li>Deep expertise building AI and technology platforms</li>
+<li>Passion for teaching and practical implementation</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="faq">
+<div class="container">
+<span class="eyebrow" style="text-align: center; display: block;">QUESTIONS</span>
+<h2 class="text-center">Frequently Asked Questions</h2>
+<div class="faq">
+<div class="faq-item">
+<h3>Do I need Victory Vision experience?</h3>
+<p>No. Starter is designed as the implementation layer for what is taught inside Operator's Edge. You will learn the methodology first, then use the platform to execute it.</p>
+</div>
+<div class="faq-item">
+<h3>Is this just an AI course?</h3>
+<p>No. It combines curriculum, community, live teaching, office hours, accountability, and hands-on platform use. The focus is on building a complete business-development system, not just learning about AI.</p>
+</div>
+<div class="faq-item">
+<h3>Do I need to speak with someone before joining?</h3>
+<p>No. Membership is self-serve. You can join immediately and start accessing content, community, and Victory Vision Starter right away.</p>
+</div>
+<div class="faq-item">
+<h3>Is this only for salespeople?</h3>
+<p>No. It is for relationship-driven professionals whose business depends on clients, investors, candidates, referrals, partnerships, or deals. This includes founders, executives, recruiters, advisers, consultants, investors, and other professionals where relationships drive revenue.</p>
+</div>
+<div class="faq-item">
+<h3>Will it guarantee meetings or revenue?</h3>
+<p>No. The program provides methodology, tools, accountability, and technology to help improve business-development execution. Results depend on your market, offer, effort, and execution quality.</p>
+</div>
+<div class="faq-item">
+<h3>What is the difference between Operator's Edge and Victory Vision?</h3>
+<p>Operator's Edge teaches you how to build the engine. Victory Vision helps you run the engine every day. This package includes both the education layer (Operator's Edge) and the Starter tier of the platform (Victory Vision).</p>
+</div>
+<div class="faq-item">
+<h3>Can I upgrade from Starter later?</h3>
+<p>Yes. Victory Vision Starter is designed to help you learn and prove the system. As your needs grow, you can upgrade to more advanced Victory Vision tiers with additional automation, capacity, and features.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="final-cta bg-primary">
+<div class="container text-center">
+<span class="eyebrow" style="display: block;">READY TO START</span>
+<h2>You Spent Years Building the Network. Put a System Behind It.</h2>
+<p class="lead">Learn the method. Use the platform. Build a repeatable meeting engine.</p>
+<div class="price">$990/year</div>
+<div style="display: flex; gap: 16px; justify-content: center; margin-top: 32px; flex-wrap: wrap;">
+<a href="#join" class="btn btn-white" id="cta-final">Join Operator's Edge + Victory Vision Starter</a>
+</div>
+<p class="microcopy" style="margin-top: 16px;">Start immediately. No sales call required.</p>
+</div>
+</section>
+
+<section class="form-section" id="join">
+<div class="container">
+<span class="eyebrow" style="text-align: center; display: block;">GET STARTED</span>
+<h2 class="text-center">Join Now</h2>
+<p class="lead text-center">Complete the form below to get started with Operator's Edge + Victory Vision Starter.</p>
+<div class="form-container">
+<form id="leadForm">
+<input type="hidden" name="source" value="landing">
+<input type="hidden" name="customer_id" value="glaze@vvdoh.com">
+<input type="hidden" name="page_slug" value="starter">
+<input type="hidden" name="page_view" id="page_view">
+<input type="hidden" name="utm_source" id="utm_source">
+<input type="hidden" name="utm_medium" id="utm_medium">
+<input type="hidden" name="utm_campaign" id="utm_campaign">
+<input type="hidden" name="utm_content" id="utm_content">
+<input type="hidden" name="referrer" id="referrer">
+<div class="form-group">
+<label for="name">Full Name *</label>
+<input type="text" id="name" name="name" required>
+</div>
+<div class="form-group">
+<label for="email">Email Address *</label>
+<input type="email" id="email" name="email" required>
+</div>
+<div class="form-group">
+<label for="company">Company</label>
+<input type="text" id="company" name="company">
+</div>
+<div class="form-group">
+<label for="phone">Phone Number</label>
+<input type="tel" id="phone" name="phone">
+</div>
+<div class="form-group">
+<label for="title">Title / Role</label>
+<input type="text" id="title" name="title">
+</div>
+<div class="form-group">
+<label for="message">What are you hoping to achieve? (Optional)</label>
+<textarea id="message" name="message"></textarea>
+</div>
+<button type="submit" class="btn btn-primary" style="width: 100%;" id="submit-form">Join Now for $990/year</button>
+</form>
+<div class="thank-you" id="thankYou">
+<h3 style="color: #155724; margin-bottom: 16px;">Thank You!</h3>
+<p style="color: #155724;">We have received your information and will be in touch shortly with next steps to complete your membership.</p>
+</div>
+</div>
+</div>
+</section>
+
+<div class="disclosure">
+<div class="container-narrow">
+<p><strong>Important Disclosure:</strong> Victory Vision and Operator's Edge provide business-development education, methodology, community, and technology tools. Results are not guaranteed and depend on individual effort, market conditions, offer quality, and execution. Past performance or testimonials do not guarantee future results. This is not investment, legal, or financial advice. Consult appropriate professionals for specific guidance. By joining, you acknowledge that business development involves risk and that one successful outcome is not guaranteed.</p>
+</div>
+</div>
+
+<footer>
+<div class="container">
+<div>
+<strong>Victory Vision</strong> © 2025
+</div>
+<div>
+<a href="mailto:andrew@victoryvisionai.com">Contact</a>
+<a href="#privacy">Privacy Policy</a>
+<a href="#terms">Terms of Service</a>
+</div>
+</div>
+</footer>
+
+<script>
+// Intersection Observer for scroll animations
+const observerOptions = {
+threshold: 0.1,
+rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+}
+});
+}, observerOptions);
+
+document.querySelectorAll('section').forEach(section => {
+observer.observe(section);
+});
+
+// Track page view
+const trackingData = {
+page_view: Date.now(),
+referrer: document.referrer,
+utm_source: new URLSearchParams(window.location.search).get('utm_source') || '',
+utm_medium: new URLSearchParams(window.location.search).get('utm_medium') || '',
+utm_campaign: new URLSearchParams(window.location.search).get('utm_campaign') || '',
+utm_content: new URLSearchParams(window.location.search).get('utm_content') || ''
+};
+
+document.getElementById('page_view').value = trackingData.page_view;
+document.getElementById('referrer').value = trackingData.referrer;
+document.getElementById('utm_source').value = trackingData.utm_source;
+document.getElementById('utm_medium').value = trackingData.utm_medium;
+document.getElementById('utm_campaign').value = trackingData.utm_campaign;
+document.getElementById('utm_content').value = trackingData.utm_content;
+
+// Track CTA clicks
+document.querySelectorAll('.btn-primary').forEach(btn => {
+btn.addEventListener('click', (e) => {
+if (window.gtag) {
+gtag('event', 'cta_click', {
+event_category: 'engagement',
+event_label: e.target.textContent,
+value: 990
+});
+}
+});
+});
+
+// Form submission
+document.getElementById('leadForm').addEventListener('submit', async (e) => {
+e.preventDefault();
+const formData = new FormData(e.target);
+const data = Object.fromEntries(formData.entries());
+
+if (window.gtag) {
+gtag('event', 'checkout_started', {
+event_category: 'conversion',
+value: 990,
+currency: 'USD'
+});
+}
+
+try {
+const response = await fetch('https://victoryvision.app.n8n.cloud/webhook/pages/lead-submission', {
+method: 'POST',
+headers: {
+'Content-Type': 'application/json'
+},
+body: JSON.stringify(data)
+});
+
+if (response.ok) {
+document.getElementById('leadForm').style.display = 'none';
+document.getElementById('thankYou').classList.add('visible');
+
+if (window.gtag) {
+gtag('event', 'purchase', {
+event_category: 'conversion',
+transaction_id: Date.now(),
+value: 990,
+currency: 'USD',
+items: [{
+item_name: 'Operators Edge + Victory Vision Starter',
+price: 990,
+quantity: 1
+}]
+});
+}
+} else {
+alert('There was an error submitting your information. Please try again or contact us directly at andrew@victoryvisionai.com');
+}
+} catch (error) {
+console.error('Form submission error:', error);
+alert('There was an error submitting your information. Please try again or contact us directly at andrew@victoryvisionai.com');
+}
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+const href = this.getAttribute('href');
+if (href !== '#privacy' && href !== '#terms') {
+e.preventDefault();
+const target = document.querySelector(href);
+if (target) {
+target.scrollIntoView({
+behavior: 'smooth',
+block: 'start'
+});
+}
+}
+});
+});
+</script>
+
+<script>
+(function(){
+  var PAGE_ID="216",CUSTOMER_ID="glaze@vvdoh.com",AB_VARIANT="A";
+  var TRACK="https://victoryvision.app.n8n.cloud/webhook/pages/track";
+  function sid(){var m=document.cookie.match(/vv_sid=([^;]+)/);if(m)return m[1];var v=Math.random().toString(36).slice(2)+Date.now().toString(36);document.cookie="vv_sid="+v+"; path=/; max-age=7776000; SameSite=Lax";return v;}
+  function track(t,e){try{fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({page_id:parseInt(PAGE_ID,10),customer_id:CUSTOMER_ID,event_type:t,session_id:sid(),ab_variant:AB_VARIANT==="null"?null:AB_VARIANT,metadata:Object.assign({path:location.pathname,referrer:document.referrer},e||{})})}).catch(function(){});}catch(_){}}
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",function(){track("visit");});else track("visit");
+  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(a&&a.href)track("click",{click_target:a.href});},true);
+  document.addEventListener("submit",function(e){if(e.target&&e.target.tagName==="FORM")track("form_submit",{});},true);
+})();
+</script>
+</body>
+</html>
