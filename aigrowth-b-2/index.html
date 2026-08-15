@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Growth | Victory Vision - Turn Your Network Into an AI Sales Desk</title>
+<meta name="description" content="Victory Vision helps relationship-driven professionals identify the right prospects, personalize outreach, improve calls and follow-up, create more qualified meetings, and learn from what actually converts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Crimson+Pro:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+<style>
+:root {
+--primary: #0a3161;
+--accent: #bb133e;
+--ink: #121a2b;
+--ink-soft: #5a6679;
+--bg: #ffffff;
+--bg-alt: #f7f9fc;
+--on-dark: #ffffff;
+--border: #e2e8f0;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+color: var(--ink);
+background: var(--bg);
+line-height: 1.6;
+-webkit-font-smoothing: antialiased;
+}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 24px;
+}
+
+.container-narrow {
+max-width: 900px;
+margin: 0 auto;
+padding: 0 24px;
+}
+
+header {
+position: sticky;
+top: 0;
+background: rgba(255, 255, 255, 0.98);
+backdrop-filter: blur(10px);
+border-bottom: 1px solid var(--border);
+z-index: 1000;
+}
+
+.header-inner {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 16px 0;
+max-width: 1200px;
+margin: 0 auto;
+padding-left: 24px;
+padding-right: 24px;
+}
+
+.logo img {
+height: 40px;
+width: auto;
+}
+
+.btn {
+display: inline-block;
+padding: 14px 32px;
+font-weight: 600;
+font-size: 16px;
+text-decoration: none;
+border-radius: 6px;
+transition: all 0.2s ease;
+border: none;
+cursor: pointer;
+font-family: 'Inter', sans-serif;
+}
+
+.btn-primary {
+background: var(--accent);
+color: #ffffff;
+}
+
+.btn-primary:hover {
+background: #9a0f32;
+transform: translateY(-1px);
+box-shadow: 0 8px 20px rgba(187, 19, 62, 0.3);
+}
+
+.btn-secondary {
+background: transparent;
+color: var(--primary);
+border: 2px solid var(--primary);
+}
+
+.btn-secondary:hover {
+background: var(--primary);
+color: #ffffff;
+}
+
+.btn-white {
+background: #ffffff;
+color: var(--primary);
+}
+
+.btn-white:hover {
+background: var(--bg-alt);
+}
+
+.hero {
+position: relative;
+background: var(--primary);
+color: var(--on-dark);
+overflow: hidden;
+}
+
+.hero-video-container {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+overflow: hidden;
+}
+
+.hero-video-container::after {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(135deg, rgba(10, 49, 97, 0.92) 0%, rgba(10, 49, 97, 0.85) 100%);
+}
+
+.hero-video {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.hero-content {
+position: relative;
+z-index: 2;
+padding: 120px 0 100px;
+}
+
+.eyebrow {
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 1.8px;
+text-transform: uppercase;
+font-variant: small-caps;
+color: var(--accent);
+margin-bottom: 20px;
+}
+
+.hero h1 {
+font-family: 'Crimson Pro', Georgia, serif;
+font-size: 56px;
+font-weight: 300;
+line-height: 1.1;
+margin-bottom: 24px;
+color: var(--on-dark);
+}
+
+.hero h1 .highlight {
+font-style: italic;
+color: var(--accent);
+}
+
+.hero-subhead {
+font-size: 22px;
+line-height: 1.5;
+margin-bottom: 40px;
+color: rgba(255, 255, 255, 0.95);
+max-width: 800px;
+font-weight: 400;
+}
+
+.hero-buttons {
+display: flex;
+gap: 16px;
+margin-bottom: 32px;
+flex-wrap: wrap;
+}
+
+.hero-support {
+font-size: 15px;
+color: rgba(255, 255, 255, 0.8);
+font-style: italic;
+}
+
+section {
+padding: 100px 0;
+}
+
+.section-alt {
+background: var(--bg-alt);
+}
+
+.section-dark {
+background: var(--primary);
+color: var(--on-dark);
+}
+
+.section-dark h2,
+.section-dark h3,
+.section-dark p,
+.section-dark li {
+color: var(--on-dark);
+}
+
+h2 {
+font-family: 'Crimson Pro', Georgia, serif;
+font-size: 42px;
+font-weight: 300;
+line-height: 1.2;
+margin-bottom: 24px;
+color: var(--primary);
+}
+
+h2 em {
+font-style: italic;
+}
+
+h3 {
+font-size: 24px;
+font-weight: 700;
+margin-bottom: 16px;
+color: var(--primary);
+}
+
+.section-label {
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 1.8px;
+text-transform: uppercase;
+font-variant: small-caps;
+color: var(--accent);
+margin-bottom: 16px;
+display: block;
+}
+
+.section-intro {
+font-size: 20px;
+line-height: 1.6;
+color: var(--ink-soft);
+margin-bottom: 60px;
+max-width: 800px;
+}
+
+.problem-list {
+list-style: none;
+margin: 40px 0;
+}
+
+.problem-list li {
+font-size: 28px;
+font-weight: 700;
+color: var(--primary);
+padding: 20px 0;
+border-bottom: 1px solid var(--border);
+}
+
+.problem-list li:last-child {
+border-bottom: none;
+}
+
+.process-flow {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 12px;
+margin: 60px 0;
+flex-wrap: wrap;
+}
+
+.process-step {
+font-size: 16px;
+font-weight: 700;
+color: var(--primary);
+padding: 12px 20px;
+background: var(--bg);
+border: 2px solid var(--primary);
+border-radius: 6px;
+white-space: nowrap;
+}
+
+.process-arrow {
+color: var(--accent);
+font-size: 24px;
+font-weight: 700;
+}
+
+.capabilities-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 32px;
+margin-top: 60px;
+}
+
+.capability-item {
+background: var(--bg);
+padding: 32px;
+border-radius: 8px;
+border: 1px solid var(--border);
+}
+
+.capability-item h4 {
+font-size: 18px;
+font-weight: 700;
+color: var(--primary);
+margin-bottom: 12px;
+}
+
+.capability-item p {
+font-size: 15px;
+color: var(--ink-soft);
+line-height: 1.6;
+}
+
+.learning-features {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 24px;
+margin-top: 40px;
+}
+
+.learning-feature {
+display: flex;
+align-items: start;
+gap: 16px;
+}
+
+.learning-icon {
+flex-shrink: 0;
+width: 48px;
+height: 48px;
+background: var(--accent);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.learning-icon svg {
+width: 24px;
+height: 24px;
+fill: #ffffff;
+}
+
+.learning-text h4 {
+font-size: 18px;
+font-weight: 700;
+color: var(--on-dark);
+margin-bottom: 8px;
+}
+
+.learning-text p {
+font-size: 15px;
+color: rgba(255, 255, 255, 0.9);
+}
+
+.industry-cards {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 24px;
+margin-top: 60px;
+}
+
+.industry-card {
+background: var(--bg);
+padding: 32px;
+border-radius: 8px;
+border-left: 4px solid var(--accent);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+transition: all 0.3s ease;
+}
+
+.industry-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.industry-card h3 {
+font-size: 22px;
+margin-bottom: 16px;
+color: var(--primary);
+}
+
+.industry-card p {
+font-size: 15px;
+color: var(--ink-soft);
+line-height: 1.6;
+}
+
+.value-showcase {
+display: flex;
+justify-content: space-around;
+align-items: center;
+margin: 60px 0;
+flex-wrap: wrap;
+gap: 32px;
+}
+
+.value-item {
+text-align: center;
+}
+
+.value-amount {
+font-size: 48px;
+font-weight: 800;
+color: var(--accent);
+margin-bottom: 8px;
+}
+
+.value-label {
+font-size: 14px;
+color: var(--ink-soft);
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+.value-copy {
+font-size: 20px;
+line-height: 1.6;
+color: var(--ink);
+max-width: 800px;
+margin: 0 auto;
+text-align: center;
+}
+
+.platform-features {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 16px;
+margin-top: 40px;
+}
+
+.platform-feature {
+display: flex;
+align-items: center;
+gap: 12px;
+padding: 16px;
+background: var(--bg-alt);
+border-radius: 6px;
+}
+
+.check-icon {
+flex-shrink: 0;
+width: 24px;
+height: 24px;
+}
+
+.check-icon svg {
+width: 100%;
+height: 100%;
+fill: var(--accent);
+}
+
+.platform-feature span {
+font-size: 15px;
+font-weight: 500;
+color: var(--ink);
+}
+
+.bio-section {
+display: grid;
+grid-template-columns: 200px 1fr;
+gap: 48px;
+align-items: start;
+margin-top: 40px;
+}
+
+.bio-image {
+width: 200px;
+height: 200px;
+border-radius: 8px;
+background: var(--bg-alt);
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 72px;
+font-weight: 800;
+color: var(--primary);
+border: 3px solid var(--primary);
+}
+
+.bio-content h3 {
+font-size: 28px;
+margin-bottom: 8px;
+}
+
+.bio-title {
+font-size: 16px;
+color: var(--accent);
+font-weight: 600;
+margin-bottom: 24px;
+}
+
+.bio-content ul {
+list-style: none;
+}
+
+.bio-content li {
+font-size: 16px;
+color: var(--ink-soft);
+padding: 8px 0;
+padding-left: 24px;
+position: relative;
+}
+
+.bio-content li::before {
+content: '•';
+position: absolute;
+left: 0;
+color: var(--accent);
+font-size: 20px;
+}
+
+.cta-section {
+text-align: center;
+}
+
+.cta-section h2 {
+margin-bottom: 32px;
+}
+
+.cta-section .section-intro {
+margin: 0 auto 40px;
+}
+
+.form-section {
+background: var(--bg-alt);
+}
+
+.form-container {
+max-width: 600px;
+margin: 0 auto;
+background: var(--bg);
+padding: 48px;
+border-radius: 8px;
+box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.form-container h2 {
+text-align: center;
+margin-bottom: 16px;
+}
+
+.form-intro {
+text-align: center;
+color: var(--ink-soft);
+margin-bottom: 32px;
+font-size: 16px;
+}
+
+.form-group {
+margin-bottom: 24px;
+}
+
+.form-group label {
+display: block;
+font-weight: 600;
+margin-bottom: 8px;
+color: var(--ink);
+font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+width: 100%;
+padding: 14px 16px;
+border: 2px solid var(--border);
+border-radius: 6px;
+font-size: 16px;
+font-family: 'Inter', sans-serif;
+transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+outline: none;
+border-color: var(--primary);
+}
+
+.form-group textarea {
+resize: vertical;
+min-height: 120px;
+}
+
+.form-submit {
+width: 100%;
+padding: 16px;
+font-size: 18px;
+}
+
+.thank-you {
+display: none;
+text-align: center;
+padding: 48px;
+background: #d4edda;
+border: 2px solid #28a745;
+border-radius: 8px;
+margin-top: 24px;
+}
+
+.thank-you h3 {
+color: #155724;
+margin-bottom: 12px;
+}
+
+.thank-you p {
+color: #155724;
+}
+
+.disclosure {
+background: var(--bg-alt);
+border: 1px solid var(--border);
+border-radius: 6px;
+padding: 24px;
+margin-top: 48px;
+font-size: 13px;
+line-height: 1.6;
+color: var(--ink-soft);
+}
+
+.disclosure h4 {
+font-size: 14px;
+font-weight: 700;
+color: var(--ink);
+margin-bottom: 12px;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+}
+
+.disclosure p {
+margin-bottom: 12px;
+}
+
+.disclosure p:last-child {
+margin-bottom: 0;
+}
+
+footer {
+background: var(--primary);
+color: var(--on-dark);
+padding: 60px 0 32px;
+}
+
+.footer-content {
+display: flex;
+justify-content: space-between;
+align-items: start;
+margin-bottom: 48px;
+flex-wrap: wrap;
+gap: 32px;
+}
+
+.footer-brand h3 {
+color: var(--on-dark);
+font-size: 24px;
+margin-bottom: 12px;
+}
+
+.footer-brand p {
+color: rgba(255, 255, 255, 0.8);
+font-size: 14px;
+max-width: 400px;
+}
+
+.footer-links {
+display: flex;
+gap: 48px;
+}
+
+.footer-links-column h4 {
+color: var(--on-dark);
+font-size: 14px;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 1px;
+margin-bottom: 16px;
+}
+
+.footer-links-column ul {
+list-style: none;
+}
+
+.footer-links-column a {
+color: rgba(255, 255, 255, 0.8);
+text-decoration: none;
+font-size: 14px;
+line-height: 2;
+transition: color 0.2s ease;
+}
+
+.footer-links-column a:hover {
+color: var(--on-dark);
+}
+
+.footer-bottom {
+border-top: 1px solid rgba(255, 255, 255, 0.2);
+padding-top: 24px;
+text-align: center;
+color: rgba(255, 255, 255, 0.7);
+font-size: 14px;
+}
+
+.reveal {
+opacity: 0;
+transform: translateY(30px);
+transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.active {
+opacity: 1;
+transform: translateY(0);
+}
+
+@media (max-width: 1024px) {
+.hero h1 {
+font-size: 44px;
+}
+
+.hero-subhead {
+font-size: 20px;
+}
+
+h2 {
+font-size: 36px;
+}
+
+.capabilities-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.bio-section {
+grid-template-columns: 1fr;
+text-align: center;
+}
+
+.bio-image {
+margin: 0 auto;
+}
+
+.footer-content {
+flex-direction: column;
+}
+}
+
+@media (max-width: 768px) {
+.hero h1 {
+font-size: 36px;
+}
+
+.hero-subhead {
+font-size: 18px;
+}
+
+.hero-buttons {
+flex-direction: column;
+}
+
+.btn {
+width: 100%;
+text-align: center;
+}
+
+h2 {
+font-size: 32px;
+}
+
+.section-intro {
+font-size: 18px;
+}
+
+.problem-list li {
+font-size: 22px;
+}
+
+.process-flow {
+flex-direction: column;
+}
+
+.process-arrow {
+transform: rotate(90deg);
+}
+
+.capabilities-grid {
+grid-template-columns: 1fr;
+}
+
+.learning-features {
+grid-template-columns: 1fr;
+}
+
+.platform-features {
+grid-template-columns: 1fr;
+}
+
+.value-showcase {
+flex-direction: column;
+}
+
+.form-container {
+padding: 32px 24px;
+}
+
+.footer-links {
+flex-direction: column;
+gap: 32px;
+}
+}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18090497137"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-18090497137');</script>
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:'97225334'};o.q=w[u],w[u]=new UET(o),w[u].push('pageLoad')},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=='loaded'&&s!=='complete'||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,'script','//bat.bing.com/bat.js','uetq');</script>
+<script type="text/javascript">_linkedin_partner_id='8929812';window._linkedin_data_partner_ids=window._linkedin_data_partner_ids||[];window._linkedin_data_partner_ids.push(_linkedin_partner_id);</script><script type="text/javascript">(function(l){if(!l){window.lintrk=function(a,b){window.lintrk.q.push([a,b])};window.lintrk.q=[]}var s=document.getElementsByTagName('script')[0];var b=document.createElement('script');b.type='text/javascript';b.async=true;b.src='https://snap.licdn.com/li.lms-analytics/insight.min.js';s.parentNode.insertBefore(b,s);})(window.lintrk);</script>
+<style>[data-variant="B"] .cta-button,[data-variant="B"] a.btn,[data-variant="B"] button{border-radius:8px !important} [data-variant="B"] .hero h1{letter-spacing:-0.5px}</style></head>
+<body data-variant="B">
+
+<header>
+<div class="header-inner">
+<div class="logo">
+<img src="https://res.cloudinary.com/dv94te4zt/image/upload/v1753320422/sd4auec2bgofhaleur7o.jpg" alt="Victory Vision logo">
+</div>
+<a href="https://calendly.com/victoryvision/45-mins" class="btn btn-primary">Book a Strategy Call</a>
+</div>
+</header>
+
+<section class="hero">
+<div class="hero-video-container">
+<video class="hero-video" autoplay muted loop playsinline>
+<source src="https://res.cloudinary.com/dv94te4zt/video/upload/v1786592244/viral_campaign_nocid_1786592244272_1786592244.mp4" type="video/mp4">
+</video>
+</div>
+<div class="hero-content">
+<div class="container">
+<div class="eyebrow">AI-Powered Business Development</div>
+<h1>Turn Your Network Into an <span class="highlight">AI Sales Desk</span></h1>
+<p class="hero-subhead">Victory Vision helps relationship-driven professionals identify the right prospects, personalize outreach, improve calls and follow-up, create more qualified meetings, and learn from what actually converts.</p>
+<div class="hero-buttons">
+<a href="https://calendly.com/victoryvision/45-mins" class="btn btn-primary">Book a Strategy Call</a>
+<a href="#learn-more" class="btn btn-white">Learn More</a>
+</div>
+<p class="hero-support">Designed for businesses where one new client, mandate, investor, placement or transaction can have significant economic value.</p>
+</div>
+</div>
+</section>
+
+<section id="learn-more" class="reveal">
+<div class="container-narrow">
+<span class="section-label">The Problem</span>
+<h2>You Probably Already Know Your <em>Next Great Client</em></h2>
+<p class="section-intro">Most executives have hundreds or thousands of LinkedIn connections, former clients, investors, prospects, referral sources, and industry relationships sitting dormant in their network.</p>
+<p class="section-intro">The problem isn't finding more names. The problem is execution.</p>
+<ul class="problem-list">
+<li>Who should I contact?</li>
+<li>Why now?</li>
+<li>What should I say?</li>
+<li>Which channel should I use?</li>
+<li>When should I follow up?</li>
+<li>What is actually creating opportunities?</li>
+</ul>
+<p class="section-intro">Without a systematic process, your network remains an underutilized asset. Victory Vision changes that.</p>
+</div>
+</section>
+
+<section class="section-alt reveal">
+<div class="container">
+<span class="section-label">The Solution</span>
+<h2>One Intelligent System From <em>Target to Meeting</em></h2>
+<p class="section-intro">Victory Vision provides a complete AI-assisted operating system for relationship-driven business development.</p>
+<div class="process-flow">
+<div class="process-step">ICP</div>
+<div class="process-arrow">→</div>
+<div class="process-step">TARGET</div>
+<div class="process-arrow">→</div>
+<div class="process-step">RESEARCH</div>
+<div class="process-arrow">→</div>
+<div class="process-step">OUTREACH</div>
+<div class="process-arrow">→</div>
+<div class="process-step">CALL</div>
+<div class="process-arrow">→</div>
+<div class="process-step">MEETING</div>
+<div class="process-arrow">→</div>
+<div class="process-step">LEARN</div>
+</div>
+<div class="capabilities-grid">
+<div class="capability-item">
+<h4>Prospect Sourcing & Enrichment</h4>
+<p>Identify and prioritize the right contacts from your existing network and targeted prospect lists. Enrich profiles with relevant business intelligence.</p>
+</div>
+<div class="capability-item">
+<h4>Campaign Creation & Outreach</h4>
+<p>Build personalized multi-channel campaigns with AI-assisted messaging. Execute email and social outreach that reflects your voice and value proposition.</p>
+</div>
+<div class="capability-item">
+<h4>Call Preparation & Follow-Up</h4>
+<p>Prepare for conversations with context and talking points. Manage systematic follow-up so no opportunity falls through the cracks.</p>
+</div>
+<div class="capability-item">
+<h4>Meeting Workflows</h4>
+<p>Structure pre-meeting research, in-meeting notes, and post-meeting next actions. Turn conversations into documented opportunities.</p>
+</div>
+<div class="capability-item">
+<h4>Content & Advertising</h4>
+<p>Generate marketing content, landing pages, and advertising creative that supports your outreach and positioning.</p>
+</div>
+<div class="capability-item">
+<h4>Performance Analytics</h4>
+<p>Track which activities produce engagement, meetings, and revenue. Understand what's working and optimize accordingly.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section-dark reveal">
+<div class="container">
+<span class="section-label" style="color: var(--accent);">Intelligence</span>
+<h2 style="color: var(--on-dark);">Your Business Development Should <em>Learn</em></h2>
+<p class="section-intro" style="color: rgba(255, 255, 255, 0.9);">Most CRM systems are record-keeping tools. Victory Vision records activity and outcomes across channels, then uses actual successful patterns to improve future recommendations.</p>
+<div class="learning-features">
+<div class="learning-feature">
+<div class="learning-icon">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+</div>
+<div class="learning-text">
+<h4>Who Responded</h4>
+<p>Track engagement by title, industry, company size, and relationship type to identify your highest-converting segments.</p>
+</div>
+</div>
+<div class="learning-feature">
+<div class="learning-icon">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+</div>
+<div class="learning-text">
+<h4>What Message Worked</h4>
+<p>Understand which subject lines, opening hooks, value propositions, and calls-to-action drive replies and meetings.</p>
+</div>
+</div>
+<div class="learning-feature">
+<div class="learning-icon">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+</div>
+<div class="learning-text">
+<h4>Which Channel Mattered</h4>
+<p>Measure performance across email, LinkedIn, phone, and other touchpoints to allocate effort where it counts.</p>
+</div>
+</div>
+<div class="learning-feature">
+<div class="learning-icon">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+</div>
+<div class="learning-text">
+<h4>When It Appeared in the Sequence</h4>
+<p>Identify optimal timing, cadence, and sequence position for each touchpoint in your campaigns.</p>
+</div>
+</div>
+</div>
+<p class="section-intro" style="color: rgba(255, 255, 255, 0.9); margin-top: 48px;">The system gets smarter as you use it, surfacing next-best actions based on what has actually produced results in your business.</p>
+</div>
+</section>
+
+<section class="reveal">
+<div class="container">
+<span class="section-label">Industries</span>
+<h2>Built for <em>Relationship-Driven Economics</em></h2>
+<p class="section-intro">Victory Vision is designed for professionals and firms where improving business development doesn't require hundreds of new customers to create meaningful economic value.</p>
+<div class="industry-cards">
+<div class="industry-card">
+<h3>Executive Search</h3>
+<p>Recruiters and search firms can systematically activate relationships with hiring executives, portfolio companies, and candidates. One additional retained search or successful placement can justify the entire investment.</p>
+</div>
+<div class="industry-card">
+<h3>Investment / Capital Markets</h3>
+<p>Investment bankers, advisers, independent sponsors, and capital raisers can turn dormant relationships into mandates, introductions, and deal flow. A single transaction or successful raise creates substantial value.</p>
+</div>
+<div class="industry-card">
+<h3>Consulting & Advisory</h3>
+<p>Fractional executives, independent consultants, and advisory firms can convert their expertise and network into a predictable pipeline of high-value engagements and retainers.</p>
+</div>
+<div class="industry-card">
+<h3>Founder-Led B2B</h3>
+<p>CEOs and business-development leaders selling complex, high-ticket B2B solutions can systematize relationship-building and move prospects through long sales cycles more effectively.</p>
+</div>
+<div class="industry-card">
+<h3>Wealth / Insurance / Professional Services</h3>
+<p>Wealth managers, insurance advisers, accountants, and attorneys can activate referral networks, nurture existing client relationships, and create consistent introductions to qualified prospects.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section-alt reveal">
+<div class="container-narrow">
+<span class="section-label">Value</span>
+<h2>What Is One Great New Relationship <em>Worth?</em></h2>
+<div class="value-showcase">
+<div class="value-item">
+<div class="value-amount">$10,000</div>
+</div>
+<div class="value-item">
+<div class="value-amount">$25,000</div>
+</div>
+<div class="value-item">
+<div class="value-amount">$100,000</div>
+</div>
+<div class="value-item">
+<div class="value-amount">$1,000,000+</div>
+</div>
+</div>
+<p class="value-copy">Victory Vision is designed for organizations where improving business development does not need to produce hundreds of incremental customers to have meaningful economic value.</p>
+</div>
+</section>
+
+<section class="reveal">
+<div class="container-narrow">
+<span class="section-label">Platform</span>
+<h2>Software Alone <em>Isn't the Point</em></h2>
+<p class="section-intro">Victory Vision is not another CRM or generic AI writing tool. It's an AI Sales Desk that combines technology with a defined business-development process, structured onboarding, implementation support, and ongoing learning.</p>
+<div class="platform-features">
+<div class="platform-feature">
+<div class="check-icon">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+</div>
+<span>Structured onboarding and implementation</span>
+</div>
+<div class="platform-feature">
+<div class="check-icon">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+</div>
+<span>Defined business-development methodology</span>
+</div>
+<div class="platform-feature">
+<div class="check-icon">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+</div>
+<span>AI-assisted campaign and content creation</span>
+</div>
+<div class="platform-feature">
+<div class="check-icon">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+</div>
+<span>Multi-channel outreach and follow-up</span>
+</div>
+<div class="platform-feature">
+<div class="check-icon">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+</div>
+<span>Performance analytics and optimization</span>
+</div>
+<div class="platform-feature">
+<div class="check-icon">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+</div>
+<span>Ongoing strategic support</span>
+</div>
+</div>
+<p class="section-intro" style="margin-top: 48px;">You're not buying software. You're implementing an operating system for relationship activation and revenue generation.</p>
+</div>
+</section>
+
+<section class="section-alt reveal">
+<div class="container-narrow">
+<span class="section-label">Leadership</span>
+<h2>Andrew Glaze, CFA</h2>
+<div class="bio-section">
+<div class="bio-image">AG</div>
+<div class="bio-content">
+<div class="bio-title">Founder, Victory Vision</div>
+<ul>
+<li>Computer Science, United States Military Academy at West Point</li>
+<li>MBA, Columbia Business School</li>
+<li>Former investment banker and institutional investor</li>
+<li>Public-company board member</li>
+<li>Operating executive with experience scaling technology platforms</li>
+<li>Built AI-powered systems for business development and relationship management</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="cta-section reveal">
+<div class="container-narrow">
+<span class="section-label">Next Steps</span>
+<h2>Your Network Is Already an Asset. <em>Put a System Behind It.</em></h2>
+<p class="section-intro">We'll discuss your current business-development process, the economic value of a successful relationship, your existing network and whether Victory Vision is a fit.</p>
+<a href="https://calendly.com/victoryvision/45-mins" class="btn btn-primary">Book a Victory Vision Strategy Call</a>
+</div>
+</section>
+
+<section class="form-section reveal">
+<div class="container">
+<div class="form-container">
+<h2>Get Started Today</h2>
+<p class="form-intro">Share your information and we'll be in touch to discuss how Victory Vision can transform your business development.</p>
+<form id="leadForm" action="https://victoryvision.app.n8n.cloud/webhook/pages/lead-submission" method="POST">
+<input type="hidden" name="source" value="landing">
+<input type="hidden" name="customer_id" value="glaze@vvdoh.com">
+<input type="hidden" name="page_slug" value="aigrowth">
+<div class="form-group">
+<label for="name">Full Name *</label>
+<input type="text" id="name" name="name" required>
+</div>
+<div class="form-group">
+<label for="email">Email Address *</label>
+<input type="email" id="email" name="email" required>
+</div>
+<div class="form-group">
+<label for="company">Company *</label>
+<input type="text" id="company" name="company" required>
+</div>
+<div class="form-group">
+<label for="phone">Phone Number</label>
+<input type="tel" id="phone" name="phone">
+</div>
+<div class="form-group">
+<label for="message">Tell us about your business development goals</label>
+<textarea id="message" name="message" rows="4"></textarea>
+</div>
+<button type="submit" class="btn btn-primary form-submit">Submit</button>
+</form>
+<div class="thank-you" id="thankYou">
+<h3>Thank You!</h3>
+<p>We've received your information and will be in touch shortly to discuss how Victory Vision can help you activate your network and accelerate your business development.</p>
+</div>
+</div>
+
+<div class="container-narrow">
+<div class="disclosure">
+<h4>Important Disclosure</h4>
+<p>Victory Vision provides AI-assisted business development tools and consulting services. Results vary based on individual effort, market conditions, industry dynamics, and the quality of existing relationships. No specific outcomes, revenue increases, or meeting volumes are guaranteed.</p>
+<p>AI-generated content and recommendations are provided as suggestions and should be reviewed, customized, and approved by users before deployment. Users remain responsible for all communications sent through or assisted by the platform.</p>
+<p>Victory Vision is not a licensed financial adviser, broker-dealer, placement agent, or registered investment adviser. Services do not constitute legal, accounting, tax, or regulatory advice. Users should consult appropriate licensed professionals for such guidance.</p>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<div class="footer-content">
+<div class="footer-brand">
+<h3>Victory Vision</h3>
+<p>AI-powered business development and relationship activation platform for executives, founders, advisers, and relationship-driven professionals.</p>
+</div>
+<div class="footer-links">
+<div class="footer-links-column">
+<h4>Product</h4>
+<ul>
+<li><a href="https://calendly.com/victoryvision/45-mins">Schedule a consultation</a></li>
+<li><a href="#learn-more">Features</a></li>
+<li><a href="#learn-more">How It Works</a></li>
+</ul>
+</div>
+<div class="footer-links-column">
+<h4>Company</h4>
+<ul>
+<li><a href="mailto:andrew@victoryvisionai.com">Contact</a></li>
+<li><a href="#">Privacy Policy</a></li>
+<li><a href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2024 Victory Vision. All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+<script>
+// Reveal on scroll
+const revealElements = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('active');
+}
+});
+}, {
+threshold: 0.1
+});
+
+revealElements.forEach(el => {
+revealObserver.observe(el);
+});
+
+// Form submission
+const form = document.getElementById('leadForm');
+const thankYou = document.getElementById('thankYou');
+
+form.addEventListener('submit', async (e) => {
+e.preventDefault();
+const formData = new FormData(form);
+const data = Object.fromEntries(formData.entries());
+
+try {
+const response = await fetch('https://victoryvision.app.n8n.cloud/webhook/pages/lead-submission', {
+method: 'POST',
+headers: {
+'Content-Type': 'application/json',
+},
+body: JSON.stringify(data)
+});
+
+if (response.ok) {
+form.style.display = 'none';
+thankYou.style.display = 'block';
+} else {
+alert('There was an error submitting your information. Please try again or contact us directly at andrew@victoryvisionai.com');
+}
+} catch (error) {
+alert('There was an error submitting your information. Please try again or contact us directly at andrew@victoryvisionai.com');
+}
+});
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+const target = document.querySelector(this.getAttribute('href'));
+if (target) {
+target.scrollIntoView({
+behavior: 'smooth',
+block: 'start'
+});
+}
+});
+});
+</script>
+
+<script>
+(function(){
+  var PAGE_ID="212",CUSTOMER_ID="glaze@vvdoh.com",AB_VARIANT="A";
+  var TRACK="https://victoryvision.app.n8n.cloud/webhook/pages/track";
+  function sid(){var m=document.cookie.match(/vv_sid=([^;]+)/);if(m)return m[1];var v=Math.random().toString(36).slice(2)+Date.now().toString(36);document.cookie="vv_sid="+v+"; path=/; max-age=7776000; SameSite=Lax";return v;}
+  function track(t,e){try{fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({page_id:parseInt(PAGE_ID,10),customer_id:CUSTOMER_ID,event_type:t,session_id:sid(),ab_variant:AB_VARIANT==="null"?null:AB_VARIANT,metadata:Object.assign({path:location.pathname,referrer:document.referrer},e||{})})}).catch(function(){});}catch(_){}}
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",function(){track("visit");});else track("visit");
+  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(a&&a.href)track("click",{click_target:a.href});},true);
+  document.addEventListener("submit",function(e){if(e.target&&e.target.tagName==="FORM")track("form_submit",{});},true);
+})();
+</script>
+</body>
+</html>
