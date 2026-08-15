@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator's Edge AI Growth Lab | Victory Vision</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Crimson+Pro:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0a3161;
+            --accent: #bb133e;
+            --ink: #121a2b;
+            --ink-soft: #5a6679;
+            --bg: #ffffff;
+            --bg-alt: #f7f9fc;
+            --on-dark: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: var(--ink);
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .container-narrow {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--bg);
+            border-bottom: 1px solid #e5e9f0;
+            padding: 16px 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            height: 40px;
+            width: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #9a0f32;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(187, 19, 62, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        .btn-light {
+            background: #ffffff;
+            color: var(--primary);
+        }
+
+        .btn-light:hover {
+            background: var(--bg-alt);
+        }
+
+        .hero {
+            position: relative;
+            background: var(--primary);
+            color: var(--on-dark);
+            padding: 120px 0 100px;
+            overflow: hidden;
+        }
+
+        .hero-video-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .hero-video-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(10, 49, 97, 0.92) 0%, rgba(10, 49, 97, 0.85) 100%);
+        }
+
+        .hero video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 900px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--on-dark);
+            margin-bottom: 24px;
+            opacity: 0.9;
+            font-variant: small-caps;
+        }
+
+        h1 {
+            font-size: 64px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            color: var(--on-dark);
+        }
+
+        h1 .highlight {
+            color: var(--accent);
+        }
+
+        .hero p {
+            font-size: 24px;
+            line-height: 1.5;
+            margin-bottom: 40px;
+            color: var(--on-dark);
+            opacity: 0.95;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .section {
+            padding: 100px 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-dark {
+            background: var(--primary);
+            color: var(--on-dark);
+        }
+
+        .section-alt {
+            background: var(--bg-alt);
+        }
+
+        .section-eyebrow {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--ink-soft);
+            margin-bottom: 16px;
+            font-variant: small-caps;
+        }
+
+        .section-dark .section-eyebrow {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        h2 {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 48px;
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+
+        h2 em {
+            font-style: italic;
+        }
+
+        .section-dark h2,
+        .section-dark h3,
+        .section-dark p,
+        .section-dark li {
+            color: var(--on-dark);
+        }
+
+        h3 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .section p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .card {
+            background: var(--bg);
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid #e5e9f0;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(10, 49, 97, 0.12);
+        }
+
+        .card-icon {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 24px;
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .card p {
+            color: var(--ink-soft);
+            font-size: 16px;
+        }
+
+        .problem-list {
+            list-style: none;
+            margin-top: 40px;
+        }
+
+        .problem-list li {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 24px;
+            padding-left: 40px;
+            position: relative;
+        }
+
+        .problem-list li::before {
+            content: '?';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .process-steps {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+
+        .process-step {
+            background: var(--bg);
+            color: var(--primary);
+            padding: 20px 32px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: 2px solid var(--primary);
+        }
+
+        .process-arrow {
+            color: var(--on-dark);
+            font-size: 24px;
+            font-weight: 300;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 60px;
+        }
+
+        .benefit-item {
+            background: var(--bg);
+            padding: 32px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .benefit-item h4 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .benefit-item p {
+            color: var(--ink-soft);
+            font-size: 16px;
+        }
+
+        .bring-list {
+            list-style: none;
+            margin-top: 40px;
+        }
+
+        .bring-list li {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 20px;
+            padding-left: 40px;
+            position: relative;
+        }
+
+        .bring-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+            margin-top: 60px;
+        }
+
+        .form-section {
+            background: linear-gradient(135deg, var(--primary) 0%, #0d4178 100%);
+            color: var(--on-dark);
+        }
+
+        .form-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--on-dark);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--on-dark);
+            transition: all 0.2s ease;
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .thank-you {
+            display: none;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .thank-you.visible {
+            display: block;
+        }
+
+        .thank-you h3 {
+            color: var(--on-dark);
+            margin-bottom: 16px;
+        }
+
+        .thank-you p {
+            color: var(--on-dark);
+        }
+
+        .pricing-box {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 48px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .pricing-box h3 {
+            color: var(--on-dark);
+            font-size: 32px;
+            margin-bottom: 24px;
+        }
+
+        .price {
+            font-size: 56px;
+            font-weight: 800;
+            color: var(--on-dark);
+            margin-bottom: 8px;
+        }
+
+        .price-period {
+            font-size: 18px;
+            color: var(--on-dark);
+            opacity: 0.8;
+            margin-bottom: 24px;
+        }
+
+        .price-alt {
+            font-size: 20px;
+            color: var(--on-dark);
+            margin-bottom: 32px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .price-note {
+            font-size: 16px;
+            color: var(--on-dark);
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        footer {
+            background: var(--primary);
+            color: var(--on-dark);
+            padding: 60px 0 40px;
+        }
+
+        footer a {
+            color: var(--on-dark);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.2s ease;
+        }
+
+        footer a:hover {
+            opacity: 1;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 32px;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+
+        .disclosure {
+            background: var(--bg-alt);
+            padding: 40px 0;
+            border-top: 1px solid #e5e9f0;
+        }
+
+        .disclosure p {
+            font-size: 14px;
+            color: var(--ink-soft);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 1024px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            h1 {
+                font-size: 48px;
+            }
+
+            h2 {
+                font-size: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .grid, .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 80px 0 60px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 20px;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .process-steps {
+                flex-direction: column;
+            }
+
+            .process-arrow {
+                transform: rotate(90deg);
+            }
+
+            .problem-list li {
+                font-size: 20px;
+            }
+        }
+    </style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18090497137"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-18090497137');</script>
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:'97225334'};o.q=w[u],w[u]=new UET(o),w[u].push('pageLoad')},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=='loaded'&&s!=='complete'||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,'script','//bat.bing.com/bat.js','uetq');</script>
+<script type="text/javascript">_linkedin_partner_id='8929812';window._linkedin_data_partner_ids=window._linkedin_data_partner_ids||[];window._linkedin_data_partner_ids.push(_linkedin_partner_id);</script><script type="text/javascript">(function(l){if(!l){window.lintrk=function(a,b){window.lintrk.q.push([a,b])};window.lintrk.q=[]}var s=document.getElementsByTagName('script')[0];var b=document.createElement('script');b.type='text/javascript';b.async=true;b.src='https://snap.licdn.com/li.lms-analytics/insight.min.js';s.parentNode.insertBefore(b,s);})(window.lintrk);</script>
+<style>[data-variant="B"] .cta-button,[data-variant="B"] a.btn,[data-variant="B"] button{border-radius:8px !important} [data-variant="B"] .hero h1{letter-spacing:-0.5px}</style></head>
+<body data-variant="B">
+    <header>
+        <div class="container">
+            <img src="https://res.cloudinary.com/dv94te4zt/image/upload/v1753320422/sd4auec2bgofhaleur7o.jpg" alt="Victory Vision logo">
+            <a href="#join" class="btn btn-primary">Join Now</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-video-wrapper">
+            <video autoplay muted loop playsinline>
+                <source src="https://res.cloudinary.com/dv94te4zt/video/upload/v1786765452/viral_campaign_nocid_1786765451838_1786765451.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="eyebrow">Operator's Edge AI Growth Lab</div>
+                <h1>You Probably Already Know <span class="highlight">Your Next Client.</span></h1>
+                <p>Use AI to Turn Your Network Into Booked Meetings.</p>
+                <p style="font-size: 20px; margin-bottom: 40px;">Practical business-development training, live office hours, accountability and AI implementation for relationship-driven professionals.</p>
+                <div class="hero-cta">
+                    <a href="#join" class="btn btn-primary">Join Operator's Edge</a>
+                    <a href="https://calendly.com/victoryvision/45-mins" class="btn btn-light">Schedule a consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container-narrow">
+            <div class="section-eyebrow">The Challenge</div>
+            <h2><em>The Problem</em></h2>
+            <p style="font-size: 20px; color: var(--ink-soft);">You may already have hundreds or thousands of LinkedIn connections, former clients, investors, candidates, advisers, referral partners and business relationships.</p>
+            <p style="font-size: 20px; color: var(--ink-soft); margin-bottom: 40px;">The problem is knowing:</p>
+            <ul class="problem-list">
+                <li>Who should I contact today?</li>
+                <li>Why them?</li>
+                <li>What should I say?</li>
+                <li>Should I email, message or call?</li>
+                <li>How should I follow up?</li>
+                <li>What is actually converting?</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-eyebrow">Our Methodology</div>
+            <h2><em>The System</em></h2>
+            <p style="font-size: 20px; margin-bottom: 20px;">A repeatable, AI-assisted operating system for turning relationships into revenue.</p>
+            <div class="process-steps">
+                <div class="process-step">Goal</div>
+                <div class="process-arrow">→</div>
+                <div class="process-step">ICP</div>
+                <div class="process-arrow">→</div>
+                <div class="process-step">Offer</div>
+                <div class="process-arrow">→</div>
+                <div class="process-step">Target</div>
+                <div class="process-arrow">→</div>
+                <div class="process-step">Outreach</div>
+                <div class="process-arrow">→</div>
+                <div class="process-step">Call</div>
+                <div class="process-arrow">→</div>
+                <div class="process-step">Meeting</div>
+                <div class="process-arrow">→</div>
+                <div class="process-step">Learn</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-eyebrow">Program Benefits</div>
+            <h2><em>What You Get</em></h2>
+            <p style="font-size: 20px; color: var(--ink-soft); max-width: 800px;">Operator's Edge AI Growth Lab combines practical training, live coaching, and peer accountability to help you build a systematic business-development engine.</p>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h4>Practical Field Guides & Workbooks</h4>
+                    <p>Step-by-step frameworks you can implement immediately in your business.</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>Live Teaching</h4>
+                    <p>Weekly sessions covering strategy, tactics, and AI implementation.</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>Office Hours</h4>
+                    <p>Direct access to expert guidance on your specific challenges.</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>Accountability Partners</h4>
+                    <p>Peer support to ensure consistent execution and progress.</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>Outreach Reviews</h4>
+                    <p>Get feedback on your messaging before you hit send.</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>Call Reviews</h4>
+                    <p>Improve your conversion with post-call analysis and coaching.</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>Campaign Experiments</h4>
+                    <p>Test and refine your approach with structured experimentation.</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>Community Feedback</h4>
+                    <p>Learn from other executives, founders, investors, and advisers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-eyebrow">Real-World Application</div>
+            <h2><em>Bring Your Real Business</em></h2>
+            <div class="two-column">
+                <div>
+                    <p style="font-size: 18px; color: var(--ink-soft); margin-bottom: 32px;">This isn't theory. Bring the actual challenges you're facing right now.</p>
+                    <ul class="bring-list">
+                        <li>Bring your ICP.</li>
+                        <li>Bring the outreach that isn't working.</li>
+                        <li>Bring the call that went sideways.</li>
+                        <li>Bring your growth questions.</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="bring-list">
+                        <li>Bring questions about AI, business development, corporate finance, capital raising, financing, M&A and business strategy.</li>
+                        <li>Learn what other executives, founders, investors, advisers and operators are seeing in the market.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-dark">
+        <div class="container-narrow">
+            <div class="section-eyebrow">Ideal Members</div>
+            <h2><em>Who This Is For</em></h2>
+            <p style="font-size: 18px; line-height: 1.8;">Operator's Edge is designed for relationship-driven professionals and small professional teams where one new relationship can have significant economic value.</p>
+            <p style="font-size: 18px; line-height: 1.8; margin-top: 24px;">Executive search and recruiting firms. Fractional executives and independent consultants. Capital markets advisers and investment bankers. Private equity professionals and independent sponsors. Fund managers and capital raisers. Wealth managers and insurance advisers. Professional-services firm partners. B2B founders and CEOs. Business-development executives. High-ticket coaches and advisers.</p>
+            <p style="font-size: 18px; line-height: 1.8; margin-top: 24px;">If one additional successful customer, search, advisory mandate, capital introduction, investor, engagement, placement, transaction, or relationship is worth at least $5,000 to your business—and particularly if it's worth more than $25,000—this program is built for you.</p>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-eyebrow">Growth Path</div>
+            <h2><em>The Next Level</em></h2>
+            <div class="grid">
+                <div class="card">
+                    <svg class="card-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="8" y="16" width="48" height="40" rx="4" stroke="#0a3161" stroke-width="3"/>
+                        <path d="M16 28L32 38L48 28" stroke="#bb133e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="32" cy="12" r="4" fill="#bb133e"/>
+                    </svg>
+                    <h3>Learn the Methodology</h3>
+                    <p>Operator's Edge teaches you the strategy and system for effective business development. You'll understand the why behind every step.</p>
+                </div>
+                <div class="card">
+                    <svg class="card-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="32" cy="32" r="24" stroke="#0a3161" stroke-width="3"/>
+                        <path d="M32 16V32L42 42" stroke="#bb133e" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    <h3>Scale with Victory Vision</h3>
+                    <p>When manual execution becomes the bottleneck, Victory Vision provides the technology layer to execute your workflows at scale.</p>
+                </div>
+                <div class="card">
+                    <svg class="card-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 32L28 48L52 16" stroke="#bb133e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="32" cy="32" r="28" stroke="#0a3161" stroke-width="3"/>
+                    </svg>
+                    <h3>Measure What Matters</h3>
+                    <p>Track engagement, conversion, and revenue. Know exactly which activities are producing results and optimize accordingly.</p>
+                </div>
+            </div>
+            <div style="margin-top: 60px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <p style="font-size: 18px; color: var(--ink-soft); text-align: center; margin-bottom: 24px;">Find and organize prospects. Create personalized campaigns. Manage follow-up. Generate content. Prepare for calls and meetings. Measure engagement and conversion.</p>
+                <p style="font-size: 20px; font-weight: 600; color: var(--primary); text-align: center;">Operator's Edge teaches the methodology. Victory Vision helps execute it at scale.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="join" class="section form-section">
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="section-eyebrow" style="text-align: center; color: rgba(255, 255, 255, 0.7);">Schedule a consultation</div>
+                <h2 style="text-align: center; color: var(--on-dark);"><em>Join Operator's Edge AI Growth Lab</em></h2>
+                <p style="text-align: center; font-size: 18px; margin-bottom: 40px;">Start building your systematic business-development engine today.</p>
+                
+                <div class="pricing-box">
+                    <h3>Membership Options</h3>
+                    <div class="price">$99</div>
+                    <div class="price-period">per month</div>
+                    <div class="price-alt">or $990/year — save two months</div>
+                    <p class="price-note">One great new relationship could pay for years of membership.</p>
+                </div>
+
+                <form id="leadForm" style="margin-top: 48px;">
+                    <input type="hidden" name="source" value="landing">
+                    <input type="hidden" name="customer_id" value="glaze@vvdoh.com">
+                    <input type="hidden" name="page_slug" value="operatorsedge">
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="John Smith">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="john@company.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company" placeholder="Your Company Name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">Join Operator's Edge</button>
+                </form>
+
+                <div id="thankYou" class="thank-you">
+                    <h3>Thank You!</h3>
+                    <p>We've received your information and will be in touch shortly with next steps to get you started.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="disclosure">
+        <div class="container-narrow">
+            <p><strong>Important Information:</strong> Victory Vision and Operator's Edge AI Growth Lab provide business development tools, training, and technology. We do not provide investment advice, legal advice, or regulated financial services. If you are a registered representative, investment adviser, or other regulated professional, you are responsible for ensuring your use of our platform and methodologies complies with all applicable regulations, including FINRA, SEC, and state securities laws. Past performance and case studies do not guarantee future results. Individual results will vary based on effort, market conditions, and business model.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">Victory Vision</p>
+            <p style="opacity: 0.8;">&copy; 2025 Victory Vision. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="mailto:andrew@victoryvisionai.com">Contact</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for scroll reveals
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Form submission
+        document.getElementById('leadForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData.entries());
+            
+            try {
+                const response = await fetch('https://victoryvision.app.n8n.cloud/webhook/pages/lead-submission', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                if (response.ok) {
+                    document.getElementById('leadForm').style.display = 'none';
+                    document.getElementById('thankYou').classList.add('visible');
+                }
+            } catch (error) {
+                console.error('Form submission error:', error);
+                alert('There was an error submitting the form. Please try again or contact us directly at andrew@victoryvisionai.com');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+<script>
+(function(){
+  var PAGE_ID="208",CUSTOMER_ID="glaze@vvdoh.com",AB_VARIANT="A";
+  var TRACK="https://victoryvision.app.n8n.cloud/webhook/pages/track";
+  function sid(){var m=document.cookie.match(/vv_sid=([^;]+)/);if(m)return m[1];var v=Math.random().toString(36).slice(2)+Date.now().toString(36);document.cookie="vv_sid="+v+"; path=/; max-age=7776000; SameSite=Lax";return v;}
+  function track(t,e){try{fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({page_id:parseInt(PAGE_ID,10),customer_id:CUSTOMER_ID,event_type:t,session_id:sid(),ab_variant:AB_VARIANT==="null"?null:AB_VARIANT,metadata:Object.assign({path:location.pathname,referrer:document.referrer},e||{})})}).catch(function(){});}catch(_){}}
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",function(){track("visit");});else track("visit");
+  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(a&&a.href)track("click",{click_target:a.href});},true);
+  document.addEventListener("submit",function(e){if(e.target&&e.target.tagName==="FORM")track("form_submit",{});},true);
+})();
+</script>
+</body>
+</html>
