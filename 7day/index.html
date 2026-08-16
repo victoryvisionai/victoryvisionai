@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free 7-Day AI Meeting Engine | Victory Vision</title>
+    <meta name="description" content="Download the free 7-Day AI Meeting Engine to turn your network into high-value conversations.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0a3161;
+            --accent: #bb133e;
+            --white: #FFFFFF;
+            --off-white: #FAFBFC;
+            --text-dark: #1a1a1a;
+            --text-mid: #4a5568;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            background: var(--off-white);
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--primary);
+        }
+        h1 {
+            font-size: clamp(36px, 5vw, 64px);
+        }
+        h2 {
+            font-size: clamp(28px, 4vw, 42px);
+        }
+        h3 {
+            font-size: clamp(20px, 3vw, 28px);
+        }
+        p {
+            font-size: 18px;
+            color: var(--text-mid);
+        }
+        .container {
+            max-width: 1200px;
+            padding: 0 24px;
+            margin: 0 auto;
+        }
+        .container-narrow {
+            max-width: 760px;
+            padding: 0 24px;
+            margin: 0 auto;
+        }
+        .top-bar {
+            position: sticky;
+            top: 0;
+            background: var(--white);
+            border-bottom: 1px solid var(--text-mid);
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+        }
+        .logo {
+            height: 36px;
+        }
+        .cta-button {
+            display: inline-flex;
+            min-height: 44px;
+            background: var(--accent);
+            color: var(--white);
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 4px 14px rgba(187, 19, 62, 0.25);
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(187, 19, 62, 0.35);
+        }
+        .hero {
+            padding: 80px 0 100px;
+            background: var(--white);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 60px;
+            align-items: center;
+        }
+        .hero-grid {
+            display: flex;
+            gap: 60px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .hero-subhead {
+            font-size: 20px;
+            color: var(--text-mid);
+            line-height: 1.5;
+        }
+        .section {
+            padding: 60px 0;
+        }
+        .section-alt {
+            background: var(--white);
+        }
+        .whats-inside-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+        .inside-item {
+            transition: transform 0.2s, box-shadow 0.2s;
+            padding: 24px 16px;
+            border: 1px solid var(--text-mid);
+            border-radius: 8px;
+            background: var(--white);
+        }
+        .inside-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+        }
+        .inside-number {
+            width: 36px;
+            height: 36px;
+            background: var(--accent);
+            color: var(--white);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-right: 8px;
+        }
+        .who-section {
+            background: var(--primary);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+        .founder-section {
+            background: var(--off-white);
+            padding: 60px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+        .founder-card {
+            background: var(--white);
+            padding: 24px;
+            border-radius: 8px;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            max-width: 600px;
+            text-align: left;
+        }
+        .founder-image {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 4px solid var(--primary);
+        }
+        .cta-section {
+            background: var(--white);
+            text-align: center;
+            padding: 100px 0;
+        }
+        .footer {
+            background: var(--primary);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 48px 0 32px;
+        }
+        .footer-links {
+            margin-bottom: 16px;
+        }
+        .footer-copy {
+            font-size: 14px;
+        }
+        @media (max-width: 820px) {
+            .hero-grid, .whats-inside-grid {
+                grid-template-columns: 1fr;
+            }
+            .founder-card {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18090497137"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-18090497137');
+    </script>
+    <script type="text/javascript">
+        (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"97225334"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+    </script>
+    <script type="text/javascript">
+        _linkedin_partner_id = "8929812";
+        window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+        window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script>
+    <script type="text/javascript">
+        (function(l) {
+            if (!l) {
+                window.lintrk = function(a,b) {
+                    window.lintrk.q.push([a,b])
+                };
+                window.lintrk.q=[]
+            }
+            var s = document.getElementsByTagName("script")[0];
+            var b = document.createElement("script");
+            b.type = "text/javascript";
+            b.async = true;
+            b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+            s.parentNode.insertBefore(b, s);
+        })(window.lintrk);
+    </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18090497137"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","AW-18090497137");</script><script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[];f=function(){var o={ti:"97225334"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")};n=d.createElement(t);n.src=r;n.async=1;n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!="loaded"&&s!="complete"||(f(),n.onload=n.onreadystatechange=null)};i=d.getElementsByTagName(t)[0];i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><script type="text/javascript">_linkedin_partner_id="8929812";window._linkedin_data_partner_ids=window._linkedin_data_partner_ids||[];window._linkedin_data_partner_ids.push(_linkedin_partner_id);</script><script type="text/javascript">(function(l){if(!l){window.lintrk=function(a,b){window.lintrk.q.push([a,b])};window.lintrk.q=[]}var s=document.getElementsByTagName("script")[0];var b=document.createElement("script");b.type="text/javascript";b.async=true;b.src="https://snap.licdn.com/li.lms-analytics/insight.min.js";s.parentNode.insertBefore(b,s)})(window.lintrk);</script><script>(function(){var CID="glaze@vvdoh.com",SLUG="7day",PTYPE="lead_magnet";var TRACK="https://victoryvision.app.n8n.cloud/webhook/engagement/track";try{var params=new URLSearchParams(window.location.search);var utm={utm_source:params.get("utm_source")||"",utm_medium:params.get("utm_medium")||"",utm_campaign:params.get("utm_campaign")||"",utm_content:params.get("utm_content")||"",utm_term:params.get("utm_term")||""};window.__VV_GADS__={"send_to":"AW-18090497137/LZ6qCNmUuqEcEPGonLJD","value":250};/*VV-GADS-WIN*/var vid=localStorage.getItem("vv_vid");if(!vid){vid="v-"+Math.random().toString(36).slice(2,10)+"-"+Date.now();localStorage.setItem("vv_vid",vid);}if(Object.values(utm).some(function(v){return v;}))sessionStorage.setItem("vv_utm",JSON.stringify(utm));var stored=sessionStorage.getItem("vv_utm");if(stored)utm=JSON.parse(stored);fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"page_view",visitor_id:vid,utm:utm,referrer:document.referrer,user_agent:navigator.userAgent,url:window.location.href})}).catch(function(){});document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("form").forEach(function(f){["utm_source","utm_medium","utm_campaign","utm_content","utm_term","visitor_id","slug"].forEach(function(n){var exists=false;for(var k=0;k<f.elements.length;k++){if(f.elements[k].name===n){exists=true;break;}}if(exists)return;var i=document.createElement("input");i.type="hidden";i.name=n;i.value=n==="visitor_id"?vid:(n==="slug"?SLUG:(utm[n]||""));f.appendChild(i);});f.addEventListener("submit",function(){if(window.__VV_GADS__&&typeof gtag==="function"&&window.__VV_GADS__.send_to){try{gtag("event","conversion",{send_to:window.__VV_GADS__.send_to,value:window.__VV_GADS__.value||0,currency:"USD"});}catch(e){}}fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"form_submit",visitor_id:vid,utm:utm,url:window.location.href})}).catch(function(){});});});document.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"link_click",visitor_id:vid,utm:utm,url:a.href})}).catch(function(){});});});});}catch(e){}})();</script></head>
+<body>
+    <div class="top-bar">
+        <img src="https://res.cloudinary.com/dv94te4zt/image/upload/v1753320422/sd4auec2bgofhaleur7o.jpg" alt="Victory Vision" class="logo">
+        <a href="#cta" class="cta-button">Get the Free 7-Day AI Meeting Engine</a>
+    </div>
+
+    <section class="hero">
+        <div class="container hero-grid">
+            <div>
+                <h1>You Probably Already Know Your Next Great Client</h1>
+                <p class="hero-subhead">Use this practical 7-day system to identify the right relationships, sharpen your offer, create relevant outreach, prepare better calls, and put a real meeting engine into motion.</p>
+                <a href="#cta" class="cta-button">Get the Free 7-Day AI Meeting Engine</a>
+            </div>
+            <!-- Hero image omitted as no specific image is provided -->
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container-narrow">
+            <h2>What's Inside</h2>
+            <div class="whats-inside-grid">
+                <div class="inside-item">
+                    <div class="inside-number">1</div>
+                    <h3>30-Day Goal Worksheet</h3>
+                    <p>Define one specific goal to drive your business development efforts for the next 30 days.</p>
+                </div>
+                <div class="inside-item">
+                    <div class="inside-number">2</div>
+                    <h3>ICP Worksheet</h3>
+                    <p>Identify and define your Ideal Customer Profile to target the right relationships.</p>
+                </div>
+                <div class="inside-item">
+                    <div class="inside-number">3</div>
+                    <h3>25 Relationship Scoring Table</h3>
+                    <p>Score and select 25 key relationships to activate immediately.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container-narrow">
+            <h2>What You'll Be Able to Do</h2>
+            <ul class="benefits-list">
+                <li class="benefit-item">
+                    <div class="benefit-icon">1</div>
+                    <div class="benefit-content">
+                        <h3>Define Clear Goals</h3>
+                        <p>Set actionable, time-bound goals that align with your business development strategy.</p>
+                    </div>
+                </li>
+                <li class="benefit-item">
+                    <div class="benefit-icon">2</div>
+                    <div class="benefit-content">
+                        <h3>Target the Right People</h3>
+                        <p>Focus your efforts on individuals who can meaningfully impact your business.</p>
+                    </div>
+                </li>
+                <li class="benefit-item">
+                    <div class="benefit-icon">3</div>
+                    <div class="benefit-content">
+                        <h3>Create Effective Outreach</h3>
+                        <p>Develop tailored messages that resonate with your audience and prompt action.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="who-section">
+        <div class="container-narrow">
+            <h2>Who This Is For</h2>
+            <p>This guide is built for executive recruiters, founders, consultants, investors, and other relationship-driven professionals where one successful relationship can have meaningful economic value.</p>
+        </div>
+    </section>
+
+    <section class="founder-section">
+        <div class="founder-card">
+            <img src="https://res.cloudinary.com/dv94te4zt/image/upload/v1753320422/sd4auec2bgofhaleur7o.jpg" alt="Andrew Glaze" class="founder-image">
+            <div class="founder-content">
+                <h3>Andrew Glaze, CFA</h3>
+                <p>With a background in computer science from West Point and an MBA from Columbia, Andrew brings his extensive experience in investment banking, investing, and AI platform development to provide practical business development strategies.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta" class="cta-section">
+        <h2>Start With 25 Relationships and Seven Days</h2>
+        <p>Stop collecting AI ideas. Put one real business-development experiment into the market.</p>
+        <a href="#cta" class="cta-button">Get the Free 7-Day AI Meeting Engine</a>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#" style="color: inherit; margin-right: 16px;">Privacy Policy</a>
+            <a href="#" style="color: inherit; margin-right: 16px;">Terms of Service</a>
+            <a href="#" style="color: inherit;">Contact Us</a>
+        </div>
+        <div class="footer-copy">&copy; <span id="year"></span> Victory Vision</div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
