@@ -658,7 +658,7 @@ gap: 16px;
 <div class="eyebrow">Operator's Edge + Victory Vision Starter</div>
 <h1>Turn Your Network Into a <span class="highlight">Repeatable Meeting Engine</span></h1>
 <p class="hero-subhead">Learn how to identify the right relationships, create better outreach, improve calls, and build a more disciplined business-development system — then use Victory Vision Starter to put it into practice.</p>
-<div class="hero-price">$990/year</div>
+<div class="hero-price">$999/year</div>
 <p class="hero-price-support">12 months of Operator's Edge + 12 months of Victory Vision Starter.<br>No sales call required.</p>
 <div class="hero-cta-group">
 <a href="#join" class="btn btn-primary">Join Now</a>
@@ -939,7 +939,7 @@ GOAL → ICP → OFFER → TARGET → OUTREACH → CALL → MEETING → LEARN
 <div class="container">
 <span class="section-eyebrow">Join Today</span>
 <h2>You Spent Years Building the Network. <em>Put a System Behind It.</em></h2>
-<div class="cta-price">$990/year</div>
+<div class="cta-price">$999/year</div>
 <p class="cta-support">Includes 12 months of Operator's Edge AI Growth Lab + 12 months of Victory Vision Starter.</p>
 <a href="#contact-form" class="btn btn-primary" style="font-size: 18px; padding: 18px 48px;">Join Now</a>
 <p style="margin-top: 24px; font-size: 16px; color: rgba(255, 255, 255, 0.8);">No sales call required.</p>
@@ -951,10 +951,10 @@ GOAL → ICP → OFFER → TARGET → OUTREACH → CALL → MEETING → LEARN
 <div class="form-wrapper">
 <span class="section-eyebrow">Get Started</span>
 <h2>Start Building Your Meeting Engine</h2>
-<form id="leadForm" action="https://victoryvision.app.n8n.cloud/webhook/pages/lead-submission" method="POST">
+<form id="leadForm" action="https://victoryvision.app.n8n.cloud/webhook/engagement/lead-submit" method="POST">
 <input type="hidden" name="source" value="landing">
 <input type="hidden" name="customer_id" value="glaze@vvdoh.com">
-<input type="hidden" name="page_slug" value="aug26performance">
+<input type="hidden" name="slug" value="aug26performance">
 <div class="form-group">
 <label for="name">Full Name *</label>
 <input type="text" id="name" name="name" required>
@@ -1023,7 +1023,7 @@ const formData = new FormData(e.target);
 const data = Object.fromEntries(formData.entries());
 
 try {
-const response = await fetch('https://victoryvision.app.n8n.cloud/webhook/pages/lead-submission', {
+const response = await fetch('https://victoryvision.app.n8n.cloud/webhook/engagement/lead-submit', {
 method: 'POST',
 headers: {
 'Content-Type': 'application/json',
@@ -1055,16 +1055,6 @@ block: 'start'
 });
 </script>
 
-<script>
-(function(){
-  var PAGE_ID="220",CUSTOMER_ID="glaze@vvdoh.com",AB_VARIANT="null";
-  var TRACK="https://victoryvision.app.n8n.cloud/webhook/pages/track";
-  function sid(){var m=document.cookie.match(/vv_sid=([^;]+)/);if(m)return m[1];var v=Math.random().toString(36).slice(2)+Date.now().toString(36);document.cookie="vv_sid="+v+"; path=/; max-age=7776000; SameSite=Lax";return v;}
-  function track(t,e){try{fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({page_id:parseInt(PAGE_ID,10),customer_id:CUSTOMER_ID,event_type:t,session_id:sid(),ab_variant:AB_VARIANT==="null"?null:AB_VARIANT,metadata:Object.assign({path:location.pathname,referrer:document.referrer},e||{})})}).catch(function(){});}catch(_){}}
-  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",function(){track("visit");});else track("visit");
-  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(a&&a.href)track("click",{click_target:a.href});},true);
-  document.addEventListener("submit",function(e){if(e.target&&e.target.tagName==="FORM")track("form_submit",{});},true);
-})();
-</script>
+<script>(function(){var CID="glaze@vvdoh.com",SLUG="aug26performance-2",PTYPE="landing";var TRACK="https://victoryvision.app.n8n.cloud/webhook/engagement/track";try{var params=new URLSearchParams(window.location.search);var utm={utm_source:params.get("utm_source")||"",utm_medium:params.get("utm_medium")||"",utm_campaign:params.get("utm_campaign")||"",utm_content:params.get("utm_content")||"",utm_term:params.get("utm_term")||""};var vid=localStorage.getItem("vv_vid");if(!vid){vid="v-"+Math.random().toString(36).slice(2,10)+"-"+Date.now();localStorage.setItem("vv_vid",vid);}if(Object.values(utm).some(function(v){return v;}))sessionStorage.setItem("vv_utm",JSON.stringify(utm));var stored=sessionStorage.getItem("vv_utm");if(stored)utm=JSON.parse(stored);fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"page_view",visitor_id:vid,utm:utm,referrer:document.referrer,user_agent:navigator.userAgent,url:window.location.href})}).catch(function(){});document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("form").forEach(function(f){["utm_source","utm_medium","utm_campaign","utm_content","utm_term","visitor_id","slug"].forEach(function(n){var exists=false;for(var k=0;k<f.elements.length;k++){if(f.elements[k].name===n){exists=true;break;}}if(exists)return;var i=document.createElement("input");i.type="hidden";i.name=n;i.value=n==="visitor_id"?vid:(n==="slug"?SLUG:(utm[n]||""));f.appendChild(i);});f.addEventListener("submit",function(){fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"form_submit",visitor_id:vid,utm:utm,url:window.location.href})}).catch(function(){});});});document.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"link_click",visitor_id:vid,utm:utm,url:a.href})}).catch(function(){});});});}catch(e){}})();</script>
 </body>
 </html>
