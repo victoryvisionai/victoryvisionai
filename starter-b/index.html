@@ -756,10 +756,10 @@ text-align: center;
 <div class="eyebrow">OPERATOR'S EDGE + VICTORY VISION STARTER</div>
 <h1>Turn Your Network Into <span class="highlight">Booked Meetings</span></h1>
 <p class="hero-subhead">Learn a practical system for identifying the right people, creating stronger outreach, improving calls, and building a repeatable business-development engine — then use Victory Vision Starter to put the system into practice.</p>
-<div class="hero-price">$990/year</div>
-<p class="hero-supporting">Includes live teaching, office hours, practical workbooks, accountability, community, and Victory Vision Starter access.</p>
+<div class="hero-price">$999/year</div>
+<p class="hero-supporting">Includes live teaching, weekly office hours, practical workbooks, accountability, community, and 12 months of Victory Vision Starter. Office hours include Andrew&rsquo;s read on what he is seeing across capital markets, M&amp;A and private credit. Prefer month to month? Operator&rsquo;s Edge is $99/month for the community; Victory Vision is available separately on a quarterly or annual plan.</p>
 <div class="hero-cta">
-<a href="#join" class="btn btn-primary btn-large" onclick="trackEvent('cta_click', 'hero_primary')">Join Now for $990/year</a>
+<a href="#join" class="btn btn-primary btn-large" onclick="trackEvent('cta_click', 'hero_primary')">Join Now for $999/year</a>
 <a href="https://calendly.com/victoryvision/45-mins" class="btn btn-secondary btn-large" onclick="trackEvent('cta_click', 'hero_secondary')">Schedule a consultation</a>
 </div>
 <p class="hero-microcopy">No sales call required. Start immediately.</p>
@@ -1120,7 +1120,7 @@ text-align: center;
 <span class="section-eyebrow">JOIN NOW</span>
 <h2>You Spent Years Building the Network. Put a System Behind It.</h2>
 <p class="section-intro">Learn the method. Use the platform. Build a repeatable meeting engine.</p>
-<div class="hero-price" style="color: var(--on-dark); text-align: center;">$990/year</div>
+<div class="hero-price" style="color: var(--on-dark); text-align: center;">$999/year</div>
 <div style="text-align: center; margin-top: 32px;">
 <a href="#form" class="btn btn-primary btn-large" onclick="trackEvent('cta_click', 'final_cta'); document.getElementById('lead-form').scrollIntoView({behavior: 'smooth'});">Join Operator's Edge + Victory Vision Starter</a>
 <p class="hero-microcopy" style="margin-top: 16px; text-align: center;">Start immediately. No sales call required.</p>
@@ -1133,10 +1133,10 @@ text-align: center;
 <span class="section-eyebrow">GET STARTED</span>
 <h2>Join Now</h2>
 <div class="form-container">
-<form id="lead-form" action="https://victoryvision.app.n8n.cloud/webhook/pages/lead-submission" method="POST" onsubmit="return handleSubmit(event)">
+<form id="lead-form" action="https://victoryvision.app.n8n.cloud/webhook/engagement/lead-submit" method="POST" onsubmit="return handleSubmit(event)">
 <input type="hidden" name="source" value="landing">
 <input type="hidden" name="customer_id" value="glaze@vvdoh.com">
-<input type="hidden" name="page_slug" value="starter">
+<input type="hidden" name="slug" value="starter">
 <input type="hidden" name="page_view_id" id="page_view_id">
 <input type="hidden" name="utm_source" id="utm_source">
 <input type="hidden" name="utm_medium" id="utm_medium">
@@ -1158,7 +1158,7 @@ text-align: center;
 <label for="phone">Phone</label>
 <input type="tel" id="phone" name="phone">
 </div>
-<button type="submit" class="btn btn-primary btn-large" style="width: 100%;">Submit & Join for $990/year</button>
+<button type="submit" class="btn btn-primary btn-large" style="width: 100%;">Submit & Join for $999/year</button>
 </form>
 <div class="thank-you" id="thank-you">
 <h3>Thank you for joining!</h3>
@@ -1248,7 +1248,7 @@ const form = event.target;
 const formData = new FormData(form);
 const data = Object.fromEntries(formData.entries());
 
-fetch('https://victoryvision.app.n8n.cloud/webhook/pages/lead-submission', {
+fetch('https://victoryvision.app.n8n.cloud/webhook/engagement/lead-submit', {
 method: 'POST',
 headers: {
 'Content-Type': 'application/json',
@@ -1285,16 +1285,6 @@ trackEvent('external_link_click', e.target.href);
 });
 </script>
 
-<script>
-(function(){
-  var PAGE_ID="214",CUSTOMER_ID="glaze@vvdoh.com",AB_VARIANT="A";
-  var TRACK="https://victoryvision.app.n8n.cloud/webhook/pages/track";
-  function sid(){var m=document.cookie.match(/vv_sid=([^;]+)/);if(m)return m[1];var v=Math.random().toString(36).slice(2)+Date.now().toString(36);document.cookie="vv_sid="+v+"; path=/; max-age=7776000; SameSite=Lax";return v;}
-  function track(t,e){try{fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({page_id:parseInt(PAGE_ID,10),customer_id:CUSTOMER_ID,event_type:t,session_id:sid(),ab_variant:AB_VARIANT==="null"?null:AB_VARIANT,metadata:Object.assign({path:location.pathname,referrer:document.referrer},e||{})})}).catch(function(){});}catch(_){}}
-  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",function(){track("visit");});else track("visit");
-  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(a&&a.href)track("click",{click_target:a.href});},true);
-  document.addEventListener("submit",function(e){if(e.target&&e.target.tagName==="FORM")track("form_submit",{});},true);
-})();
-</script>
+<script>(function(){var CID="glaze@vvdoh.com",SLUG="starter-b",PTYPE="landing";var TRACK="https://victoryvision.app.n8n.cloud/webhook/engagement/track";try{var params=new URLSearchParams(window.location.search);var utm={utm_source:params.get("utm_source")||"",utm_medium:params.get("utm_medium")||"",utm_campaign:params.get("utm_campaign")||"",utm_content:params.get("utm_content")||"",utm_term:params.get("utm_term")||""};var vid=localStorage.getItem("vv_vid");if(!vid){vid="v-"+Math.random().toString(36).slice(2,10)+"-"+Date.now();localStorage.setItem("vv_vid",vid);}if(Object.values(utm).some(function(v){return v;}))sessionStorage.setItem("vv_utm",JSON.stringify(utm));var stored=sessionStorage.getItem("vv_utm");if(stored)utm=JSON.parse(stored);fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"page_view",visitor_id:vid,utm:utm,referrer:document.referrer,user_agent:navigator.userAgent,url:window.location.href})}).catch(function(){});document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("form").forEach(function(f){["utm_source","utm_medium","utm_campaign","utm_content","utm_term","visitor_id","slug"].forEach(function(n){var exists=false;for(var k=0;k<f.elements.length;k++){if(f.elements[k].name===n){exists=true;break;}}if(exists)return;var i=document.createElement("input");i.type="hidden";i.name=n;i.value=n==="visitor_id"?vid:(n==="slug"?SLUG:(utm[n]||""));f.appendChild(i);});f.addEventListener("submit",function(){fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"form_submit",visitor_id:vid,utm:utm,url:window.location.href})}).catch(function(){});});});document.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"link_click",visitor_id:vid,utm:utm,url:a.href})}).catch(function(){});});});}catch(e){}})();</script>
 </body>
 </html>
