@@ -839,13 +839,16 @@ margin-top: 0.5rem;
 </div>
 </header>
 
-<section class="hero">
-<div class="container">
-<div class="hero-grid">
-<div class="hero-content">
-<span class="eyebrow">VICTORY VISION GOLD</span>
-<h1>You Already Built the Network.<br>Now Put an <em class="accent-text">AI Sales Desk</em> Behind It.</h1>
-<p class="subhead" style="font-size:1.25rem;color:var(--ink-soft);">Victory Vision Gold helps senior rainmakers decide who matters now, execute highly personalized outreach, prepare calls, manage follow-up, and see what is actually moving toward meetings and opportunities.</p>
+<section class="hero" style="position:relative;overflow:hidden;padding:110px 0;">
+<video autoplay muted loop playsinline poster="https://res.cloudinary.com/dv94te4zt/video/upload/sp_auto/v1787359450/viral_campaign_nocid_1787359449549_1787359449.m3u8" style="position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%);z-index:0;object-fit:cover;">
+<source src="https://res.cloudinary.com/dv94te4zt/video/upload/v1787359450/viral_campaign_nocid_1787359449549_1787359449.mp4" type="video/mp4">
+</video>
+<div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(10,49,97,0.78) 0%, rgba(10,49,97,0.90) 100%);z-index:1;"></div>
+<div class="container" style="position:relative;z-index:2;">
+<div class="hero-content" style="max-width:760px;">
+<span class="eyebrow" style="color:#ffffff;">VICTORY VISION GOLD</span>
+<h1 style="color:#ffffff;">You Already Built the Network.<br>Now Put an <em class="accent-text">AI Sales Desk</em> Behind It.</h1>
+<p class="subhead" style="font-size:1.25rem;color:rgba(255,255,255,0.88);">Victory Vision Gold helps senior rainmakers decide who matters now, execute highly personalized outreach, prepare calls, manage follow-up, and see what is actually moving toward meetings and opportunities.</p>
 <div class="price-block">
 <div class="price-badge">SAVE $2,500 WITH ANNUAL</div>
 <div class="price-amount">$12,500 / YEAR</div>
@@ -855,13 +858,7 @@ margin-top: 0.5rem;
 <a href="#pricing" class="btn btn-primary">BUY GOLD</a>
 <a href="#request-call" class="btn btn-secondary">REQUEST A CONVERSATION</a>
 </div>
-<p class="supporting-text">Built for senior professionals who still personally originate high-value business.</p>
-</div>
-<div class="hero-video-wrapper">
-<video controls poster="https://res.cloudinary.com/dv94te4zt/video/upload/sp_auto/v1787359450/viral_campaign_nocid_1787359449549_1787359449.m3u8">
-<source src="https://res.cloudinary.com/dv94te4zt/video/upload/v1787359450/viral_campaign_nocid_1787359449549_1787359449.mp4" type="video/mp4">
-</video>
-</div>
+<p class="supporting-text" style="color:rgba(255,255,255,0.75);">Built for senior professionals who still personally originate high-value business.</p>
 </div>
 </div>
 </section>
@@ -1462,4 +1459,4 @@ const hero = document.querySelector('.hero');
 const stickyCTA = document.getElementById('stickyCTA');
 const heroObserver = new IntersectionObserver((entries) => {
 entries.forEach(entry => {
-if (!entry.isInters<script>(function(){var CID="glaze@vvdoh.com",SLUG="gold",PTYPE="landing";var TRACK="https://victoryvision.app.n8n.cloud/webhook/engagement/track";try{var params=new URLSearchParams(window.location.search);var utm={utm_source:params.get("utm_source")||"",utm_medium:params.get("utm_medium")||"",utm_campaign:params.get("utm_campaign")||"",utm_content:params.get("utm_content")||"",utm_term:params.get("utm_term")||""};var vid=localStorage.getItem("vv_vid");if(!vid){vid="v-"+Math.random().toString(36).slice(2,10)+"-"+Date.now();localStorage.setItem("vv_vid",vid);}if(Object.values(utm).some(function(v){return v;}))sessionStorage.setItem("vv_utm",JSON.stringify(utm));var stored=sessionStorage.getItem("vv_utm");if(stored)utm=JSON.parse(stored);fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"page_view",visitor_id:vid,utm:utm,referrer:document.referrer,user_agent:navigator.userAgent,url:window.location.href})}).catch(function(){});document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("form").forEach(function(f){["utm_source","utm_medium","utm_campaign","utm_content","utm_term","visitor_id","slug"].forEach(function(n){var exists=false;for(var k=0;k<f.elements.length;k++){if(f.elements[k].name===n){exists=true;break;}}if(exists)return;var i=document.createElement("input");i.type="hidden";i.name=n;i.value=n==="visitor_id"?vid:(n==="slug"?SLUG:(utm[n]||""));f.appendChild(i);});f.addEventListener("submit",function(){fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"form_submit",visitor_id:vid,utm:utm,url:window.location.href})}).catch(function(){});});});document.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"link_click",visitor_id:vid,utm:utm,url:a.href})}).catch(function(){});});});}catch(e){}})();</script>
+if (!entry.isInters<script>window.trackEvent=window.trackEvent||function(){};(function(){var CID="glaze@vvdoh.com",SLUG="gold",PTYPE="landing";var TRACK="https://victoryvision.app.n8n.cloud/webhook/engagement/track";try{var params=new URLSearchParams(window.location.search);var utm={utm_source:params.get("utm_source")||"",utm_medium:params.get("utm_medium")||"",utm_campaign:params.get("utm_campaign")||"",utm_content:params.get("utm_content")||"",utm_term:params.get("utm_term")||""};var vid=localStorage.getItem("vv_vid");if(!vid){vid="v-"+Math.random().toString(36).slice(2,10)+"-"+Date.now();localStorage.setItem("vv_vid",vid);}if(Object.values(utm).some(function(v){return v;}))sessionStorage.setItem("vv_utm",JSON.stringify(utm));var stored=sessionStorage.getItem("vv_utm");if(stored)utm=JSON.parse(stored);fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"page_view",visitor_id:vid,utm:utm,referrer:document.referrer,user_agent:navigator.userAgent,url:window.location.href})}).catch(function(){});document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("form").forEach(function(f){["utm_source","utm_medium","utm_campaign","utm_content","utm_term","visitor_id","slug"].forEach(function(n){var exists=false;for(var k=0;k<f.elements.length;k++){if(f.elements[k].name===n){exists=true;break;}}if(exists)return;var i=document.createElement("input");i.type="hidden";i.name=n;i.value=n==="visitor_id"?vid:(n==="slug"?SLUG:(utm[n]||""));f.appendChild(i);});f.addEventListener("submit",function(){fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"form_submit",visitor_id:vid,utm:utm,url:window.location.href})}).catch(function(){});});});document.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"link_click",visitor_id:vid,utm:utm,url:a.href})}).catch(function(){});});});}catch(e){}})();</script>
