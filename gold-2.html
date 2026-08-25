@@ -1,0 +1,1657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Victory Vision Gold – The AI Sales Desk for Senior Rainmakers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Crimson+Pro:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+<style>
+:root {
+--primary: #0a3161;
+--accent: #bb133e;
+--ink: #121a2b;
+--ink-soft: #5a6679;
+--bg: #ffffff;
+--bg-alt: #f7f9fc;
+--on-dark: #ffffff;
+--gold: #d4af37;
+}
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+background: var(--bg);
+color: var(--ink);
+line-height: 1.6;
+-webkit-font-smoothing: antialiased;
+}
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 24px;
+}
+.container-wide {
+max-width: 1400px;
+margin: 0 auto;
+padding: 0 24px;
+}
+header {
+position: sticky;
+top: 0;
+background: rgba(255, 255, 255, 0.98);
+backdrop-filter: blur(10px);
+border-bottom: 1px solid rgba(10, 49, 97, 0.1);
+z-index: 1000;
+padding: 16px 0;
+}
+header .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+header img {
+height: 40px;
+width: auto;
+}
+.btn {
+display: inline-block;
+padding: 14px 32px;
+font-weight: 600;
+font-size: 16px;
+text-decoration: none;
+border-radius: 6px;
+transition: all 0.3s ease;
+border: none;
+cursor: pointer;
+text-align: center;
+}
+.btn-primary {
+background: var(--accent);
+color: var(--on-dark);
+}
+.btn-primary:hover {
+background: #9a0f32;
+transform: translateY(-1px);
+box-shadow: 0 8px 20px rgba(187, 19, 62, 0.3);
+}
+.btn-secondary {
+background: transparent;
+color: var(--primary);
+border: 2px solid var(--primary);
+}
+.btn-secondary:hover {
+background: var(--primary);
+color: var(--on-dark);
+}
+.btn-large {
+padding: 18px 48px;
+font-size: 18px;
+}
+.hero {
+padding: 80px 0 100px;
+background: linear-gradient(135deg, #f7f9fc 0%, #ffffff 100%);
+}
+.hero-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 60px;
+align-items: center;
+}
+.hero-content {
+}
+.eyebrow {
+display: inline-block;
+font-size: 13px;
+font-weight: 700;
+letter-spacing: 1.5px;
+text-transform: uppercase;
+color: var(--accent);
+margin-bottom: 20px;
+padding: 6px 16px;
+background: rgba(187, 19, 62, 0.1);
+border-radius: 20px;
+font-variant: small-caps;
+}
+h1 {
+font-size: 52px;
+font-weight: 800;
+line-height: 1.1;
+color: var(--primary);
+margin-bottom: 24px;
+}
+h1 .highlight {
+color: var(--accent);
+}
+.subhead {
+font-size: 20px;
+line-height: 1.6;
+color: var(--ink-soft);
+margin-bottom: 32px;
+}
+.price-block {
+background: var(--bg-alt);
+border: 2px solid var(--primary);
+border-radius: 12px;
+padding: 24px;
+margin-bottom: 32px;
+display: inline-block;
+}
+.price-amount {
+font-size: 42px;
+font-weight: 800;
+color: var(--primary);
+}
+.price-period {
+font-size: 18px;
+color: var(--ink-soft);
+}
+.price-badge {
+display: inline-block;
+background: var(--gold);
+color: var(--primary);
+font-weight: 700;
+font-size: 13px;
+padding: 6px 14px;
+border-radius: 20px;
+margin-top: 8px;
+}
+.price-support {
+font-size: 15px;
+color: var(--ink-soft);
+margin-top: 12px;
+}
+.cta-group {
+display: flex;
+gap: 16px;
+margin-bottom: 20px;
+flex-wrap: wrap;
+}
+.hero-note {
+font-size: 14px;
+color: var(--ink-soft);
+font-style: italic;
+}
+.hero-video {
+position: relative;
+border-radius: 12px;
+overflow: hidden;
+box-shadow: 0 20px 60px rgba(10, 49, 97, 0.2);
+}
+.hero-video video {
+width: 100%;
+height: auto;
+display: block;
+}
+section {
+padding: 100px 0;
+}
+.section-dark {
+background: var(--primary);
+color: var(--on-dark);
+}
+.section-dark h2,
+.section-dark h3,
+.section-dark p,
+.section-dark li {
+color: var(--on-dark);
+}
+.section-alt {
+background: var(--bg-alt);
+}
+.section-eyebrow {
+display: block;
+font-size: 12px;
+font-weight: 700;
+letter-spacing: 2px;
+text-transform: uppercase;
+color: var(--accent);
+margin-bottom: 12px;
+text-align: center;
+font-variant: small-caps;
+}
+h2 {
+font-family: 'Crimson Pro', Georgia, serif;
+font-size: 42px;
+font-weight: 300;
+color: var(--primary);
+margin-bottom: 24px;
+line-height: 1.2;
+}
+h2 em {
+font-style: italic;
+}
+h3 {
+font-size: 24px;
+font-weight: 700;
+color: var(--primary);
+margin-bottom: 16px;
+}
+.section-intro {
+font-size: 20px;
+color: var(--ink-soft);
+max-width: 800px;
+margin: 0 auto 60px;
+text-align: center;
+}
+.recognition-section {
+text-align: center;
+}
+.recognition-list {
+max-width: 700px;
+margin: 40px auto;
+text-align: left;
+}
+.recognition-list li {
+font-size: 20px;
+color: var(--ink);
+margin-bottom: 16px;
+font-weight: 600;
+}
+.recognition-conclusion {
+font-size: 28px;
+font-weight: 700;
+color: var(--primary);
+margin-top: 60px;
+}
+.comparison-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 40px;
+max-width: 1000px;
+margin: 60px auto 0;
+}
+.comparison-column {
+background: var(--bg);
+border-radius: 12px;
+padding: 40px;
+}
+.comparison-column h3 {
+text-align: center;
+margin-bottom: 32px;
+font-size: 20px;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+.comparison-column.without {
+border: 2px solid #e2e8f0;
+}
+.comparison-column.with {
+border: 2px solid var(--accent);
+background: linear-gradient(135deg, #fff 0%, #fef5f7 100%);
+}
+.comparison-column ul {
+list-style: none;
+}
+.comparison-column li {
+padding: 12px 0;
+color: var(--ink);
+font-size: 16px;
+border-bottom: 1px solid rgba(10, 49, 97, 0.1);
+}
+.comparison-column li:last-child {
+border-bottom: none;
+}
+.comparison-footer {
+text-align: center;
+margin-top: 60px;
+}
+.comparison-footer p {
+font-size: 24px;
+font-weight: 600;
+color: var(--ink);
+}
+.comparison-footer p:last-child {
+font-size: 20px;
+color: var(--ink-soft);
+margin-top: 8px;
+}
+.workflow {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 60px 0;
+overflow-x: auto;
+padding: 20px 0;
+}
+.workflow-step {
+text-align: center;
+flex: 1;
+min-width: 120px;
+position: relative;
+}
+.workflow-step:not(:last-child)::after {
+content: '→';
+position: absolute;
+right: -20px;
+top: 30px;
+font-size: 24px;
+color: var(--accent);
+font-weight: 700;
+}
+.workflow-icon {
+width: 60px;
+height: 60px;
+background: var(--accent);
+color: var(--on-dark);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 auto 16px;
+font-weight: 800;
+font-size: 18px;
+}
+.workflow-label {
+font-weight: 700;
+font-size: 14px;
+text-transform: uppercase;
+color: var(--primary);
+margin-bottom: 8px;
+}
+.workflow-desc {
+font-size: 13px;
+color: var(--ink-soft);
+line-height: 1.4;
+}
+.proof-section {
+background: var(--primary);
+color: var(--on-dark);
+}
+.proof-content {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 60px;
+align-items: center;
+}
+.proof-image {
+border-radius: 12px;
+overflow: hidden;
+box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+.proof-image img {
+width: 100%;
+height: auto;
+display: block;
+}
+.proof-stats {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 24px;
+margin: 40px 0;
+}
+.stat {
+text-align: center;
+}
+.stat-number {
+font-size: 48px;
+font-weight: 800;
+color: var(--on-dark);
+display: block;
+}
+.stat-label {
+font-size: 14px;
+color: rgba(255, 255, 255, 0.8);
+text-transform: uppercase;
+letter-spacing: 1px;
+margin-top: 8px;
+}
+.proof-disclaimer {
+font-size: 13px;
+color: rgba(255, 255, 255, 0.7);
+font-style: italic;
+margin-top: 32px;
+line-height: 1.6;
+}
+.capabilities-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 40px;
+margin-top: 60px;
+}
+.capability-group h3 {
+font-size: 18px;
+text-transform: uppercase;
+letter-spacing: 1px;
+margin-bottom: 24px;
+color: var(--primary);
+}
+.capability-group ul {
+list-style: none;
+}
+.capability-group li {
+padding: 8px 0;
+color: var(--ink-soft);
+font-size: 15px;
+position: relative;
+padding-left: 20px;
+}
+.capability-group li::before {
+content: '✓';
+position: absolute;
+left: 0;
+color: var(--accent);
+font-weight: 700;
+}
+.callout-box {
+background: linear-gradient(135deg, var(--accent) 0%, #9a0f32 100%);
+color: var(--on-dark);
+padding: 32px;
+border-radius: 12px;
+text-align: center;
+margin-top: 60px;
+}
+.callout-box p {
+font-size: 20px;
+font-weight: 700;
+color: var(--on-dark);
+}
+.human-ai-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 60px;
+max-width: 1000px;
+margin: 60px auto 0;
+}
+.human-ai-column {
+background: var(--bg);
+border-radius: 12px;
+padding: 40px;
+border: 2px solid var(--primary);
+}
+.human-ai-column h3 {
+text-align: center;
+margin-bottom: 32px;
+font-size: 22px;
+}
+.human-ai-column ul {
+list-style: none;
+}
+.human-ai-column li {
+padding: 12px 0;
+color: var(--ink);
+font-size: 16px;
+border-bottom: 1px solid rgba(10, 49, 97, 0.1);
+}
+.human-ai-column li:last-child {
+border-bottom: none;
+}
+.implementation-journey {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 24px;
+margin-top: 60px;
+}
+.journey-step {
+background: var(--bg);
+border: 2px solid var(--primary);
+border-radius: 12px;
+padding: 24px;
+text-align: center;
+}
+.journey-number {
+width: 40px;
+height: 40px;
+background: var(--accent);
+color: var(--on-dark);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 auto 16px;
+font-weight: 800;
+font-size: 18px;
+}
+.journey-step p {
+font-size: 15px;
+color: var(--ink);
+font-weight: 600;
+}
+.timeline {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 32px;
+margin-top: 60px;
+}
+.timeline-week {
+background: var(--bg);
+border-radius: 12px;
+padding: 32px 24px;
+border-left: 4px solid var(--accent);
+}
+.timeline-week h4 {
+font-size: 18px;
+font-weight: 800;
+color: var(--primary);
+margin-bottom: 16px;
+}
+.timeline-week p {
+font-size: 15px;
+color: var(--ink-soft);
+line-height: 1.6;
+}
+.value-visual {
+display: flex;
+justify-content: center;
+gap: 40px;
+margin: 60px 0 40px;
+flex-wrap: wrap;
+}
+.value-amount {
+text-align: center;
+}
+.value-number {
+font-size: 64px;
+font-weight: 800;
+color: var(--accent);
+display: block;
+}
+.value-label {
+font-size: 16px;
+color: var(--ink-soft);
+margin-top: 8px;
+}
+.checklist {
+max-width: 800px;
+margin: 60px auto 0;
+}
+.checklist li {
+padding: 20px;
+background: var(--bg);
+border-radius: 8px;
+margin-bottom: 16px;
+font-size: 18px;
+color: var(--ink);
+display: flex;
+align-items: center;
+gap: 16px;
+}
+.checklist li::before {
+content: '✓';
+width: 32px;
+height: 32px;
+background: var(--accent);
+color: var(--on-dark);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
+font-weight: 800;
+}
+.pricing-card {
+max-width: 600px;
+margin: 60px auto;
+background: var(--bg);
+border: 3px solid var(--primary);
+border-radius: 16px;
+padding: 60px 40px;
+text-align: center;
+box-shadow: 0 20px 60px rgba(10, 49, 97, 0.15);
+position: relative;
+}
+.pricing-badge {
+position: absolute;
+top: -16px;
+left: 50%;
+transform: translateX(-50%);
+background: var(--gold);
+color: var(--primary);
+font-weight: 800;
+font-size: 14px;
+padding: 8px 24px;
+border-radius: 20px;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+.pricing-card h3 {
+font-size: 28px;
+margin-bottom: 24px;
+}
+.pricing-card .price-amount {
+font-size: 56px;
+}
+.pricing-features {
+list-style: none;
+margin: 40px 0;
+text-align: left;
+}
+.pricing-features li {
+padding: 12px 0;
+color: var(--ink);
+font-size: 16px;
+border-bottom: 1px solid rgba(10, 49, 97, 0.1);
+position: relative;
+padding-left: 32px;
+}
+.pricing-features li::before {
+content: '✓';
+position: absolute;
+left: 0;
+color: var(--accent);
+font-weight: 800;
+font-size: 20px;
+}
+.pricing-features li:last-child {
+border-bottom: none;
+}
+.pricing-support {
+font-size: 15px;
+color: var(--ink-soft);
+margin-top: 32px;
+}
+.form-section {
+max-width: 700px;
+margin: 0 auto;
+}
+.form-section h2 {
+text-align: center;
+margin-bottom: 16px;
+}
+.form-section .section-intro {
+margin-bottom: 40px;
+}
+form {
+background: var(--bg);
+padding: 40px;
+border-radius: 12px;
+border: 2px solid var(--primary);
+}
+.form-row {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 20px;
+margin-bottom: 20px;
+}
+.form-group {
+margin-bottom: 20px;
+}
+.form-group label {
+display: block;
+font-weight: 600;
+color: var(--primary);
+margin-bottom: 8px;
+font-size: 14px;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+width: 100%;
+padding: 14px;
+border: 2px solid #e2e8f0;
+border-radius: 6px;
+font-size: 16px;
+font-family: inherit;
+transition: border-color 0.3s ease;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+outline: none;
+border-color: var(--accent);
+}
+.form-group textarea {
+resize: vertical;
+min-height: 100px;
+}
+.faq-section {
+max-width: 900px;
+margin: 0 auto;
+}
+.faq-item {
+background: var(--bg);
+border-radius: 8px;
+padding: 32px;
+margin-bottom: 24px;
+border-left: 4px solid var(--accent);
+}
+.faq-item h3 {
+font-size: 20px;
+margin-bottom: 16px;
+}
+.faq-item p {
+color: var(--ink-soft);
+line-height: 1.7;
+}
+.downsell-card {
+max-width: 500px;
+margin: 40px auto;
+background: var(--bg-alt);
+border: 2px solid var(--ink-soft);
+border-radius: 12px;
+padding: 40px;
+text-align: center;
+}
+.downsell-card h4 {
+font-size: 24px;
+color: var(--primary);
+margin-bottom: 16px;
+}
+.downsell-card .price-amount {
+font-size: 42px;
+}
+.downsell-card p {
+margin: 20px 0;
+color: var(--ink-soft);
+}
+.final-cta {
+background: var(--primary);
+color: var(--on-dark);
+text-align: center;
+padding: 100px 0;
+}
+.final-cta h2 {
+color: var(--on-dark);
+margin-bottom: 40px;
+}
+.final-cta .price-block {
+background: rgba(255, 255, 255, 0.1);
+border-color: var(--on-dark);
+}
+.final-cta .price-amount,
+.final-cta .price-period {
+color: var(--on-dark);
+}
+.final-cta .price-support {
+color: rgba(255, 255, 255, 0.8);
+}
+footer {
+background: var(--primary);
+color: var(--on-dark);
+padding: 60px 0 40px;
+}
+.footer-content {
+text-align: center;
+}
+.footer-links {
+display: flex;
+justify-content: center;
+gap: 32px;
+margin-top: 32px;
+flex-wrap: wrap;
+}
+.footer-links a {
+color: var(--on-dark);
+text-decoration: none;
+font-size: 14px;
+transition: opacity 0.3s ease;
+}
+.footer-links a:hover {
+opacity: 0.7;
+}
+.footer-bottom {
+margin-top: 40px;
+padding-top: 32px;
+border-top: 1px solid rgba(255, 255, 255, 0.2);
+font-size: 14px;
+color: rgba(255, 255, 255, 0.7);
+}
+.sticky-cta {
+position: fixed;
+bottom: 0;
+left: 0;
+right: 0;
+background: rgba(10, 49, 97, 0.98);
+backdrop-filter: blur(10px);
+padding: 16px 0;
+box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+z-index: 999;
+display: none;
+}
+.sticky-cta.visible {
+display: block;
+}
+.sticky-cta .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.sticky-cta-text {
+color: var(--on-dark);
+font-weight: 600;
+font-size: 16px;
+}
+.sticky-cta-actions {
+display: flex;
+gap: 16px;
+align-items: center;
+}
+.sticky-cta-actions a {
+color: rgba(255, 255, 255, 0.8);
+text-decoration: none;
+font-size: 14px;
+}
+.reveal { opacity: 1;
+transform: translateY(30px);
+transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+opacity: 1;
+transform: translateY(0);
+}
+@media (max-width: 1024px) {
+.hero-grid {
+grid-template-columns: 1fr;
+gap: 40px;
+}
+.comparison-grid,
+.human-ai-grid {
+grid-template-columns: 1fr;
+gap: 24px;
+}
+.capabilities-grid {
+grid-template-columns: repeat(2, 1fr);
+gap: 32px;
+}
+.implementation-journey,
+.timeline {
+grid-template-columns: repeat(2, 1fr);
+}
+.workflow {
+flex-wrap: wrap;
+}
+.workflow-step:not(:last-child)::after {
+display: none;
+}
+.proof-content {
+grid-template-columns: 1fr;
+}
+}
+@media (max-width: 768px) {
+h1 {
+font-size: 36px;
+}
+h2 {
+font-size: 32px;
+}
+.subhead {
+font-size: 18px;
+}
+.cta-group {
+flex-direction: column;
+}
+.btn {
+width: 100%;
+}
+.form-row {
+grid-template-columns: 1fr;
+}
+.capabilities-grid,
+.implementation-journey,
+.timeline {
+grid-template-columns: 1fr;
+}
+.value-visual {
+flex-direction: column;
+gap: 24px;
+}
+.sticky-cta .container {
+flex-direction: column;
+gap: 12px;
+text-align: center;
+}
+.sticky-cta-actions {
+flex-direction: column;
+width: 100%;
+}
+.sticky-cta-actions .btn {
+width: 100%;
+}
+.proof-stats {
+grid-template-columns: 1fr;
+}
+}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18090497137"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-18090497137');</script>
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:'97225334'};o.q=w[u],w[u]=new UET(o),w[u].push('pageLoad')},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=='loaded'&&s!=='complete'||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,'script','//bat.bing.com/bat.js','uetq');</script>
+<script type="text/javascript">_linkedin_partner_id='8929812';window._linkedin_data_partner_ids=window._linkedin_data_partner_ids||[];window._linkedin_data_partner_ids.push(_linkedin_partner_id);</script><script type="text/javascript">(function(l){if(!l){window.lintrk=function(a,b){window.lintrk.q.push([a,b])};window.lintrk.q=[]}var s=document.getElementsByTagName('script')[0];var b=document.createElement('script');b.type='text/javascript';b.async=true;b.src='https://snap.licdn.com/li.lms-analytics/insight.min.js';s.parentNode.insertBefore(b,s);})(window.lintrk);</script>
+</head>
+<body>
+
+<header>
+<div class="container">
+<img src="https://res.cloudinary.com/dv94te4zt/image/upload/v1753320422/sd4auec2bgofhaleur7o.jpg" alt="Victory Vision logo">
+<a href="#pricing" class="btn btn-primary">Buy Gold</a>
+</div>
+</header>
+
+<section class="hero">
+<div class="container-wide">
+<div class="hero-grid">
+<div class="hero-content">
+<div class="eyebrow">VICTORY VISION GOLD</div>
+<h1>You Already Built the Network. <span class="highlight">Now Put an AI Sales Desk Behind It.</span></h1>
+<p class="subhead">Victory Vision Gold helps senior rainmakers decide who matters now, execute highly personalized outreach, prepare calls, manage follow-up, and see what is actually moving toward meetings and opportunities.</p>
+<div class="price-block">
+<div class="price-amount">$12,500 <span class="price-period">/ YEAR</span></div>
+<div class="price-badge">SAVE $2,500 WITH ANNUAL</div>
+<div class="price-support">Includes bespoke 1-on-1 implementation and training</div>
+</div>
+<div class="cta-group">
+<a href="#pricing" class="btn btn-primary btn-large">BUY GOLD</a>
+<a href="#request" class="btn btn-secondary btn-large">REQUEST A CONVERSATION</a>
+</div>
+<p class="hero-note">Built for senior professionals who still personally originate high-value business.</p>
+</div>
+<div class="hero-video">
+<video autoplay muted loop playsinline poster="https://res.cloudinary.com/dv94te4zt/video/upload/sp_auto/v1787359450/viral_campaign_nocid_1787359449549_1787359449.m3u8">
+<source src="https://res.cloudinary.com/dv94te4zt/video/upload/v1787359450/viral_campaign_nocid_1787359449549_1787359449.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+</div>
+</section>
+
+<section class="recognition-section reveal">
+<div class="container">
+<span class="section-eyebrow">The Real Problem</span>
+<h2>Your Problem Probably Isn't a <em>Lack of Contacts</em>.</h2>
+<p class="section-intro">If you have been successful for 15 or 20 years, you may already know your next great:</p>
+<div class="recognition-list">
+<ul>
+<li>Client</li>
+<li>Investor</li>
+<li>Referral source</li>
+<li>Mandate</li>
+<li>Search client</li>
+<li>Acquisition target</li>
+<li>Business partner</li>
+</ul>
+</div>
+<p class="section-intro">The problem is usually deciding:</p>
+<div class="recognition-list">
+<ul>
+<li>Who matters right now?</li>
+<li>Why now?</li>
+<li>What should I say?</li>
+<li>Should I email or call?</li>
+<li>Who needs follow-up?</li>
+<li>What happened last time?</li>
+<li>What should I do today?</li>
+</ul>
+</div>
+<p class="recognition-conclusion">Gold is designed to answer those questions before asking you to create more activity.</p>
+</div>
+</section>
+
+<section class="section-alt reveal">
+<div class="container">
+<span class="section-eyebrow">Before / After</span>
+<h2 style="text-align: center; margin-bottom: 60px;">The <em>Before / After</em></h2>
+<div class="comparison-grid">
+<div class="comparison-column without">
+<h3>Without a System</h3>
+<ul>
+<li>3,000 LinkedIn connections</li>
+<li>Scattered spreadsheets</li>
+<li>Unread CRM reminders</li>
+<li>Forgotten follow-ups</li>
+<li>Random prospecting</li>
+<li>Outreach written from scratch</li>
+<li>"Who should I call today?"</li>
+</ul>
+</div>
+<div class="comparison-column with">
+<h3>With Victory Vision Gold</h3>
+<ul>
+<li>Prioritized relationships</li>
+<li>Reason-now intelligence</li>
+<li>Personalized campaigns</li>
+<li>Connected email execution</li>
+<li>Call preparation</li>
+<li>Systematic follow-up</li>
+<li>Engagement signals</li>
+<li>Next-best actions</li>
+<li>Measurable funnel</li>
+</ul>
+</div>
+</div>
+<div class="comparison-footer">
+<p>AI handles more of the repetitive work.</p>
+<p>You remain the rainmaker.</p>
+</div>
+</div>
+</section>
+
+<section class="reveal">
+<div class="container-wide">
+<span class="section-eyebrow">How It Works</span>
+<h2 style="text-align: center; margin-bottom: 20px;">How the <em>AI Sales Desk</em> Works</h2>
+<p class="section-intro">A complete business-development operating system for relationship-driven professionals.</p>
+<div class="workflow">
+<div class="workflow-step">
+<div class="workflow-icon">1</div>
+<div class="workflow-label">Network</div>
+<div class="workflow-desc">Bring together the relationships you have already spent years building.</div>
+</div>
+<div class="workflow-step">
+<div class="workflow-icon">2</div>
+<div class="workflow-label">Prioritize</div>
+<div class="workflow-desc">Identify the people most worthy of senior attention.</div>
+</div>
+<div class="workflow-step">
+<div class="workflow-icon">3</div>
+<div class="workflow-label">Research</div>
+<div class="workflow-desc">Understand the company, person, history and reason to engage.</div>
+</div>
+<div class="workflow-step">
+<div class="workflow-icon">4</div>
+<div class="workflow-label">Outreach</div>
+<div class="workflow-desc">Build highly personalized campaigns and connected email.</div>
+</div>
+<div class="workflow-step">
+<div class="workflow-icon">5</div>
+<div class="workflow-label">Call</div>
+<div class="workflow-desc">Prepare prospect-specific talking points and calling workflows.</div>
+</div>
+<div class="workflow-step">
+<div class="workflow-icon">6</div>
+<div class="workflow-label">Meeting</div>
+<div class="workflow-desc">Capture activity, context and follow-up.</div>
+</div>
+<div class="workflow-step">
+<div class="workflow-icon">7</div>
+<div class="workflow-label">Opportunity</div>
+<div class="workflow-desc">Connect business-development activity to pipeline.</div>
+</div>
+<div class="workflow-step">
+<div class="workflow-icon">8</div>
+<div class="workflow-label">Learn</div>
+<div class="workflow-desc">Use actual outcomes to decide what to do more of, less of or differently.</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="proof-section reveal">
+<div class="container-wide">
+<div class="proof-content">
+<div>
+<span class="section-eyebrow" style="color: rgba(255, 255, 255, 0.9);">Real Results</span>
+<h2 style="color: var(--on-dark);">This Isn't a <em>Mock-Up</em>.</h2>
+<p style="font-size: 20px; line-height: 1.7; margin-bottom: 32px;">This is a real business-development operating snapshot being managed and measured inside Victory Vision.</p>
+<div class="proof-stats">
+<div class="stat">
+<span class="stat-number">619</span>
+<span class="stat-label">Contacts</span>
+</div>
+<div class="stat">
+<span class="stat-number">194</span>
+<span class="stat-label">Emails Sent</span>
+</div>
+<div class="stat">
+<span class="stat-number">28</span>
+<span class="stat-label">Calls</span>
+</div>
+<div class="stat">
+<span class="stat-number">21</span>
+<span class="stat-label">Replies</span>
+</div>
+<div class="stat">
+<span class="stat-number">13</span>
+<span class="stat-label">Meetings Scheduled</span>
+</div>
+<div class="stat">
+<span class="stat-number">11</span>
+<span class="stat-label">Attended</span>
+</div>
+<div class="stat">
+<span class="stat-number">28</span>
+<span class="stat-label">Deals</span>
+</div>
+<div class="stat">
+<span class="stat-number">$4.0M</span>
+<span class="stat-label">Pipeline Tracked</span>
+</div>
+</div>
+<p class="proof-disclaimer">Victory Vision is not being represented as the sole cause of the $4.0M pipeline, nor are these figures presented as expected customer results. This dashboard reflects actual usage by a Victory Vision user during the specified time period.</p>
+<a href="https://victoryvisionai.com/aug26performance/" class="btn btn-primary" style="margin-top: 32px;">SEE THE FULL OPERATING SNAPSHOT</a>
+</div>
+<div class="proof-image">
+<img src="https://res.cloudinary.com/dv94te4zt/image/upload/v1786940973/fut7wf6u7twiyistmyuj.png" alt="Victory Vision dashboard showing funnel analytics and performance metrics">
+</div>
+</div>
+</div>
+</section>
+
+<section class="section-alt reveal">
+<div class="container-wide">
+<span class="section-eyebrow">Capabilities</span>
+<h2 style="text-align: center; margin-bottom: 20px;">What Gold <em>Actually Does</em></h2>
+<p class="section-intro">Organized by outcome, not feature list.</p>
+<div class="capabilities-grid">
+<div class="capability-group">
+<h3>Know Who Matters</h3>
+<ul>
+<li>Contact intelligence</li>
+<li>Segmentation</li>
+<li>Sourcing</li>
+<li>Lookalike prospects</li>
+<li>Enrichment</li>
+<li>Prioritization</li>
+<li>AI next-best actions</li>
+</ul>
+</div>
+<div class="capability-group">
+<h3>Create the Conversation</h3>
+<ul>
+<li>Campaign creation</li>
+<li>Personalized messaging</li>
+<li>Connected outbound email</li>
+<li>Follow-up workflows</li>
+<li>Landing pages/content</li>
+</ul>
+</div>
+<div class="capability-group">
+<h3>Prepare the Rainmaker</h3>
+<ul>
+<li>Prospect research</li>
+<li>Call scripts</li>
+<li>Pre-call preparation</li>
+<li>Calling workflows</li>
+<li>Relationship context</li>
+</ul>
+</div>
+<div class="capability-group">
+<h3>Learn What Works</h3>
+<ul>
+<li>Activity tracking</li>
+<li>Replies</li>
+<li>Meetings</li>
+<li>Funnel analytics</li>
+<li>Pipeline</li>
+<li>Campaign performance</li>
+<li>Next actions</li>
+</ul>
+</div>
+</div>
+<div class="callout-box">
+<p>CONNECTED EMAIL + CALLING ARE INCLUDED WITH GOLD</p>
+</div>
+</div>
+</section>
+
+<section class="reveal">
+<div class="container">
+<span class="section-eyebrow">Human + AI</span>
+<h2 style="text-align: center; margin-bottom: 60px;">The Relationship Still <em>Belongs to You</em>.</h2>
+<div class="human-ai-grid">
+<div class="human-ai-column">
+<h3>YOU PROVIDE</h3>
+<ul>
+<li>Judgment</li>
+<li>Credibility</li>
+<li>Experience</li>
+<li>Trust</li>
+<li>Relationships</li>
+<li>Persuasion</li>
+<li>Closing</li>
+</ul>
+</div>
+<div class="human-ai-column">
+<h3>VICTORY VISION PROVIDES</h3>
+<ul>
+<li>Organization</li>
+<li>Research</li>
+<li>Prioritization</li>
+<li>Preparation</li>
+<li>Execution support</li>
+<li>Follow-up discipline</li>
+<li>Analytics</li>
+</ul>
+</div>
+</div>
+<p style="text-align: center; font-size: 22px; font-weight: 600; color: var(--primary); margin-top: 60px;">Gold is designed to make a great rainmaker more systematic — not replace the person the client actually wants to know.</p>
+</div>
+</section>
+
+<section class="section-alt reveal">
+<div class="container">
+<span class="section-eyebrow">Implementation</span>
+<h2 style="text-align: center; margin-bottom: 20px;">Don't Buy Another Platform and <em>Figure It Out Yourself</em>.</h2>
+<p class="section-intro">Gold includes bespoke 1-on-1 implementation and training so the system is configured around the way you actually win business.</p>
+<div class="implementation-journey">
+<div class="journey-step">
+<div class="journey-number">1</div>
+<p>Define your commercial goal</p>
+</div>
+<div class="journey-step">
+<div class="journey-number">2</div>
+<p>Clarify ICP and offer</p>
+</div>
+<div class="journey-step">
+<div class="journey-number">3</div>
+<p>Segment your existing network</p>
+</div>
+<div class="journey-step">
+<div class="journey-number">4</div>
+<p>Identify first priority targets</p>
+</div>
+<div class="journey-step">
+<div class="journey-number">5</div>
+<p>Configure campaign approach</p>
+</div>
+<div class="journey-step">
+<div class="journey-number">6</div>
+<p>Build outreach</p>
+</div>
+<div class="journey-step">
+<div class="journey-number">7</div>
+<p>Set up calling workflow</p>
+</div>
+<div class="journey-step">
+<div class="journey-number">8</div>
+<p>Establish measurement and next-best-action process</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="reveal">
+<div class="container">
+<span class="section-eyebrow">Timeline</span>
+<h2 style="text-align: center; margin-bottom: 60px;">From Scattered Relationships to a <em>Working Sales Desk</em></h2>
+<div class="timeline">
+<div class="timeline-week">
+<h4>Week 1</h4>
+<p>Goal + ICP + offer</p>
+</div>
+<div class="timeline-week">
+<h4>Week 2</h4>
+<p>First 100 priority relationships</p>
+</div>
+<div class="timeline-week">
+<h4>Week 3</h4>
+<p>Outreach + calling workflows</p>
+</div>
+<div class="timeline-week">
+<h4>Week 4</h4>
+<p>Review engagement, meetings, pipeline and next actions</p>
+</div>
+</div>
+<p style="text-align: center; font-size: 15px; color: var(--ink-soft); margin-top: 40px; font-style: italic;">Victory Vision does not promise a specific number of meetings, deals or revenue. Results depend on your market, offer, relationships and execution.</p>
+</div>
+</section>
+
+<section class="section-alt reveal">
+<div class="container">
+<span class="section-eyebrow">Value</span>
+<h2 style="text-align: center; margin-bottom: 40px;">What Is One Great Relationship <em>Worth</em>?</h2>
+<div class="value-visual">
+<div class="value-amount">
+<span class="value-number">$25K</span>
+</div>
+<div class="value-amount">
+<span class="value-number">$50K</span>
+</div>
+<div class="value-amount">
+<span class="value-number">$100K+</span>
+</div>
+</div>
+<p class="section-intro">Victory Vision Gold is designed for businesses where one successful relationship, client, mandate, search, advisory engagement or transaction can have meaningful economic value.</p>
+<p style="text-align: center; font-size: 18px; font-weight: 600; color: var(--primary); margin-bottom: 60px;">Gold is not intended for every business.</p>
+<div class="pricing-card">
+<div class="pricing-badge">SAVE $2,500 WITH ANNUAL</div>
+<h3>Victory Vision Gold</h3>
+<div class="price-amount">$12,500 <span class="price-period">/ YEAR</span></div>
+<p style="margin-top: 16px; color: var(--ink-soft);">Bespoke 1-on-1 training included</p>
+<div style="margin-top: 40px;">
+<a href="#pricing" class="btn btn-primary btn-large" style="width: 100%;">BUY GOLD</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="reveal">
+<div class="container">
+<span class="section-eyebrow">Qualification</span>
+<h2 style="text-align: center; margin-bottom: 60px;">Gold Is Probably <em>Right for You</em> If…</h2>
+<ul class="checklist">
+<li>You personally win business.</li>
+<li>You already have a valuable professional network.</li>
+<li>One successful engagement has meaningful economics.</li>
+<li>Your problem is consistency, prioritization and follow-up.</li>
+<li>Personalization matters in your market.</li>
+<li>You do not want another SDR to manage.</li>
+<li>You want email, calls, meetings and pipeline in one operating system.</li>
+</ul>
+</div>
+</section>
+
+<section class="section-alt reveal">
+<div class="container">
+<span class="section-eyebrow">Disqualification</span>
+<h2 style="text-align: center; margin-bottom: 60px;">Gold Is Probably <em>Wrong for You</em> If…</h2>
+<ul class="checklist">
+<li>Your customers are low-ticket.</li>
+<li>You want mass automated spam.</li>
+<li>You want to hand the platform entirely to a junior employee.</li>
+<li>You expect software to replace your relationships.</li>
+<li>You want guaranteed meetings or revenue.</li>
+</ul>
+<p style="text-align: center; font-size: 16px; color: var(--ink-soft); margin-top: 40px; font-style: italic;">This qualification should help you make the right decision for your business.</p>
+</div>
+</section>
+
+<section class="reveal" id="pricing">
+<div class="container">
+<span class="section-eyebrow">Pricing</span>
+<h2 style="text-align: center; margin-bottom: 60px;">Victory Vision <em>Gold</em></h2>
+<div class="pricing-card">
+<div class="pricing-badge">SAVE $2,500 WITH ANNUAL</div>
+<h3>VICTORY VISION GOLD</h3>
+<div class="price-amount">$12,500 <span class="price-period">/ YEAR</span></div>
+<ul class="pricing-features">
+<li>Full Gold platform</li>
+<li>Connected email</li>
+<li>Calling workflows</li>
+<li>Relationship intelligence</li>
+<li>AI outreach</li>
+<li>Campaign execution</li>
+<li>Advanced analytics</li>
+<li>Next-best actions</li>
+<li>Bespoke 1-on-1 implementation/training</li>
+</ul>
+<div style="margin-top: 40px;">
+<a href="https://victoryvisionai.com/checkout?product=gold" class="btn btn-primary btn-large" style="width: 100%;">BUY GOLD — $12,500</a>
+</div>
+<p class="pricing-support">Prefer to discuss your workflow first?</p>
+<div style="margin-top: 16px;">
+<a href="#request" class="btn btn-secondary" style="width: 100%;">REQUEST A CONVERSATION</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section-alt reveal" id="request">
+<div class="container">
+<div class="form-section">
+<span class="section-eyebrow">Contact</span>
+<h2>Think You're a Fit but Want to <em>Talk First</em>?</h2>
+<p class="section-intro">Request a private conversation with our team to discuss your specific business-development workflow.</p>
+<form action="https://victoryvision.app.n8n.cloud/webhook/engagement/lead-submit" method="POST">
+<input type="hidden" name="customer_id" value="glaze@vvdoh.com">
+<input type="hidden" name="slug" value="gold">
+<input type="hidden" name="source" value="landing">
+<div class="form-row">
+<div class="form-group">
+<label for="first_name">First Name *</label>
+<input type="text" id="first_name" name="first_name" required>
+</div>
+<div class="form-group">
+<label for="last_name">Last Name *</label>
+<input type="text" id="last_name" name="last_name" required>
+</div>
+</div>
+<div class="form-group">
+<label for="company">Company *</label>
+<input type="text" id="company" name="company" required>
+</div>
+<div class="form-group">
+<label for="email">Work Email *</label>
+<input type="email" id="email" name="email" required>
+</div>
+<div class="form-group">
+<label for="linkedin">LinkedIn URL</label>
+<input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+</div>
+<div class="form-group">
+<label for="phone">Phone</label>
+<input type="tel" id="phone" name="phone">
+</div>
+<div class="form-group">
+<label for="goal">What would you most like Victory Vision to help you accomplish? (Optional)</label>
+<textarea id="goal" name="goal" rows="4"></textarea>
+</div>
+<div class="form-group">
+<label for="deal_value">Approximately what is one successful new client / mandate / engagement worth? *</label>
+<select id="deal_value" name="deal_value" required>
+<option value="">Select range...</option>
+<option value="under_10k">Under $10K</option>
+<option value="10k_25k">$10K–$25K</option>
+<option value="25k_50k">$25K–$50K</option>
+<option value="50k_100k">$50K–$100K</option>
+<option value="100k_plus">$100K+</option>
+</select>
+</div>
+<button type="submit" class="btn btn-primary btn-large" style="width: 100%;">REQUEST A PRIVATE CONVERSATION</button>
+</form>
+</div>
+</div>
+</section>
+
+<section class="reveal">
+<div class="container">
+<div class="faq-section">
+<span class="section-eyebrow">FAQ</span>
+<h2 style="text-align: center; margin-bottom: 60px;">Frequently Asked <em>Questions</em></h2>
+<div class="faq-item">
+<h3>Why is Gold $12,500?</h3>
+<p>Gold combines the full Victory Vision execution platform, including connected email and calling capabilities, advanced automation, relationship intelligence, and bespoke 1-on-1 implementation and training. The price reflects the combination of sophisticated technology and personalized onboarding designed to configure the system around the way you actually win business.</p>
+</div>
+<div class="faq-item">
+<h3>How is Gold different from Starter?</h3>
+<p>Starter is the learn/practice layer, designed for professionals who want to learn the methodology and begin working their network. Gold includes the full execution stack, including connected email and calling, advanced automation, deeper analytics, and personalized implementation support.</p>
+</div>
+<div class="faq-item">
+<h3>Do I have to book a sales call?</h3>
+<p>No. Qualified buyers who understand their business-development workflow and recognize the fit can purchase directly from this page.</p>
+</div>
+<div class="faq-item">
+<h3>Is this for teams?</h3>
+<p>Gold can support a broader workflow, but the core offer is designed around senior rainmakers who remain personally involved in winning business. If you need multi-seat licensing or team workflows, request a conversation to discuss your specific needs.</p>
+</div>
+<div class="faq-item">
+<h3>Does Victory Vision guarantee meetings or revenue?</h3>
+<p>No. Victory Vision is a business-development operating system that helps you systematize relationship-driven prospecting, outreach, follow-up and pipeline management. Results depend on your market, offer, existing relationships, and execution discipline.</p>
+</div>
+<div class="faq-item">
+<h3>What does the 1-on-1 training include?</h3>
+<p>Bespoke implementation includes working sessions to define your commercial goal, clarify your ICP and offer, segment your existing network, identify priority targets, configure campaign approach, build outreach workflows, set up calling processes, and establish measurement and next-best-action systems. The scope is designed to get you operational, not provide unlimited ongoing consulting.</p>
+</div>
+<div class="faq-item">
+<h3>What if Gold is more than I need?</h3>
+<p>If you want to learn the methodology first and begin working your network without the full execution stack, consider starting with Operator's Edge + Victory Vision Starter at $990/year. You can always upgrade to Gold when you are ready for connected email, calling, and advanced automation.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section-alt reveal">
+<div class="container">
+<span class="section-eyebrow">Alternative</span>
+<h2 style="text-align: center; margin-bottom: 40px;">Not Ready for the Full <em>Gold Execution Stack</em>?</h2>
+<div class="downsell-card">
+<h4>Operator's Edge + Victory Vision Starter</h4>
+<div class="price-amount">$990 <span class="price-period">/ YEAR</span></div>
+<p>Learn the methodology, join live office hours, use practical workbooks and begin working your real network inside Victory Vision Starter.</p>
+<a href="https://victoryvisionai.com/starter/" class="btn btn-secondary" style="width: 100%;">START WITH OPERATOR'S EDGE — $990</a>
+</div>
+</div>
+</section>
+
+<section class="reveal">
+<div class="container">
+<div style="max-width: 600px; margin: 0 auto; text-align: center;">
+<span class="section-eyebrow">Free Resource</span>
+<h2 style="margin-bottom: 24px;">Still Evaluating the Opportunity in <em>Your Network</em>?</h2>
+<p style="font-size: 18px; color: var(--ink-soft); margin-bottom: 32px;">Get the free Senior Rainmaker Network Opportunity Audit</p>
+<a href="https://victoryvisionai.com/gold-rainmaker/" class="btn btn-secondary">GET THE FREE AUDIT</a>
+</div>
+</div>
+</section>
+
+<section class="final-cta">
+<div class="container">
+<img src="https://res.cloudinary.com/dv94te4zt/image/upload/v1753320422/sd4auec2bgofhaleur7o.jpg" alt="Victory Vision logo" style="height: 50px; width: auto; margin: 0 auto 40px; display: block; filter: brightness(0) invert(1);">
+<h2 style="font-family: 'Crimson Pro', Georgia, serif; font-weight: 300;">You Spent Years Building the Network.<br><em>Put a System Behind It.</em></h2>
+<div class="price-block">
+<div style="font-size: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; color: var(--on-dark);">VICTORY VISION GOLD</div>
+<div class="price-amount">$12,500 <span class="price-period">/ YEAR</span></div>
+<div class="price-badge">SAVE $2,500 WITH ANNUAL</div>
+<div class="price-support">Bespoke 1-on-1 training included</div>
+</div>
+<div class="cta-group" style="justify-content: center; margin-top: 40px;">
+<a href="https://victoryvisionai.com/checkout?product=gold" class="btn btn-primary btn-large">BUY GOLD</a>
+<a href="#request" class="btn btn-secondary btn-large">REQUEST A CONVERSATION</a>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<div class="footer-content">
+<p style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">Victory Vision</p>
+<p style="font-size: 14px; color: rgba(255, 255, 255, 0.7);">The AI Sales Desk for Senior Rainmakers</p>
+<div class="footer-links">
+<a href="https://victoryvisionai.com/privacy">Privacy Policy</a>
+<a href="https://victoryvisionai.com/terms">Terms of Service</a>
+<a href="mailto:andrew@victoryvisionai.com">Contact</a>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2025 Victory Vision. All rights reserved.</p>
+<p style="margin-top: 16px; font-size: 13px; line-height: 1.6;">Victory Vision is a business development operating system. We do not guarantee specific meetings, revenue, or business outcomes. Results depend on your market, offer, relationships, and execution. All case studies and performance data represent actual user results during specified periods and are not presented as typical or guaranteed outcomes. Individual results will vary based on numerous factors including industry, experience, network quality, and consistent platform usage.</p>
+</div>
+</div>
+</div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta">
+<div class="container">
+<div class="sticky-cta-text">Victory Vision Gold — $12,500/year</div>
+<div class="sticky-cta-actions">
+<a href="https://victoryvisionai.com/checkout?product=gold" class="btn btn-primary">BUY GOLD — $12,500/YEAR</a>
+<a href="mailto:andrew@victoryvisionai.com">Questions? Talk to Andrew</a>
+</div>
+</div>
+</div>
+
+<script>
+// Tracker script injection
+(function() {
+const script = document.createElement('script');
+script.src = 'https://victoryvision.app.n8n.cloud/tracker.js';
+script.async = true;
+document.head.appendChild(script);
+})();
+
+// Intersection Observer for reveal animations
+const revealElements = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+}
+});
+}, {
+threshold: 0.1
+});
+
+revealElements.forEach(el => {
+revealObserver.observe(el);
+});
+
+// Sticky CTA
+const stickyCta = document.getElementById('stickyCta');
+const hero = document.querySelector('.hero');
+let heroBottom = 0;
+
+function updateHeroBottom() {
+heroBottom = hero.offsetTop + hero.offsetHeight;
+}
+
+updateHeroBottom();
+window.addEventListener('resize', updateHeroBottom);
+
+window.addEventListener('scroll', () => {
+if (window.scrollY > heroBottom) {
+stickyCta.classList.add('visible');
+} else {
+stickyCta.classList.remove('visible');
+}
+});
+
+// Video tracking
+const heroVideo = document.querySelector('.hero-video video');
+if (heroVideo) {
+let tracked25 = false, tracked50 = false, tracked75 = false, tracked100 = false;
+
+heroVideo.addEventListener('play', () => {
+if (window.vv && window.vv.track) {
+window.vv.track('gold_video_start');
+}
+});
+
+heroVideo.addEventListener('timeupdate', () => {
+const percent = (heroVideo.currentTime / heroVideo.duration) * 100;
+if (percent >= 25 && !tracked25) {
+tracked25 = true;
+if (window.vv && window.vv.track) window.vv.track('gold_video_25');
+}
+if (percent >= 50 && !tracked50) {
+tracked50 = true;
+if (window.vv && window.vv.track) window.vv.track('gold_video_50');
+}
+if (percent >= 75 && !tracked75) {
+tracked75 = true;
+if (window.vv && window.vv.track) window.vv.track('gold_video_75');
+}
+});
+
+heroVideo.addEventListener('ended', () => {
+if (!tracked100) {
+tracked100 = true;
+if (window.vv && window.vv.track) window.vv.track('gold_video_complete');
+}
+});
+}
+
+// Proof section view tracking
+const proofSection = document.querySelector('.proof-section');
+if (proofSection) {
+const proofObserver = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+if (window.vv && window.vv.track) {
+window.vv.track('gold_proof_view');
+}
+proofObserver.unobserve(entry.target);
+}
+});
+}, { threshold: 0.5 });
+proofObserver.observe(proofSection);
+}
+
+// Pricing section view tracking
+const pricingSection = document.getElementById('pricing');
+if (pricingSection) {
+const pricingObserver = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+if (window.vv && window.vv.track) {
+window.vv.track('gold_pricing_view');
+}
+pricingObserver.unobserve(entry.target);
+}
+});
+}, { threshold: 0.5 });
+pricingObserver.observe(pricingSection);
+}
+
+// Performance link click tracking
+const perfLink = document.querySelector('a[href*="aug26performance"]');
+if (perfLink) {
+perfLink.addEventListener('click', () => {
+if (window.vv && window.vv.track) {
+window.vv.track('gold_performance_click');
+}
+});
+}
+
+// Buy button click tracking
+const buyButtons = document.querySelectorAll('a[href*="checkout"]');<script>window.trackEvent=window.trackEvent||function(){};(function(){var CID="glaze@vvdoh.com",SLUG="gold",PTYPE="landing";var TRACK="https://victoryvision.app.n8n.cloud/webhook/engagement/track";try{var params=new URLSearchParams(window.location.search);var utm={utm_source:params.get("utm_source")||"",utm_medium:params.get("utm_medium")||"",utm_campaign:params.get("utm_campaign")||"",utm_content:params.get("utm_content")||"",utm_term:params.get("utm_term")||""};var vid=localStorage.getItem("vv_vid");if(!vid){vid="v-"+Math.random().toString(36).slice(2,10)+"-"+Date.now();localStorage.setItem("vv_vid",vid);}if(Object.values(utm).some(function(v){return v;}))sessionStorage.setItem("vv_utm",JSON.stringify(utm));var stored=sessionStorage.getItem("vv_utm");if(stored)utm=JSON.parse(stored);fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"page_view",visitor_id:vid,utm:utm,referrer:document.referrer,user_agent:navigator.userAgent,url:window.location.href})}).catch(function(){});document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("form").forEach(function(f){["utm_source","utm_medium","utm_campaign","utm_content","utm_term","visitor_id","slug"].forEach(function(n){var exists=false;for(var k=0;k<f.elements.length;k++){if(f.elements[k].name===n){exists=true;break;}}if(exists)return;var i=document.createElement("input");i.type="hidden";i.name=n;i.value=n==="visitor_id"?vid:(n==="slug"?SLUG:(utm[n]||""));f.appendChild(i);});f.addEventListener("submit",function(){fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"form_submit",visitor_id:vid,utm:utm,url:window.location.href})}).catch(function(){});});});document.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"link_click",visitor_id:vid,utm:utm,url:a.href})}).catch(function(){});});});}catch(e){}})();</script>
