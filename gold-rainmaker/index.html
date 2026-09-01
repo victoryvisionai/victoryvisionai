@@ -375,6 +375,34 @@
     </script>
 
 <p style="text-align:center;padding:16px;font-size:14px;">Want to go deeper? <a href="https://www.skool.com/victoryvision/about">Join Operator's Edge</a></p>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var form = document.querySelector('form[action*="lead-submit"]');
+  if (!form) return;
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = form.querySelector('button[type="submit"]');
+    var originalText = btn ? btn.textContent : '';
+    if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
+    var fd = new FormData(form);
+    var params = new URLSearchParams();
+    fd.forEach(function(value, key) { params.append(key, value); });
+    fetch(form.action, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+      body: params.toString()
+    }).then(function() {
+      var msg = document.createElement('p');
+      msg.textContent = "Thanks! Check your email — we just sent your download link.";
+      msg.style.cssText = 'font-weight:600;padding:16px;text-align:center;';
+      form.replaceWith(msg);
+    }).catch(function() {
+      if (btn) { btn.disabled = false; btn.textContent = originalText; }
+      alert('Something went wrong submitting the form. Please try again or email us directly.');
+    });
+  });
+});
+</script>
 </body>
 
 </html>
