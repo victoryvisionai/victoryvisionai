@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>West Point PE & Asset Management | Victory Vision</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0a3161;
+            --accent: #bb133e;
+            --ink: #121a2b;
+            --ink-soft: #5a6679;
+            --bg: #ffffff;
+            --bg-alt: #f7f9fc;
+            --on-dark: #ffffff;
+            --gold: #c5a572;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--ink);
+            background: var(--bg);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Inter', serif;
+            font-weight: 300;
+            line-height: 1.2;
+            color: var(--primary);
+        }
+        
+        h1 em, h2 em, h3 em, h4 em {
+            font-style: italic;
+            font-weight: 300;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        header {
+            position: sticky;
+            top: 0;
+            background: var(--bg);
+            border-bottom: 1px solid #e5e7eb;
+            z-index: 100;
+            padding: 16px 0;
+        }
+        
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header img {
+            height: 40px;
+            width: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .btn-primary {
+            background: var(--accent);
+            color: #ffffff;
+        }
+        
+        .btn-primary:hover {
+            background: #9a0f33;
+            transform: translateY(-1px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: #ffffff;
+        }
+        
+        .eyebrow {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--ink-soft);
+            margin-bottom: 16px;
+            font-variant: small-caps;
+        }
+        
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, var(--primary) 0%, #0d4a8a 100%);
+            color: var(--on-dark);
+            padding: 120px 0 100px;
+            overflow: hidden;
+        }
+        
+        .hero-video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.15;
+        }
+        
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero .eyebrow {
+            color: var(--gold);
+        }
+        
+        .hero h1 {
+            font-size: 72px;
+            margin-bottom: 24px;
+            color: var(--on-dark);
+            font-weight: 300;
+        }
+        
+        .hero h1 .accent {
+            color: var(--gold);
+            display: block;
+            font-style: italic;
+        }
+        
+        .hero-subhead {
+            font-size: 22px;
+            line-height: 1.6;
+            color: var(--on-dark);
+            max-width: 800px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .story-section {
+            padding: 100px 0;
+            background: var(--bg);
+        }
+        
+        .story-intro {
+            max-width: 900px;
+            margin: 0 auto 60px;
+            text-align: center;
+        }
+        
+        .story-intro .eyebrow {
+            text-align: center;
+        }
+        
+        .story-intro h2 {
+            font-size: 48px;
+            margin-bottom: 24px;
+            font-weight: 300;
+        }
+        
+        .story-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .story-content p {
+            font-size: 18px;
+            margin-bottom: 24px;
+            color: var(--ink-soft);
+        }
+        
+        .pullquote {
+            background: linear-gradient(135deg, var(--gold) 0%, #d4b87a 100%);
+            color: var(--primary);
+            padding: 32px;
+            margin: 40px 0;
+            border-left: 4px solid var(--primary);
+            font-size: 20px;
+            font-weight: 600;
+            font-style: italic;
+        }
+        
+        .problem-section {
+            background: var(--primary);
+            color: var(--on-dark);
+            padding: 100px 0;
+        }
+        
+        .problem-section .eyebrow {
+            text-align: center;
+            color: var(--gold);
+        }
+        
+        .problem-section h2 {
+            font-size: 48px;
+            margin-bottom: 48px;
+            text-align: center;
+            color: var(--on-dark);
+            font-weight: 300;
+        }
+        
+        .problem-list {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .problem-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 24px;
+            font-size: 20px;
+            color: var(--on-dark);
+        }
+        
+        .checkbox {
+            width: 24px;
+            height: 24px;
+            border: 2px solid var(--gold);
+            border-radius: 4px;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+        
+        .relationships-section {
+            padding: 100px 0;
+            background: var(--bg-alt);
+        }
+        
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .relationships-section .eyebrow {
+            margin-bottom: 16px;
+        }
+        
+        .relationships-section h2 {
+            font-size: 42px;
+            margin-bottom: 32px;
+            font-weight: 300;
+        }
+        
+        .relationships-section p {
+            font-size: 18px;
+            color: var(--ink-soft);
+            line-height: 1.8;
+        }
+        
+        .network-visual {
+            text-align: center;
+        }
+        
+        .network-svg {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .case-study {
+            padding: 100px 0;
+            background: var(--bg);
+        }
+        
+        .case-study-card {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-alt);
+            padding: 60px;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .case-study .eyebrow {
+            margin-bottom: 16px;
+        }
+        
+        .case-study h2 {
+            font-size: 42px;
+            margin-bottom: 16px;
+            font-weight: 300;
+        }
+        
+        .case-study-subtitle {
+            font-size: 18px;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 32px;
+        }
+        
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 48px;
+            position: relative;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gold);
+            z-index: 0;
+        }
+        
+        .timeline-item {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .timeline-dot {
+            width: 40px;
+            height: 40px;
+            background: var(--gold);
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-weight: 700;
+        }
+        
+        .timeline-label {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        
+        .timeline-desc {
+            font-size: 14px;
+            color: var(--ink-soft);
+        }
+        
+        .challenge-section {
+            background: linear-gradient(135deg, var(--gold) 0%, #d4b87a 100%);
+            padding: 100px 0;
+        }
+        
+        .challenge-section .eyebrow {
+            text-align: center;
+            color: var(--primary);
+        }
+        
+        .challenge-section h2 {
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 48px;
+            color: var(--primary);
+            font-weight: 300;
+        }
+        
+        .goal-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .goal-btn {
+            background: var(--bg);
+            color: var(--primary);
+            padding: 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .goal-btn:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .system-section {
+            padding: 100px 0;
+            background: var(--bg);
+        }
+        
+        .system-section .eyebrow {
+            text-align: center;
+        }
+        
+        .system-section h2 {
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 60px;
+            font-weight: 300;
+        }
+        
+        .system-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .system-card {
+            background: var(--bg-alt);
+            padding: 48px;
+            border-radius: 12px;
+            border: 2px solid #e5e7eb;
+        }
+        
+        .system-card h3 {
+            font-size: 32px;
+            margin-bottom: 24px;
+            color: var(--primary);
+            font-weight: 300;
+        }
+        
+        .system-card ul {
+            list-style: none;
+        }
+        
+        .system-card li {
+            padding: 12px 0;
+            color: var(--ink-soft);
+            font-size: 16px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .system-card li:last-child {
+            border-bottom: none;
+        }
+        
+        .system-card li::before {
+            content: '→';
+            color: var(--accent);
+            font-weight: 700;
+            margin-right: 12px;
+        }
+        
+        .founder-section {
+            padding: 100px 0;
+            background: var(--bg-alt);
+        }
+        
+        .founder-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .founder-content .eyebrow {
+            text-align: center;
+        }
+        
+        .founder-content h2 {
+            font-size: 42px;
+            margin-bottom: 24px;
+            font-weight: 300;
+        }
+        
+        .founder-credentials {
+            font-size: 18px;
+            color: var(--ink-soft);
+            margin-bottom: 24px;
+        }
+        
+        .founder-quote {
+            font-size: 24px;
+            font-style: italic;
+            color: var(--primary);
+            font-weight: 600;
+            margin-top: 32px;
+        }
+        
+        .social-proof {
+            padding: 100px 0;
+            background: var(--bg);
+        }
+        
+        .social-proof .eyebrow {
+            text-align: center;
+        }
+        
+        .social-proof h2 {
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 60px;
+            font-weight: 300;
+        }
+        
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .proof-card {
+            background: var(--bg-alt);
+            padding: 32px;
+            border-radius: 8px;
+            border-left: 4px solid var(--gold);
+        }
+        
+        .proof-name {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        
+        .proof-title {
+            font-size: 14px;
+            color: var(--ink-soft);
+        }
+        
+        .cta-section {
+            background: var(--primary);
+            color: var(--on-dark);
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .cta-section .eyebrow {
+            text-align: center;
+            color: var(--gold);
+        }
+        
+        .cta-section h2 {
+            font-size: 48px;
+            margin-bottom: 24px;
+            color: var(--on-dark);
+            font-weight: 300;
+        }
+        
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            color: var(--on-dark);
+            opacity: 0.95;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-buttons .btn-primary {
+            background: var(--gold);
+            color: var(--primary);
+        }
+        
+        .cta-buttons .btn-primary:hover {
+            background: #d4b87a;
+        }
+        
+        .lead-form-section {
+            padding: 100px 0;
+            background: var(--bg-alt);
+        }
+        
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-container .eyebrow {
+            text-align: center;
+        }
+        
+        .form-container h2 {
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 16px;
+            font-weight: 300;
+        }
+        
+        .form-intro {
+            text-align: center;
+            color: var(--ink-soft);
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+        
+        .form-group {
+            margin-bottom: 24px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #e5e7eb;
+            border-radius: 6px;
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: var(--accent);
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .submit-btn:hover {
+            background: #9a0f33;
+            transform: translateY(-1px);
+        }
+        
+        .disclosure {
+            padding: 60px 0;
+            background: var(--bg);
+        }
+        
+        .disclosure p {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 14px;
+            color: var(--ink-soft);
+            line-height: 1.8;
+        }
+        
+        footer {
+            background: var(--primary);
+            color: var(--on-dark);
+            padding: 60px 0 40px;
+        }
+        
+        .footer-content {
+            text-align: center;
+        }
+        
+        .footer-motto {
+            font-family: 'Inter', serif;
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 24px;
+            color: var(--gold);
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+        
+        .footer-links a {
+            color: var(--on-dark);
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+        
+        .footer-copy {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 56px;
+            }
+            
+            .two-col,
+            .system-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline {
+                flex-direction: column;
+                gap: 32px;
+            }
+            
+            .timeline::before {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 42px;
+            }
+            
+            .hero-subhead {
+                font-size: 18px;
+            }
+            
+            h2 {
+                font-size: 36px !important;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .story-section,
+            .problem-section,
+            .relationships-section,
+            .case-study,
+            .challenge-section,
+            .system-section,
+            .founder-section,
+            .social-proof,
+            .cta-section,
+            .lead-form-section {
+                padding: 60px 0;
+            }
+            
+            .case-study-card,
+            .system-card {
+                padding: 32px 24px;
+            }
+        }
+    </style>
+    <script>
+        (function() {
+            const params = new URLSearchParams(window.location.search);
+            const visitorId = 'visitor_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+            
+            window.vvTracking = {
+                utm_source: params.get('utm_source') || '',
+                utm_medium: params.get('utm_medium') || '',
+                utm_campaign: params.get('utm_campaign') || '',
+                utm_content: params.get('utm_content') || '',
+                utm_term: params.get('utm_term') || '',
+                visitor_id: visitorId
+            };
+            
+            document.addEventListener('DOMContentLoaded', function() {
+                const forms = document.querySelectorAll('form');
+                forms.forEach(function(form) {
+                    Object.keys(window.vvTracking).forEach(function(key) {
+                        if (!form.querySelector('input[name="' + key + '"]')) {
+                            const input = document.createElement('input');
+                            input.type = 'hidden';
+                            input.name = key;
+                            input.value = window.vvTracking[key];
+                            form.appendChild(input);
+                        }
+                    });
+                });
+            });
+        })();
+    </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18090497137"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-18090497137');</script>
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:'97225334'};o.q=w[u],w[u]=new UET(o),w[u].push('pageLoad')},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=='loaded'&&s!=='complete'||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,'script','//bat.bing.com/bat.js','uetq');</script>
+<script type="text/javascript">_linkedin_partner_id='8929812';window._linkedin_data_partner_ids=window._linkedin_data_partner_ids||[];window._linkedin_data_partner_ids.push(_linkedin_partner_id);</script><script type="text/javascript">(function(l){if(!l){window.lintrk=function(a,b){window.lintrk.q.push([a,b])};window.lintrk.q=[]}var s=document.getElementsByTagName('script')[0];var b=document.createElement('script');b.type='text/javascript';b.async=true;b.src='https://snap.licdn.com/li.lms-analytics/insight.min.js';s.parentNode.insertBefore(b,s);})(window.lintrk);</script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="https://res.cloudinary.com/dv94te4zt/image/upload/v1753320422/sd4auec2bgofhaleur7o.jpg" alt="Victory Vision logo">
+            <a href="https://calendar.app.google/NQdpcCKsx1rQtfdn9" class="btn btn-primary">Book a Call</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <video class="hero-video-bg" autoplay muted loop playsinline>
+            <source src="https://res.cloudinary.com/dv94te4zt/video/upload/v1790488028/viral_campaign_nocid_1790488028441_1790488028.mp4" type="video/mp4">
+        </video>
+        <div class="container">
+            <div class="eyebrow">West Point • PE • Asset Management</div>
+            <h1>
+                <em class="accent">One Introduction</em>
+                Can Change Everything
+            </h1>
+            <p class="hero-subhead">
+                You've spent 20 years building a valuable network. What if you had a systematic way to turn dormant relationships into your next $50K engagement?
+            </p>
+            <div class="hero-cta">
+                <a href="#lead-form" class="btn btn-primary">Join 100 West Point Grads Building Better Businesses</a>
+                <a href="https://calendar.app.google/NQdpcCKsx1rQtfdn9" class="btn btn-secondary">See How Victory Vision Works</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="story-section">
+        <div class="container">
+            <div class="story-intro">
+                <div class="eyebrow">Origin Story</div>
+                <h2><em>Iraq, 2006</em></h2>
+            </div>
+            <div class="story-content">
+                <p>
+                    I was deployed in Iraq, running convoy security missions and trying to figure out what came next. I knew I wanted to go to business school, but I had no money, no network in finance, and no clear path forward.
+                </p>
+                <p>
+                    So I did something uncomfortable. I started cold-calling West Point graduates I'd never met. I pulled names from the alumni directory, found their contact information, and reached out. Most didn't respond. Some were polite but couldn't help. But a few—just a few—took the time to talk.
+                </p>
+                <div class="pullquote">
+                    "One of those conversations led to an introduction. That introduction led to Columbia Business School on a full scholarship. That degree changed my entire trajectory."
+                </div>
+                <p>
+                    I didn't realize it at the time, but I had stumbled onto something powerful: a shared institutional bond plus a genuine reason to connect is not a favor—it's a repeatable system. The problem is, most of us never systematically work that system. We let relationships go dormant. We don't know who to call, what to say, or how to follow up. We leave enormous value on the table.
+                </p>
+                <p>
+                    I built Victory Vision because I needed it. And if you're reading this, you probably do too.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="problem-section">
+        <div class="container">
+            <div class="eyebrow">The Challenge</div>
+            <h2><em>The Business Problem</em></h2>
+            <div class="problem-list">
+                <div class="problem-item">
+                    <div class="checkbox"></div>
+                    <div>Who should I call this week?</div>
+                </div>
+                <div class="problem-item">
+                    <div class="checkbox"></div>
+                    <div>Which former customer went dormant?</div>
+                </div>
+                <div class="problem-item">
+                    <div class="checkbox"></div>
+                    <div>Who changed jobs recently?</div>
+                </div>
+                <div class="problem-item">
+                    <div class="checkbox"></div>
+                    <div>Who knows my ideal buyer?</div>
+                </div>
+                <div class="problem-item">
+                    <div class="checkbox"></div>
+                    <div>Which activities actually generate revenue?</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relationships-section">
+        <div class="container">
+            <div class="two-col">
+                <div>
+                    <div class="eyebrow">Network Activation</div>
+                    <h2><em>The Relationships You're Not Working</em></h2>
+                    <p>
+                        In your business, one relationship could produce a $50K retained search, a major advisory engagement, an enterprise customer, or the referral partner you've been seeking.
+                    </p>
+                    <p>
+                        The problem isn't lead volume. It's systematic activation. You know hundreds of people. You've worked with dozens of clients. You've built real credibility. But without a process, those relationships stay dormant.
+                    </p>
+                </div>
+                <div class="network-visual">
+                    <svg class="network-svg" width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="200" cy="150" r="12" fill="#bb133e"/>
+                        <circle cx="100" cy="80" r="8" fill="#d1d5db" opacity="0.3"/>
+                        <circle cx="300" cy="80" r="8" fill="#d1d5db" opacity="0.3"/>
+                        <circle cx="80" cy="150" r="8" fill="#d1d5db" opacity="0.3"/>
+                        <circle cx="320" cy="150" r="8" fill="#c5a572"/>
+                        <circle cx="100" cy="220" r="8" fill="#d1d5db" opacity="0.3"/>
+                        <circle cx="300" cy="220" r="8" fill="#c5a572"/>
+                        <circle cx="150" cy="100" r="8" fill="#d1d5db" opacity="0.3"/>
+                        <circle cx="250" cy="100" r="8" fill="#d1d5db" opacity="0.3"/>
+                        <circle cx="150" cy="200" r="8" fill="#d1d5db" opacity="0.3"/>
+                        <circle cx="250" cy="200" r="8" fill="#d1d5db" opacity="0.3"/>
+                        <line x1="200" y1="150" x2="100" y2="80" stroke="#d1d5db" stroke-width="1" opacity="0.2"/>
+                        <line x1="200" y1="150" x2="300" y2="80" stroke="#d1d5db" stroke-width="1" opacity="0.2"/>
+                        <line x1="200" y1="150" x2="80" y2="150" stroke="#d1d5db" stroke-width="1" opacity="0.2"/>
+                        <line x1="200" y1="150" x2="320" y2="150" stroke="#c5a572" stroke-width="2"/>
+                        <line x1="200" y1="150" x2="100" y2="220" stroke="#d1d5db" stroke-width="1" opacity="0.2"/>
+                        <line x1="200" y1="150" x2="300" y2="220" stroke="#c5a572" stroke-width="2"/>
+                        <line x1="200" y1="150" x2="150" y2="100" stroke="#d1d5db" stroke-width="1" opacity="0.2"/>
+                        <line x1="200" y1="150" x2="250" y2="100" stroke="#d1d5db" stroke-width="1" opacity="0.2"/>
+                        <line x1="200" y1="150" x2="150" y2="200" stroke="#d1d5db" stroke-width="1" opacity="0.2"/>
+                        <line x1="200" y1="150" x2="250" y2="200" stroke="#d1d5db" stroke-width="1" opacity="0.2"/>
+                    </svg>
+                    <p style="margin-top: 24px; color: var(--ink-soft); font-size: 14px;">Most of your network is dormant. A systematic process activates it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-study">
+        <div class="container">
+            <div class="case-study-card">
+                <div class="eyebrow">Proof of Concept</div>
+                <h2><em>Nathan MacCarter</em></h2>
+                <div class="case-study-subtitle">Impendi → Accenture Acquisition</div>
+                <p style="color: var(--ink-soft); font-size: 18px; line-height: 1.8;">
+                    Nathan MacCarter, West Point '04, founded Impendi, a performance marketing agency. Through systematic relationship activation and disciplined business development, Nathan built a firm that caught the attention of Accenture. The acquisition wasn't luck—it was the result of consistent execution, strategic positioning, and leveraging the right relationships at the right time.
+                </p>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot">1</div>
+                        <div class="timeline-label">Introduction</div>
+                        <div class="timeline-desc">Strategic relationship activation</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot">2</div>
+                        <div class="timeline-label">Performance</div>
+                        <div class="timeline-desc">Consistent delivery and growth</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot">3</div>
+                        <div class="timeline-label">Acquisition</div>
+                        <div class="timeline-desc">Acquired by Accenture</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenge-section">
+        <div class="container">
+            <div class="eyebrow">Your Next 90 Days</div>
+            <h2><em>What's ONE Thing You Want to Make Happen?</em></h2>
+            <div class="goal-buttons">
+                <button class="goal-btn">Win 3 New Clients</button>
+                <button class="goal-btn">Reach PE Portfolio Companies</button>
+                <button class="goal-btn">Find a Referral Partner</button>
+                <button class="goal-btn">Enter a New Vertical</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="system-section">
+        <div class="container">
+            <div class="eyebrow">How It Works</div>
+            <h2><em>The System</em></h2>
+            <div class="system-cards">
+                <div class="system-card">
+                    <h3><em>Victory Vision</em></h3>
+                    <ul>
+                        <li>Prioritize relationships based on economic value</li>
+                        <li>Research current state and trigger events</li>
+                        <li>Create personalized, AI-assisted outreach</li>
+                        <li>Maintain disciplined follow-up sequences</li>
+                        <li>Measure what actually converts to meetings and revenue</li>
+                    </ul>
+                </div>
+                <div class="system-card">
+                    <h3><em>Operator's Edge AI Growth Lab</em></h3>
+                    <ul>
+                        <li>Live problem-solving with experienced operators</li>
+                        <li>Vetted professional community of peers</li>
+                        <li>Practical field guides and frameworks</li>
+                        <li>Weekly office hours and accountability</li>
+                        <li>Thoughtful introductions when there's genuine fit</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="founder-section">
+        <div class="container">
+            <div class="founder-content">
+                <div class="eyebrow">Leadership</div>
+                <h2><em>Built by Someone Who Needed It</em></h2>
+                <p class="founder-credentials">
+                    <strong>Andrew Gazdecki</strong><br>
+                    West Point Graduate • CFA Charterholder • Columbia MBA
+                </p>
+                <p style="color: var(--ink-soft); font-size: 18px; max-width: 700px; margin: 0 auto;">
+                    After deploying to Iraq, attending Columbia Business School, and working in capital markets and private equity, I realized the same pattern kept repeating: the professionals who won weren't necessarily the smartest or most credentialed. They were the ones with a systematic approach to relationships.
+                </p>
+                <p class="founder-quote">"I built this because I needed it."</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="social-proof">
+        <div class="container">
+            <div class="eyebrow">Community</div>
+            <h2><em>Join Peers Who've Already Figured This Out</em></h2>
+            <div class="proof-grid">
+                <div class="proof-card">
+                    <div class="proof-name">Jason Blonstein</div>
+                    <div class="proof-title">Caldwell</div>
+                </div>
+                <div class="proof-card">
+                    <div class="proof-name">Nathan MacCarter, USMA '04</div>
+                    <div class="proof-title">Founder, Impendi (acquired by Accenture)</div>
+                </div>
+                <div class="proof-card">
+                    <div class="proof-name">West Point Graduates in PE & Asset Management</div>
+                    <div class="proof-title">Founding Members</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="eyebrow">Take Action</div>
+            <h2><em>Beat Navy. Use Your Network.</em></h2>
+            <p>The Long Gray Line is more than tradition. It's competitive advantage—if you work it systematically.</p>
+            <div class="cta-buttons">
+                <a href="#lead-form" class="btn btn-primary">Join 100 West Point Grads Building Better Businesses</a>
+                <a href="https://calendar.app.google/NQdpcCKsx1rQtfdn9" class="btn btn-secondary">See How Victory Vision Works</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="lead-form-section" id="lead-form">
+        <div class="container">
+            <div class="form-container">
+                <div class="eyebrow">Free Resource</div>
+                <h2><em>Get The 25-Relationship Audit</em></h2>
+                <p class="form-intro">
+                    A simple framework to identify your most economically valuable dormant relationships. Delivered as a PDF worksheet.
+                </p>
+                <form action="https://victoryvision.app.n8n.cloud/webhook/engagement/lead-submit" method="POST">
+                    <input type="hidden" name="customer_id" value="glaze@vvdoh.com">
+                    <input type="hidden" name="slug" value="westpointfinance">
+                    <input type="hidden" name="source" value="landing">
+                    
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Get The 25-Relationship Audit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="disclosure">
+        <div class="container">
+            <p>
+                <strong>Important Disclosure:</strong> Victory Vision provides business development tools, training, and community resources. Results vary based on individual effort, market conditions, and business context. No specific outcomes are guaranteed. The case studies and testimonials presented represent individual experiences and are not typical results. Your success depends on your own skills, effort, network quality, and market factors beyond our control. Victory Vision is not affiliated with the United States Military Academy at West Point, the Department of Defense, or any branch of the U.S. military. References to West Point indicate alumni status only. This is a commercial service designed for independent professionals and business owners. By using Victory Vision's services, you acknowledge that business development involves risk and that past performance of other users does not guarantee future results for your specific situation.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-motto">Duty • Honor • Country</div>
+                <div class="footer-links">
+                    <a href="mailto:andrew@victoryvisionai.com">Contact</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+                <div class="footer-copy">
+                    &copy; 2025 Victory Vision. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+<script>window.trackEvent=window.trackEvent||function(){};(function(){var CID="glaze@vvdoh.com",SLUG="westpointfinance",PTYPE="landing";var TRACK="https://victoryvision.app.n8n.cloud/webhook/engagement/track";try{var params=new URLSearchParams(window.location.search);var utm={utm_source:params.get("utm_source")||"",utm_medium:params.get("utm_medium")||"",utm_campaign:params.get("utm_campaign")||"",utm_content:params.get("utm_content")||"",utm_term:params.get("utm_term")||""};var vid=localStorage.getItem("vv_vid");if(!vid){vid="v-"+Math.random().toString(36).slice(2,10)+"-"+Date.now();localStorage.setItem("vv_vid",vid);}if(Object.values(utm).some(function(v){return v;}))sessionStorage.setItem("vv_utm",JSON.stringify(utm));var stored=sessionStorage.getItem("vv_utm");if(stored)utm=JSON.parse(stored);fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"page_view",visitor_id:vid,utm:utm,referrer:document.referrer,user_agent:navigator.userAgent,url:window.location.href})}).catch(function(){});document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("form").forEach(function(f){["utm_source","utm_medium","utm_campaign","utm_content","utm_term","visitor_id","slug"].forEach(function(n){var exists=false;for(var k=0;k<f.elements.length;k++){if(f.elements[k].name===n){exists=true;break;}}if(exists)return;var i=document.createElement("input");i.type="hidden";i.name=n;i.value=n==="visitor_id"?vid:(n==="slug"?SLUG:(utm[n]||""));f.appendChild(i);});f.addEventListener("submit",function(){fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"form_submit",visitor_id:vid,utm:utm,url:window.location.href})}).catch(function(){});});});document.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"link_click",visitor_id:vid,utm:utm,url:a.href})}).catch(function(){});});});}catch(e){}})();</script>
+</body>
+</html>
