@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Introduction | Victory Vision for West Point PE & Asset Management</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Georgia:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+--primary: #0a3161;
+--accent: #bb133e;
+--gold: #fd7e14;
+--ink: #1a2230;
+--ink-soft: #4a5568;
+--bg: #ffffff;
+--bg-alt: #f6f8fb;
+--on-dark: #ffffff;
+}
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: 'Inter', sans-serif;
+color: var(--ink);
+background: var(--bg);
+line-height: 1.6;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Georgia', serif;
+font-weight: 300;
+color: var(--primary);
+line-height: 1.2;
+margin-bottom: 1rem;
+}
+h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
+font-style: italic;
+font-weight: 300;
+}
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 1.5rem;
+}
+header {
+position: sticky;
+top: 0;
+background: var(--bg);
+border-bottom: 1px solid #e2e8f0;
+padding: 1rem 0;
+z-index: 1000;
+}
+header .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+header img {
+height: 40px;
+width: auto;
+}
+.btn {
+display: inline-block;
+padding: 0.875rem 2rem;
+border-radius: 6px;
+font-weight: 600;
+text-decoration: none;
+transition: all 0.3s ease;
+border: none;
+cursor: pointer;
+font-size: 1rem;
+}
+.btn-primary {
+background: var(--accent);
+color: #ffffff;
+}
+.btn-primary:hover {
+background: #9a0f33;
+transform: translateY(-2px);
+box-shadow: 0 4px 12px rgba(187, 19, 62, 0.3);
+}
+.btn-secondary {
+background: transparent;
+color: var(--primary);
+border: 2px solid var(--primary);
+}
+.btn-secondary:hover {
+background: var(--primary);
+color: #ffffff;
+}
+.hero {
+position: relative;
+background: linear-gradient(135deg, var(--primary) 0%, #0d4a8a 100%);
+color: var(--on-dark);
+padding: 6rem 0 8rem;
+overflow: hidden;
+}
+.hero::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><path d="M0 0L100 100M100 0L0 100" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></svg>');
+opacity: 0.4;
+}
+.hero .container {
+position: relative;
+z-index: 2;
+}
+.hero-video-wrapper {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+overflow: hidden;
+z-index: 1;
+}
+.hero-video-wrapper::after {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: linear-gradient(135deg, rgba(10, 49, 97, 0.92) 0%, rgba(13, 74, 138, 0.88) 100%);
+}
+.hero-video-wrapper video {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.hero-content {
+max-width: 800px;
+position: relative;
+z-index: 3;
+}
+.eyebrow {
+font-size: 0.875rem;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 1.5px;
+color: var(--gold);
+margin-bottom: 1.5rem;
+font-variant: small-caps;
+}
+.hero h1 {
+font-size: 4rem;
+font-weight: 300;
+margin-bottom: 1.5rem;
+color: var(--on-dark);
+}
+.hero h1 .accent {
+color: var(--gold);
+display: block;
+font-style: italic;
+}
+.hero p {
+font-size: 1.375rem;
+margin-bottom: 2.5rem;
+color: var(--on-dark);
+opacity: 0.95;
+}
+.hero-cta {
+display: flex;
+gap: 1rem;
+flex-wrap: wrap;
+}
+section {
+padding: 5rem 0;
+}
+.section-dark {
+background: var(--primary);
+color: var(--on-dark);
+}
+.section-dark h2,
+.section-dark h3,
+.section-dark h4,
+.section-dark p,
+.section-dark li {
+color: var(--on-dark);
+}
+.section-alt {
+background: var(--bg-alt);
+}
+.section-gold {
+background: var(--gold);
+color: var(--ink);
+}
+.section-gold h2,
+.section-gold h3,
+.section-gold p {
+color: var(--ink);
+}
+.section-header {
+margin-bottom: 3rem;
+}
+.section-eyebrow {
+font-size: 0.75rem;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 1.5px;
+color: var(--accent);
+margin-bottom: 0.5rem;
+font-variant: small-caps;
+}
+.section-dark .section-eyebrow {
+color: var(--gold);
+}
+.section-gold .section-eyebrow {
+color: var(--primary);
+}
+h2 {
+font-size: 2.75rem;
+font-weight: 300;
+margin-bottom: 1rem;
+}
+h2 em {
+font-style: italic;
+}
+h3 {
+font-size: 1.75rem;
+font-weight: 300;
+margin-bottom: 0.75rem;
+}
+.section-intro {
+max-width: 800px;
+margin: 0 auto 3rem;
+text-align: center;
+font-size: 1.125rem;
+color: var(--ink-soft);
+}
+.story-section {
+max-width: 900px;
+margin: 0 auto;
+}
+.story-section p {
+font-size: 1.125rem;
+margin-bottom: 1.5rem;
+line-height: 1.8;
+}
+.pullquote {
+background: var(--gold);
+border-left: 4px solid var(--accent);
+padding: 1.5rem 2rem;
+margin: 2rem 0;
+font-size: 1.25rem;
+font-style: italic;
+color: var(--ink);
+}
+.problem-list {
+max-width: 700px;
+margin: 2rem auto;
+}
+.problem-item {
+display: flex;
+align-items: flex-start;
+gap: 1rem;
+padding: 1.25rem;
+background: rgba(255, 255, 255, 0.05);
+border-radius: 8px;
+margin-bottom: 1rem;
+}
+.checkbox {
+width: 24px;
+height: 24px;
+border: 2px solid rgba(255, 255, 255, 0.3);
+border-radius: 4px;
+flex-shrink: 0;
+margin-top: 0.25rem;
+}
+.problem-item p {
+margin: 0;
+font-size: 1.125rem;
+}
+.two-col {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 3rem;
+align-items: center;
+}
+.network-visual {
+text-align: center;
+padding: 2rem;
+}
+.network-visual svg {
+max-width: 100%;
+height: auto;
+}
+.timeline {
+position: relative;
+max-width: 800px;
+margin: 3rem auto;
+padding-left: 3rem;
+}
+.timeline::before {
+content: '';
+position: absolute;
+left: 0;
+top: 0;
+bottom: 0;
+width: 3px;
+background: var(--gold);
+}
+.timeline-item {
+position: relative;
+margin-bottom: 2rem;
+}
+.timeline-item::before {
+content: '';
+position: absolute;
+left: -3.5rem;
+top: 0.5rem;
+width: 16px;
+height: 16px;
+border-radius: 50%;
+background: var(--gold);
+border: 3px solid var(--primary);
+}
+.timeline-item h4 {
+font-size: 1.25rem;
+font-weight: 300;
+margin-bottom: 0.5rem;
+color: var(--on-dark);
+}
+.timeline-item p {
+color: var(--on-dark);
+opacity: 0.9;
+}
+.challenge-buttons {
+display: flex;
+flex-wrap: wrap;
+gap: 1rem;
+justify-content: center;
+margin: 2rem 0;
+}
+.challenge-btn {
+padding: 1rem 1.5rem;
+background: var(--primary);
+color: var(--on-dark);
+border: 2px solid var(--primary);
+border-radius: 6px;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+.challenge-btn:hover {
+background: var(--on-dark);
+color: var(--primary);
+}
+.challenge-insight {
+max-width: 700px;
+margin: 2rem auto;
+padding: 2rem;
+background: rgba(10, 49, 97, 0.1);
+border-radius: 8px;
+display: none;
+}
+.challenge-insight.active {
+display: block;
+}
+.cards {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 2rem;
+margin-top: 3rem;
+}
+.card {
+background: var(--bg);
+padding: 2.5rem;
+border-radius: 12px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+transform: translateY(-4px);
+box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+.card-icon {
+width: 60px;
+height: 60px;
+margin-bottom: 1.5rem;
+}
+.card h3 {
+color: var(--primary);
+font-weight: 300;
+margin-bottom: 1rem;
+}
+.card p {
+color: var(--ink-soft);
+}
+.system-cards {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 2rem;
+margin-top: 3rem;
+}
+.system-card {
+background: var(--bg);
+padding: 3rem;
+border-radius: 12px;
+border: 2px solid var(--primary);
+}
+.system-card h3 {
+color: var(--primary);
+font-size: 2rem;
+font-weight: 300;
+margin-bottom: 1.5rem;
+}
+.system-card ul {
+list-style: none;
+}
+.system-card li {
+padding: 0.75rem 0;
+padding-left: 2rem;
+position: relative;
+color: var(--ink);
+}
+.system-card li::before {
+content: '→';
+position: absolute;
+left: 0;
+color: var(--accent);
+font-weight: bold;
+}
+.steps {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 2rem;
+margin-top: 3rem;
+}
+.step {
+text-align: center;
+padding: 2rem;
+}
+.step-number {
+width: 60px;
+height: 60px;
+background: var(--accent);
+color: var(--on-dark);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.75rem;
+font-weight: 700;
+margin: 0 auto 1.5rem;
+}
+.step h3 {
+margin-bottom: 1rem;
+font-weight: 300;
+}
+.founder-spotlight {
+display: flex;
+gap: 3rem;
+align-items: center;
+max-width: 900px;
+margin: 0 auto;
+}
+.founder-image {
+width: 200px;
+height: 200px;
+border-radius: 50%;
+background: var(--bg-alt);
+flex-shrink: 0;
+border: 4px solid var(--gold);
+}
+.founder-content h3 {
+font-size: 2rem;
+font-weight: 300;
+margin-bottom: 0.5rem;
+}
+.founder-content .credentials {
+color: var(--ink-soft);
+margin-bottom: 1rem;
+font-size: 1rem;
+}
+.founder-content .positioning {
+font-size: 1.25rem;
+font-style: italic;
+color: var(--accent);
+}
+.social-proof {
+text-align: center;
+max-width: 800px;
+margin: 0 auto;
+}
+.social-proof h3 {
+margin-bottom: 2rem;
+font-weight: 300;
+}
+.member-list {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 2rem;
+margin-top: 2rem;
+}
+.member-item {
+padding: 1rem 2rem;
+background: var(--bg-alt);
+border-radius: 8px;
+font-weight: 600;
+color: var(--primary);
+}
+.cta-section {
+text-align: center;
+background: var(--primary);
+color: var(--on-dark);
+padding: 6rem 0;
+}
+.cta-section h2 {
+color: var(--on-dark);
+font-size: 3rem;
+font-weight: 300;
+margin-bottom: 1rem;
+}
+.cta-section .rally-cry {
+font-size: 1.5rem;
+color: var(--gold);
+font-weight: 700;
+margin-bottom: 2rem;
+}
+.cta-section p {
+font-size: 1.25rem;
+margin-bottom: 2.5rem;
+color: var(--on-dark);
+opacity: 0.95;
+}
+.cta-buttons {
+display: flex;
+gap: 1rem;
+justify-content: center;
+flex-wrap: wrap;
+}
+.form-section {
+background: var(--bg-alt);
+}
+.form-wrapper {
+max-width: 600px;
+margin: 0 auto;
+background: var(--bg);
+padding: 3rem;
+border-radius: 12px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.form-wrapper h3 {
+text-align: center;
+font-weight: 300;
+margin-bottom: 0.5rem;
+}
+.form-intro {
+text-align: center;
+color: var(--ink-soft);
+margin-bottom: 2rem;
+}
+.form-group {
+margin-bottom: 1.5rem;
+}
+.form-group label {
+display: block;
+margin-bottom: 0.5rem;
+font-weight: 600;
+color: var(--ink);
+}
+.form-group input,
+.form-group textarea {
+width: 100%;
+padding: 0.875rem;
+border: 2px solid #e2e8f0;
+border-radius: 6px;
+font-size: 1rem;
+font-family: 'Inter', sans-serif;
+transition: border-color 0.3s ease;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+outline: none;
+border-color: var(--primary);
+}
+.form-group textarea {
+resize: vertical;
+min-height: 100px;
+}
+.form-submit {
+width: 100%;
+padding: 1rem;
+background: var(--accent);
+color: var(--on-dark);
+border: none;
+border-radius: 6px;
+font-size: 1.125rem;
+font-weight: 700;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+.form-submit:hover {
+background: #9a0f33;
+transform: translateY(-2px);
+}
+.disclosure {
+background: var(--bg-alt);
+padding: 3rem 0;
+}
+.disclosure p {
+max-width: 900px;
+margin: 0 auto;
+font-size: 0.875rem;
+color: var(--ink-soft);
+line-height: 1.8;
+}
+footer {
+background: var(--primary);
+color: var(--on-dark);
+padding: 3rem 0 2rem;
+}
+.footer-content {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 2rem;
+margin-bottom: 2rem;
+}
+.footer-links {
+display: flex;
+gap: 2rem;
+}
+.footer-links a {
+color: var(--on-dark);
+text-decoration: none;
+transition: color 0.3s ease;
+}
+.footer-links a:hover {
+color: var(--gold);
+}
+.footer-bottom {
+text-align: center;
+padding-top: 2rem;
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+color: rgba(255, 255, 255, 0.7);
+font-size: 0.875rem;
+}
+.motto {
+font-style: italic;
+color: var(--gold);
+}
+@media (max-width: 1024px) {
+.hero h1 {
+font-size: 3rem;
+}
+h2 {
+font-size: 2.25rem;
+}
+.two-col,
+.system-cards {
+grid-template-columns: 1fr;
+}
+.founder-spotlight {
+flex-direction: column;
+text-align: center;
+}
+}
+@media (max-width: 768px) {
+.hero {
+padding: 4rem 0 5rem;
+}
+.hero h1 {
+font-size: 2.25rem;
+}
+.hero p {
+font-size: 1.125rem;
+}
+.hero-cta {
+flex-direction: column;
+}
+.btn {
+width: 100%;
+text-align: center;
+}
+h2 {
+font-size: 1.875rem;
+}
+section {
+padding: 3rem 0;
+}
+.cards,
+.steps {
+grid-template-columns: 1fr;
+}
+.timeline {
+padding-left: 2rem;
+}
+.form-wrapper {
+padding: 2rem;
+}
+.footer-content {
+flex-direction: column;
+text-align: center;
+}
+.footer-links {
+flex-direction: column;
+gap: 1rem;
+}
+}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18090497137"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-18090497137');</script>
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:'97225334'};o.q=w[u],w[u]=new UET(o),w[u].push('pageLoad')},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=='loaded'&&s!=='complete'||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,'script','//bat.bing.com/bat.js','uetq');</script>
+<script type="text/javascript">_linkedin_partner_id='8929812';window._linkedin_data_partner_ids=window._linkedin_data_partner_ids||[];window._linkedin_data_partner_ids.push(_linkedin_partner_id);</script><script type="text/javascript">(function(l){if(!l){window.lintrk=function(a,b){window.lintrk.q.push([a,b])};window.lintrk.q=[]}var s=document.getElementsByTagName('script')[0];var b=document.createElement('script');b.type='text/javascript';b.async=true;b.src='https://snap.licdn.com/li.lms-analytics/insight.min.js';s.parentNode.insertBefore(b,s);})(window.lintrk);</script>
+</head>
+<body>
+
+<header>
+<div class="container">
+<img src="https://res.cloudinary.com/dv94te4zt/image/upload/v1753320422/sd4auec2bgofhaleur7o.jpg" alt="Victory Vision logo">
+<a href="#lead-form" class="btn btn-primary">Get Started</a>
+</div>
+</header>
+
+<section class="hero">
+<div class="hero-video-wrapper">
+<video autoplay muted loop playsinline>
+<source src="https://res.cloudinary.com/dv94te4zt/video/upload/v1790488028/viral_campaign_nocid_1790488028441_1790488028.mp4" type="video/mp4">
+</video>
+</div>
+<div class="container">
+<div class="hero-content">
+<div class="eyebrow">West Point PE & Asset Management</div>
+<h1><em class="accent">One Introduction</em></h1>
+<p>You've spent 20 years building a valuable network. What if you had a systematic way to turn dormant relationships into your next $50K engagement?</p>
+<div class="hero-cta">
+<a href="#lead-form" class="btn btn-primary">Join 100 West Point Grads Building Better Businesses</a>
+<a href="https://calendar.app.google/NQdpcCKsx1rQtfdn9" class="btn btn-secondary">Book a Call</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section-alt">
+<div class="container">
+<div class="section-header">
+<div class="section-eyebrow">Origin Story</div>
+<h2><em>The Story Behind This</em></h2>
+</div>
+<div class="story-section">
+<p>In 2007, I was deployed to Iraq. Between missions, I started cold-calling West Point graduates I'd never met—people who had graduated years before me, people I had no personal connection to. I wasn't asking for favors. I was asking for advice on how to transition from the Army to business school.</p>
+<p>Every single person I called took the time to help. One conversation led to another. Those introductions opened doors I didn't know existed. Within a year, I was accepted to Columbia Business School on a full scholarship.</p>
+<div class="pullquote">
+"I didn't have a network. I had an institution. And that institution gave me permission to reach out to people who had no reason to help me—except that we shared something meaningful."
+</div>
+<p>That experience changed everything. It taught me that relationships aren't just about who you know right now. They're about who you could know, who you should know, and having a systematic way to activate those connections when it matters.</p>
+<p>Twenty years later, I built Victory Vision because I needed it. And I built it for people like you—professionals who understand that one relationship, properly activated, can change the trajectory of your business.</p>
+</div>
+</div>
+</section>
+
+<section class="section-dark">
+<div class="container">
+<div class="section-header" style="text-align: center;">
+<div class="section-eyebrow">The Problem</div>
+<h2><em>The Business Problem</em></h2>
+</div>
+<div class="problem-list">
+<div class="problem-item">
+<div class="checkbox"></div>
+<p>Who should I call this week?</p>
+</div>
+<div class="problem-item">
+<div class="checkbox"></div>
+<p>Which former customer went dormant?</p>
+</div>
+<div class="problem-item">
+<div class="checkbox"></div>
+<p>Who changed jobs?</p>
+</div>
+<div class="problem-item">
+<div class="checkbox"></div>
+<p>Who knows my ideal buyer?</p>
+</div>
+<div class="problem-item">
+<div class="checkbox"></div>
+<p>Which activities are actually generating revenue?</p>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-header" style="text-align: center;">
+<div class="section-eyebrow">Opportunity</div>
+<h2><em>The Relationships You're Not Working</em></h2>
+</div>
+<div class="two-col">
+<div>
+<p style="font-size: 1.125rem; line-height: 1.8;">In your business, one relationship could produce a $50K retained search, a major advisory engagement, an enterprise customer, or the referral partner you've been seeking.</p>
+<p style="font-size: 1.125rem; line-height: 1.8;">The problem isn't lead volume. It's systematic activation.</p>
+<p style="font-size: 1.125rem; line-height: 1.8;">You know hundreds of people. Maybe thousands. But without a process for prioritizing who to contact, what to say, and how to follow up, most of those relationships stay dormant.</p>
+</div>
+<div class="network-visual">
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+<circle cx="150" cy="150" r="8" fill="#bb133e"/>
+<circle cx="80" cy="80" r="6" fill="#cccccc" opacity="0.3"/>
+<circle cx="220" cy="80" r="6" fill="#cccccc" opacity="0.3"/>
+<circle cx="80" cy="220" r="6" fill="#cccccc" opacity="0.3"/>
+<circle cx="220" cy="220" r="6" fill="#cccccc" opacity="0.3"/>
+<circle cx="150" cy="50" r="6" fill="#cccccc" opacity="0.3"/>
+<circle cx="150" cy="250" r="6" fill="#cccccc" opacity="0.3"/>
+<circle cx="50" cy="150" r="6" fill="#cccccc" opacity="0.3"/>
+<circle cx="250" cy="150" r="6" fill="#cccccc" opacity="0.3"/>
+<circle cx="110" cy="110" r="6" fill="#fd7e14"/>
+<circle cx="190" cy="110" r="6" fill="#fd7e14"/>
+<circle cx="110" cy="190" r="6" fill="#cccccc" opacity="0.3"/>
+<circle cx="190" cy="190" r="6" fill="#cccccc" opacity="0.3"/>
+<line x1="150" y1="150" x2="110" y2="110" stroke="#fd7e14" stroke-width="2"/>
+<line x1="150" y1="150" x2="190" y2="110" stroke="#fd7e14" stroke-width="2"/>
+<line x1="150" y1="150" x2="80" y2="80" stroke="#cccccc" stroke-width="1" opacity="0.2"/>
+<line x1="150" y1="150" x2="220" y2="80" stroke="#cccccc" stroke-width="1" opacity="0.2"/>
+<line x1="150" y1="150" x2="80" y2="220" stroke="#cccccc" stroke-width="1" opacity="0.2"/>
+<line x1="150" y1="150" x2="220" y2="220" stroke="#cccccc" stroke-width="1" opacity="0.2"/>
+<line x1="150" y1="150" x2="150" y2="50" stroke="#cccccc" stroke-width="1" opacity="0.2"/>
+<line x1="150" y1="150" x2="150" y2="250" stroke="#cccccc" stroke-width="1" opacity="0.2"/>
+<line x1="150" y1="150" x2="50" y2="150" stroke="#cccccc" stroke-width="1" opacity="0.2"/>
+<line x1="150" y1="150" x2="250" y2="150" stroke="#cccccc" stroke-width="1" opacity="0.2"/>
+</svg>
+<p style="margin-top: 1rem; color: var(--ink-soft); font-size: 0.875rem;">Most of your network is dormant. Victory Vision helps you activate it systematically.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="form-section" id="lead-form">
+<div class="container">
+<div class="form-wrapper">
+<h3>Get The 25-Relationship Audit</h3>
+<p class="form-intro">A simple framework to identify your most economically valuable dormant relationships. Delivered as a PDF worksheet.</p>
+<form id="leadForm" method="POST" action="https://victoryvision.app.n8n.cloud/webhook/engagement/lead-submit">
+<input type="hidden" name="customer_id" value="glaze@vvdoh.com">
+<input type="hidden" name="slug" value="westpointfinance">
+<input type="hidden" name="source" value="landing">
+<div class="form-group">
+<label for="name">Full Name *</label>
+<input type="text" id="name" name="name" required>
+</div>
+<div class="form-group">
+<label for="email">Email Address *</label>
+<input type="email" id="email" name="email" required>
+</div>
+<div class="form-group">
+<label for="company">Company</label>
+<input type="text" id="company" name="company">
+</div>
+<div class="form-group">
+<label for="phone">Phone Number</label>
+<input type="tel" id="phone" name="phone">
+</div>
+<button type="submit" class="form-submit">Download The 25-Relationship Audit</button>
+</form>
+</div>
+</div>
+</section>
+
+<section class="disclosure">
+<div class="container">
+<p><strong>Important Disclosure:</strong> Victory Vision is a business development and relationship management platform. It is not a broker-dealer, investment adviser, or financial services firm. Any references to financial services, investment banking, private equity, wealth management, or related industries are for illustrative purposes to describe the types of professionals who may benefit from systematic relationship management. Users are solely responsible for compliance with all applicable regulations governing their own professional activities, including but not limited to FINRA, SEC, and state securities regulations. Victory Vision does not provide investment advice, legal advice, or regulatory compliance services. Past performance and case studies do not guarantee future results. Individual results will vary based on effort, market conditions, and professional expertise.</p>
+</div>
+</section>
+
+<section class="section-dark">
+<div class="container">
+<div class="section-header" style="text-align: center;">
+<div class="section-eyebrow">Case Study</div>
+<h2><em>Proof of Concept</em></h2>
+</div>
+<div style="max-width: 900px; margin: 0 auto;">
+<h3 style="color: var(--on-dark); margin-bottom: 1.5rem;">The Nathan MacCarter Story</h3>
+<p style="color: var(--on-dark); margin-bottom: 2rem; font-size: 1.125rem;">Nathan MacCarter founded Impendi Analytics, a performance analytics firm serving private equity portfolio companies. Through systematic relationship activation and a disciplined business development process, Nathan built Impendi into a recognized leader in the space.</p>
+<div class="timeline">
+<div class="timeline-item">
+<h4>Introduction</h4>
+<p>Targeted outreach to PE firms and portfolio company executives using a systematic approach to relationship activation.</p>
+</div>
+<div class="timeline-item">
+<h4>Performance</h4>
+<p>Impendi became the go-to analytics partner for multiple PE firms, delivering measurable performance improvements across portfolio companies.</p>
+</div>
+<div class="timeline-item">
+<h4>Acquisition by Accenture</h4>
+<p>The systematic approach to business development and relationship management made Impendi an attractive acquisition target. Accenture acquired the firm to expand their PE services capability.</p>
+</div>
+</div>
+<p style="color: var(--on-dark); font-style: italic; text-align: center; margin-top: 2rem;">One systematic process. Multiple high-value relationships. A successful exit.</p>
+</div>
+</div>
+</section>
+
+<section class="section-gold">
+<div class="container">
+<div class="section-header" style="text-align: center;">
+<div class="section-eyebrow">Your Goal</div>
+<h2><em>What's ONE Thing You Want to Make Happen in the Next 90 Days?</em></h2>
+</div>
+<div class="challenge-buttons">
+<button class="challenge-btn" onclick="showInsight('clients')">Win 3 New Clients</button>
+<button class="challenge-btn" onclick="showInsight('pe')">Reach PE Portfolio Companies</button>
+<button class="challenge-btn" onclick="showInsight('partner')">Find a Referral Partner</button>
+<button class="challenge-btn" onclick="showInsight('vertical')">Enter a New Vertical</button>
+</div>
+<div id="insight-clients" class="challenge-insight">
+<h3>Win 3 New Clients</h3>
+<p>Start with your existing network. Identify 25 people who either fit your ideal client profile or know someone who does. Reach out with a specific, valuable reason to reconnect—not a generic "checking in." Victory Vision helps you prioritize who to contact, research their current situation, and create personalized outreach that gets responses.</p>
+</div>
+<div id="insight-pe" class="challenge-insight">
+<h3>Reach PE Portfolio Companies</h3>
+<p>Private equity firms are relationship-driven. The fastest path in is through a warm introduction or a shared institutional connection. Victory Vision helps you identify which PE professionals you're connected to (directly or indirectly), track portfolio company changes, and create targeted campaigns that position you as a valuable resource to their portfolio.</p>
+</div>
+<div id="insight-partner" class="challenge-insight">
+<h3>Find a Referral Partner</h3>
+<p>The best referral partners serve the same clients you do but offer complementary services. Map your existing clients and identify patterns—who else is in their ecosystem? Victory Vision helps you systematically identify potential partners, track interactions, and build relationships that generate consistent, high-quality referrals.</p>
+</div>
+<div id="insight-vertical" class="challenge-insight">
+<h3>Enter a New Vertical</h3>
+<p>Breaking into a new industry requires credibility and introductions. Start by identifying 10 people in your network who either work in that vertical or have strong connections there. Victory Vision helps you research the vertical, identify key players, and create a systematic outreach plan that positions you as someone worth talking to.</p>
+</div>
+</div>
+</section>
+
+<section class="section-alt">
+<div class="container">
+<div class="section-header" style="text-align: center;">
+<div class="section-eyebrow">Platform + Community</div>
+<h2><em>The System</em></h2>
+</div>
+<p class="section-intro">Victory Vision and Operator's Edge work together to turn relationship-driven business development into a repeatable operating system.</p>
+<div class="system-cards">
+<div class="system-card">
+<h3>Victory Vision</h3>
+<p style="margin-bottom: 1.5rem; color: var(--ink-soft);">The AI-powered platform that helps you execute at scale.</p>
+<ul>
+<li>Prioritize relationships based on economic value</li>
+<li>Research current state and identify opportunities</li>
+<li>Create personalized outreach that gets responses</li>
+<li>Maintain disciplined follow-up automatically</li>
+<li>Measure what actually converts to revenue</li>
+</ul>
+</div>
+<div class="system-card">
+<h3>Operator's Edge AI Growth Lab</h3>
+<p style="margin-bottom: 1.5rem; color: var(--ink-soft);">The education and community layer that teaches you the methodology.</p>
+<ul>
+<li>Live problem-solving and office hours</li>
+<li>Vetted professional community</li>
+<li>Practical field guides and frameworks</li>
+<li>Accountability and feedback</li>
+<li>Thoughtful introductions when there's genuine reason to connect</li>
+</ul>
+</div>
+</div>
+<p style="text-align: center; margin-top: 3rem; font-size: 1.25rem; font-weight: 600; color: var(--primary);">Operator's Edge teaches you how to build the engine. Victory Vision helps you run it every day.</p>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-header" style="text-align: center;">
+<div class="section-eyebrow">Process</div>
+<h2><em>How It Works</em></h2>
+</div>
+<p class="section-intro">A complete business-development process, from goal to revenue.</p>
+<div class="steps">
+<div class="step">
+<div class="step-number">1</div>
+<h3>Define & Target</h3>
+<p>Clarify your goal, ideal client profile, and offer. Identify who you should be talking to and why they should care.</p>
+</div>
+<div class="step">
+<div class="step-number">2</div>
+<h3>Outreach & Engage</h3>
+<p>Create personalized campaigns across email and social. Victory Vision helps you research, write, and send outreach that gets responses.</p>
+</div>
+<div class="step">
+<div class="step-number">3</div>
+<h3>Convert & Learn</h3>
+<p>Manage calls and meetings systematically. Track what works, refine your approach, and turn conversations into revenue.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section-alt">
+<div class="container">
+<div class="section-header" style="text-align: center;">
+<div class="section-eyebrow">Ideal User</div>
+<h2><em>Who This Is For</em></h2>
+</div>
+<div style="max-width: 800px; margin: 0 auto;">
+<p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem;">Victory Vision is built for relationship-driven professionals and small professional teams where one new relationship can have significant economic value.</p>
+<p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem;">Our ideal users include executive search and recruiting firms, fractional executives and independent consultants, capital markets advisers and investment bankers, private equity professionals and independent sponsors, fund managers and capital raisers, wealth managers and insurance advisers, professional-services firm partners, B2B founders and CEOs, business-development executives, and high-ticket coaches and advisers.</p>
+<p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem;">If one additional successful customer, search, advisory mandate, capital introduction, investor, engagement, placement, transaction, or relationship is worth at least $5,000—and particularly if it's worth $25,000 or more—this system is built for you.</p>
+<p style="font-size: 1.125rem; line-height: 1.8; font-weight: 600; color: var(--accent);">The core pain we solve: "I know a lot of people, but I do not have a systematic process for determining who I should contact, what I should say, how I should follow up, or which activities are actually generating revenue."</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-header" style="text-align: center;">
+<div class="section-eyebrow">Founder</div>
+<h2><em>Built by Someone Who Needed It</em></h2>
+</div>
+<div class="founder-spotlight">
+<div class="founder-image"></div>
+<div class="founder-content">
+<h3>Andrew Yeung</h3>
+<div class="credentials">West Point Graduate • CFA Charterholder • Columbia MBA</div>
+<p class="positioning">"I built this because I needed it."</p>
+<p style="margin-top: 1rem; color: var(--ink-soft);">Andrew deployed to Iraq, cold-called West Point graduates he'd never met, and turned those conversations into a full scholarship to Columbia Business School. He built Victory Vision to help relationship-driven professionals systematically activate the networks they've spent decades building.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section-alt">
+<div class="container">
+<div class="section-header" style="text-align: center;">
+<div class="section-eyebrow">Community</div>
+<h2><em>Join Peers Who've Already Figured This Out</em></h2>
+</div>
+<div class="social-proof">
+<p style="color: var(--ink-soft); margin-bottom: 2rem;">Founding members include West Point graduates and relationship-driven professionals who understand that systematic business development is a competitive advantage.</p>
+<div class="member-list">
+<div class="member-item">Jason Blonstein, Caldwell</div>
+<div class="member-item">West Point Class of 2004</div>
+<div class="member-item">West Point Class of 2008</div>
+<div class="member-item">Columbia Business School MBA</div>
+<div class="member-item">CFA Charterholders</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="cta-section">
+<div class="container">
+<div class="rally-cry">Beat Navy. Use Your Network.</div>
+<h2><em>Join 100 West Point Grads Building Better Businesses</em></h2>
+<p>Start with Operator's Edge AI Growth Lab. Learn the methodology, join the community, and get access to Victory Vision to scale what works.</p>
+<div class="cta-buttons">
+<a href="#lead-form" class="btn btn-primary" style="font-size: 1.125rem; padding: 1.125rem 2.5rem;">Get Started Today</a>
+<a href="https://calendar.app.google/NQdpcCKsx1rQtfdn9" class="btn btn-secondary" style="background: transparent; color: var(--on-dark); border-color: var(--on-dark); font-size: 1.125rem; padding: 1.125rem 2.5rem;">See How Victory Vision Works</a>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<div class="footer-content">
+<div>
+<strong>Victory Vision</strong><br>
+<span class="motto">Duty First. Long Gray Line.</span>
+</div>
+<div class="footer-links">
+<a href="mailto:andrew@victoryvisionai.com">Contact</a>
+<a href="#">Privacy Policy</a>
+<a href="#">Terms of Service</a>
+</div>
+</div>
+<div class="footer-bottom">
+&copy; 2025 Victory Vision. All rights reserved.
+</div>
+</div>
+</footer>
+
+<script>
+function showInsight(type) {
+const insights = document.querySelectorAll('.challenge-insight');
+insights.forEach(insight => insight.classList.remove('active'));
+const target = document.getElementById('insight-' + type);
+if (target) {
+target.classList.add('active');
+}
+}
+
+(function() {
+const forms = document.querySelectorAll('form');
+forms.forEach(form => {
+const urlParams = new URLSearchParams(window.location.search);
+const utmFields = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+utmFields.forEach(field => {
+const value = urlParams.get(field);
+if (value) {
+const input = document.createElement('input');
+input.type = 'hidden';
+input.name = field;
+input.value = value;
+form.appendChild(input);
+}
+});
+let visitorId = localStorage.getItem('visitor_id');
+if (!visitorId) {
+visitorId = 'visitor_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+localStorage.setItem('visitor_id', visitorId);
+}
+const visitorInput = document.createElement('input');
+visitorInput.type = 'hidden';
+visitorInput.name = 'visitor_id';
+visitorInput.value = visitorId;
+form.appendChild(visitorInput);
+});
+})();
+</script>
+
+<script>window.trackEvent=window.trackEvent||function(){};(function(){var CID="glaze@vvdoh.com",SLUG="westpointfinance",PTYPE="landing";var TRACK="https://victoryvision.app.n8n.cloud/webhook/engagement/track";try{var params=new URLSearchParams(window.location.search);var utm={utm_source:params.get("utm_source")||"",utm_medium:params.get("utm_medium")||"",utm_campaign:params.get("utm_campaign")||"",utm_content:params.get("utm_content")||"",utm_term:params.get("utm_term")||""};var vid=localStorage.getItem("vv_vid");if(!vid){vid="v-"+Math.random().toString(36).slice(2,10)+"-"+Date.now();localStorage.setItem("vv_vid",vid);}if(Object.values(utm).some(function(v){return v;}))sessionStorage.setItem("vv_utm",JSON.stringify(utm));var stored=sessionStorage.getItem("vv_utm");if(stored)utm=JSON.parse(stored);fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"page_view",visitor_id:vid,utm:utm,referrer:document.referrer,user_agent:navigator.userAgent,url:window.location.href})}).catch(function(){});document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("form").forEach(function(f){["utm_source","utm_medium","utm_campaign","utm_content","utm_term","visitor_id","slug"].forEach(function(n){var exists=false;for(var k=0;k<f.elements.length;k++){if(f.elements[k].name===n){exists=true;break;}}if(exists)return;var i=document.createElement("input");i.type="hidden";i.name=n;i.value=n==="visitor_id"?vid:(n==="slug"?SLUG:(utm[n]||""));f.appendChild(i);});f.addEventListener("submit",function(){fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"form_submit",visitor_id:vid,utm:utm,url:window.location.href})}).catch(function(){});});});document.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"link_click",visitor_id:vid,utm:utm,url:a.href})}).catch(function(){});});});}catch(e){}})();</script>
+</body>
+</html>
