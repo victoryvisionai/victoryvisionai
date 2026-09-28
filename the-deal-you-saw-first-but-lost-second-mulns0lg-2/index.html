@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Deal You Saw First but Lost Second | Victory Vision</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0a3161;
+            --accent: #bb133e;
+            --ink: #121a2b;
+            --ink-soft: #5a6679;
+            --bg: #ffffff;
+            --bg-alt: #f7f9fc;
+            --on-dark: #ffffff;
+            --border: #e2e8f0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--ink);
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--bg);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+        }
+        
+        .header-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.75rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        
+        .btn-primary {
+            background: var(--accent);
+            color: #ffffff;
+        }
+        
+        .btn-primary:hover {
+            background: #9a0f32;
+            transform: translateY(-1px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: #ffffff;
+        }
+        
+        .btn-white {
+            background: #ffffff;
+            color: var(--primary);
+        }
+        
+        .btn-white:hover {
+            background: var(--bg-alt);
+        }
+        
+        section {
+            padding: 5rem 2rem;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        
+        .container-narrow {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero {
+            background: var(--bg-alt);
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        
+        .eyebrow {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-variant: small-caps;
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 3.5rem;
+            font-weight: 300;
+            line-height: 1.1;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        h1 .highlight {
+            font-style: italic;
+            color: var(--accent);
+        }
+        
+        .hero-subhead {
+            font-size: 1.375rem;
+            line-height: 1.5;
+            color: var(--ink-soft);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        .hero-citation {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--ink-soft);
+            margin-bottom: 2.5rem;
+            font-style: italic;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2.5rem;
+        }
+        
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-variant: small-caps;
+        }
+        
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        h2 em {
+            font-style: italic;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: var(--ink);
+            margin-bottom: 1.25rem;
+        }
+        
+        .about {
+            background: var(--bg);
+        }
+        
+        .about p {
+            font-size: 1.125rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .capabilities {
+            background: var(--bg-alt);
+        }
+        
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        
+        .capability-card {
+            background: var(--bg);
+            padding: 2.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+        
+        .capability-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .capability-card h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .capability-card p {
+            font-size: 1rem;
+            color: var(--ink-soft);
+            margin-bottom: 0.75rem;
+        }
+        
+        .who-for {
+            background: var(--primary);
+            color: var(--on-dark);
+        }
+        
+        .who-for .section-label {
+            color: var(--accent);
+        }
+        
+        .who-for h2 {
+            color: var(--on-dark);
+        }
+        
+        .who-for p {
+            color: var(--on-dark);
+            font-size: 1.125rem;
+        }
+        
+        .who-for ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .who-for li {
+            color: var(--on-dark);
+            padding-left: 1.75rem;
+            position: relative;
+            font-size: 1.05rem;
+        }
+        
+        .who-for li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+        
+        .process {
+            background: var(--bg);
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .step {
+            position: relative;
+        }
+        
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            background: var(--accent);
+            color: #ffffff;
+            font-size: 1.75rem;
+            font-weight: 700;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+        }
+        
+        .step h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .step p {
+            font-size: 1rem;
+            color: var(--ink-soft);
+        }
+        
+        .problem-sections {
+            background: var(--bg-alt);
+        }
+        
+        .problem-section {
+            margin-bottom: 4rem;
+        }
+        
+        .problem-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .problem-section h3 {
+            font-size: 1.75rem;
+            margin-bottom: 1.25rem;
+        }
+        
+        .problem-section p {
+            color: var(--ink-soft);
+        }
+        
+        .lead-form-section {
+            background: var(--primary);
+            color: var(--on-dark);
+        }
+        
+        .lead-form-section .section-label {
+            color: var(--accent);
+            text-align: center;
+        }
+        
+        .lead-form-section h2 {
+            color: var(--on-dark);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .lead-form-section > .container-narrow > p {
+            color: var(--on-dark);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .form-wrapper {
+            background: var(--bg);
+            padding: 3rem;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: inherit;
+            color: var(--ink);
+            transition: border-color 0.2s;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .form-wrapper .btn-primary {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.125rem;
+        }
+        
+        .disclosure {
+            background: var(--bg-alt);
+            padding: 3rem 2rem;
+        }
+        
+        .disclosure p {
+            font-size: 0.875rem;
+            color: var(--ink-soft);
+            line-height: 1.6;
+        }
+        
+        footer {
+            background: var(--primary);
+            color: var(--on-dark);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        footer p {
+            color: var(--on-dark);
+            font-size: 0.95rem;
+        }
+        
+        .footer-links {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: var(--on-dark);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 2.75rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .capabilities-grid,
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .who-for ul {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding: 3rem 1.5rem;
+            }
+            
+            .hero {
+                padding: 4rem 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2.25rem;
+            }
+            
+            h2 {
+                font-size: 1.75rem;
+            }
+            
+            .hero-subhead {
+                font-size: 1.125rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .btn {
+                text-align: center;
+            }
+            
+            header {
+                padding: 1rem 1.5rem;
+            }
+            
+            .form-wrapper {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18090497137"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-18090497137');</script>
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:'97225334'};o.q=w[u],w[u]=new UET(o),w[u].push('pageLoad')},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=='loaded'&&s!=='complete'||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,'script','//bat.bing.com/bat.js','uetq');</script>
+<script type="text/javascript">_linkedin_partner_id='8929812';window._linkedin_data_partner_ids=window._linkedin_data_partner_ids||[];window._linkedin_data_partner_ids.push(_linkedin_partner_id);</script><script type="text/javascript">(function(l){if(!l){window.lintrk=function(a,b){window.lintrk.q.push([a,b])};window.lintrk.q=[]}var s=document.getElementsByTagName('script')[0];var b=document.createElement('script');b.type='text/javascript';b.async=true;b.src='https://snap.licdn.com/li.lms-analytics/insight.min.js';s.parentNode.insertBefore(b,s);})(window.lintrk);</script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://res.cloudinary.com/dv94te4zt/image/upload/v1753320422/sd4auec2bgofhaleur7o.jpg" alt="Victory Vision logo">
+            </div>
+            <a href="#download" class="btn btn-primary">Download Protocol</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container-narrow">
+            <span class="eyebrow">For West Point Graduates in Private Equity</span>
+            <h1>You Were the First Conversation. <span class="highlight">You Were the Third Term Sheet.</span></h1>
+            <p class="hero-subhead">A pre-qualification protocol for West Point graduates in private equity who lose transactions to faster competitors.</p>
+            <p class="hero-citation">With Intelligence reported September 22, 2026 that private equity firms face a constrained origination environment where median target markets have contracted even as evaluation volume stays high — fewer quality transactions exist to lose.</p>
+            <div class="hero-cta">
+                <a href="#download" class="btn btn-primary">Download the Three-Phase Protocol</a>
+                <a href="https://calendar.app.google/NQdpcCKsx1rQtfdn9" class="btn btn-secondary">Book a Call</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container-narrow">
+            <span class="section-label">The Problem</span>
+            <h2>The <em>Origination-to-Execution</em> Gap</h2>
+            <p>You have deal flow. You have relationships. You see opportunities before most of the market does. But when the seller signs, it's not your name on the LOI.</p>
+            <p>The problem isn't sourcing. It's not capital. It's not sector expertise. The problem is that you're treating pre-qualification as a diligence phase instead of a velocity advantage.</p>
+            <p>Being first to see a deal means nothing if you're third to sign. In a constrained origination environment, the firms that win are the ones who can move from initial conversation to executable term sheet while competitors are still scheduling their second meeting.</p>
+        </div>
+    </section>
+
+    <section class="problem-sections">
+        <div class="container">
+            <span class="section-label">Three Critical Insights</span>
+            <h2>Why <em>Speed</em> Beats <em>Access</em></h2>
+            
+            <div class="problem-section">
+                <h3>1. Why Being First to See a Deal Means Nothing If You're Third to Sign</h3>
+                <p>Most independent sponsors and small fund managers believe their competitive advantage is access. They cultivate relationships with intermediaries, industry operators, and business owners. They get the call before the deal goes to market.</p>
+                <p>Then they lose the transaction to a competitor who showed up three weeks later but moved faster.</p>
+                <p>The origination-to-execution gap is the silent killer of deal flow. You spend months building the relationship that gets you the first conversation. Then you spend weeks "getting comfortable" with the opportunity while a competitor runs a 10-day pre-qualification sprint and submits an LOI before you've finished your sector analysis.</p>
+                <p>In 2026, with fewer quality transactions available, the firms that win are the ones who treat pre-qualification as a speed discipline, not a diligence phase. The three-phase protocol gives you a systematic method to move from initial conversation to executable term sheet in days, not weeks.</p>
+            </div>
+
+            <div class="problem-section">
+                <h3>2. How Academy Training Applies to Seller Pre-Qualification</h3>
+                <p>West Point teaches you to make sound decisions under time pressure with incomplete information. You learn to assess a situation, identify the critical variables, and act while others are still gathering data.</p>
+                <p>That's exactly the skill required for pre-qualification in a competitive deal environment.</p>
+                <p>The commercial analog isn't running a full diligence process before you submit an LOI. It's identifying the three to five variables that determine whether a transaction is executable, validating those variables in the first 72 hours, and moving to term sheet while competitors are still building their financial model.</p>
+                <p>The three-phase protocol maps directly to the pattern-recognition framework you already know: Assess (identify the critical variables), Validate (confirm or disqualify in 72 hours), Execute (move to term sheet before the window closes).</p>
+                <p>Your academy training is a competitive advantage. You just need a commercial framework that lets you apply it.</p>
+            </div>
+
+            <div class="problem-section">
+                <h3>3. What Jason Gonzalez Did Differently to Close in 24 Days</h3>
+                <p>Jason Gonzalez, USMA '09, is an independent sponsor who saw three deals in 2025 and closed zero. In early 2026, he implemented the three-phase pre-qualification protocol.</p>
+                <p>In March 2026, he received an introduction to a lower-middle-market services business. First conversation on a Tuesday. Pre-qualification complete by Friday. LOI submitted the following Monday. Transaction closed 24 days later.</p>
+                <p>His competitors—two regional funds and another independent sponsor—were still in the "getting to know you" phase when the seller accepted Jason's term sheet.</p>
+                <p>What Jason did differently: He treated pre-qualification as a velocity discipline. He identified the three critical variables (owner motivation, financial sustainability, and management transition risk) in the first call. He validated all three in 72 hours. He moved to LOI while competitors were still scheduling their second meeting.</p>
+                <p>The three-phase protocol doesn't replace diligence. It replaces the weeks of unstructured "exploration" that most sponsors mistake for relationship-building. Jason built the relationship by moving fast and demonstrating competence, not by dragging out the courtship.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="capabilities">
+        <div class="container">
+            <span class="section-label">The Platform</span>
+            <h2>How Victory Vision <em>Accelerates</em> Your Deal Velocity</h2>
+            <p style="text-align:center; max-width:800px; margin:0 auto 3rem; color:var(--ink-soft);">Victory Vision is an AI-powered business development and relationship activation platform built for relationship-driven professionals. It helps you turn existing relationships and targeted prospect lists into more qualified conversations, meetings, opportunities, and revenue.</p>
+            <div class="capabilities-grid">
+                <div class="capability-card">
+                    <svg class="capability-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="6" y="10" width="36" height="28" rx="2" stroke="#0a3161" stroke-width="2.5"/>
+                        <path d="M6 16h36" stroke="#bb133e" stroke-width="2.5"/>
+                        <circle cx="14" cy="13" r="1.5" fill="#0a3161"/>
+                        <circle cx="20" cy="13" r="1.5" fill="#0a3161"/>
+                    </svg>
+                    <h3>AI-Assisted Prospect Targeting</h3>
+                    <p>Identify and organize prospects systematically. Enrich contact data and build targeted lists based on your ideal counterparty profile.</p>
+                    <p>Stop relying on memory and spreadsheets. Build a repeatable system for identifying who you should contact and when.</p>
+                </div>
+                <div class="capability-card">
+                    <svg class="capability-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 38V14l8-6 8 6 8-6 8 6v24" stroke="#0a3161" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8 38h32" stroke="#bb133e" stroke-width="2.5" stroke-linecap="round"/>
+                        <rect x="14" y="22" width="6" height="8" stroke="#0a3161" stroke-width="2"/>
+                        <rect x="28" y="22" width="6" height="8" stroke="#0a3161" stroke-width="2"/>
+                    </svg>
+                    <h3>Personalized Multi-Channel Campaigns</h3>
+                    <p>Create personalized email and social outreach at scale. Manage follow-up sequences and track engagement across channels.</p>
+                    <p>Execute consistent outreach without sacrificing personalization. Victory Vision generates individualized messaging based on relationship context and campaign goals.</p>
+                </div>
+                <div class="capability-card">
+                    <svg class="capability-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="8" y="12" width="32" height="24" rx="2" stroke="#0a3161" stroke-width="2.5"/>
+                        <path d="M16 20h16M16 26h10" stroke="#bb133e" stroke-width="2.5" stroke-linecap="round"/>
+                        <circle cx="34" cy="34" r="8" fill="#bb133e"/>
+                        <path d="M31 34l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h3>Meeting Workflows & Performance Analytics</h3>
+                    <p>Prepare for calls and meetings with AI-generated briefs. Track which activities actually produce engagement, meetings, and revenue.</p>
+                    <p>Stop guessing which outreach works. Victory Vision shows you which messages, channels, and relationship types generate the outcomes you need.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="who-for">
+        <div class="container">
+            <span class="section-label">Who This Is For</span>
+            <h2>Built for <em>Relationship-Driven</em> Professionals</h2>
+            <p>Victory Vision is designed for professionals where one additional client, mandate, placement, investor relationship, advisory engagement, or transaction can be worth thousands to millions of dollars.</p>
+            <p>Ideal for:</p>
+            <ul>
+                <li>Independent sponsors and PE deal principals</li>
+                <li>Executive search and recruiting firms</li>
+                <li>Capital markets advisers and investment bankers</li>
+                <li>Private equity professionals at sub-$500M funds</li>
+                <li>Fund managers and capital raisers</li>
+                <li>Fractional executives and independent consultants</li>
+                <li>Wealth managers and insurance advisers</li>
+                <li>Professional-services firm partners</li>
+                <li>B2B founders and CEOs</li>
+                <li>Business-development executives and rainmakers</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="process">
+        <div class="container">
+            <span class="section-label">How It Works</span>
+            <h2>The Victory Vision <em>Operating System</em></h2>
+            <p style="text-align:center; max-width:800px; margin:0 auto; color:var(--ink-soft);">Victory Vision turns relationship-driven business development into a repeatable AI-assisted process.</p>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Learn the Methodology</h3>
+                    <p>Join Operator's Edge AI Growth Lab. Work through practical field guides, attend live office hours, and learn the strategy for systematic business development. Operator's Edge teaches you how to build the engine.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Execute with AI Assistance</h3>
+                    <p>Use Victory Vision to automate and scale the workflows you learned. Identify prospects, create personalized campaigns, generate outreach, manage follow-up, and prepare for meetings—all in one system.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Measure What Works</h3>
+                    <p>Track which activities produce engagement, meetings, and revenue. Victory Vision shows you which messages, channels, and relationship types generate results so you can double down on what works.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="lead-form-section" id="download">
+        <div class="container-narrow">
+            <span class="section-label">Get the Protocol</span>
+            <h2>Download the <em>Three-Phase Pre-Qualification Protocol</em></h2>
+            <p>Get the framework Jason Gonzalez used to close in 24 days. Learn how to move from initial conversation to executable term sheet while competitors are still scheduling their second meeting.</p>
+            <div class="form-wrapper">
+                <form method="POST" action="https://victoryvision.app.n8n.cloud/webhook/engagement/lead-submit">
+                    <input type="hidden" name="customer_id" value="glaze@vvdoh.com">
+                    <input type="hidden" name="slug" value="the-deal-you-saw-first-but-lost-second-mulns0lg">
+                    <input type="hidden" name="source" value="landing">
+                    
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Company *</label>
+                        <input type="text" id="company" name="company" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Download Protocol</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="disclosure">
+        <div class="container-narrow">
+            <p><strong>Important Disclosure:</strong> Victory Vision and Operator's Edge AI Growth Lab provide business development tools, education, and methodology. We do not provide investment advice, broker-dealer services, or regulatory compliance consulting. Private equity professionals, investment advisers, and broker-dealers remain solely responsible for compliance with all applicable securities laws, FINRA rules, and regulatory obligations. The case studies and examples presented reflect individual results and do not constitute a guarantee of performance. Past results do not predict future outcomes. All investment and transaction decisions carry risk.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Victory Vision. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://victoryvisionai.com/privacy">Privacy Policy</a>
+                <a href="https://victoryvisionai.com/terms">Terms of Service</a>
+                <a href="mailto:andrew@victoryvisionai.com">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            function generateVisitorId() {
+                return 'vid_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+            }
+            
+            function getOrCreateVisitorId() {
+                let visitorId = localStorage.getItem('vv_visitor_id');
+                if (!visitorId) {
+                    visitorId = generateVisitorId();
+                    localStorage.setItem('vv_visitor_id', visitorId);
+                }
+                return visitorId;
+            }
+            
+            function getUrlParameter(name) {
+                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                var results = regex.exec(location.search);
+                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+            }
+            
+            const visitorId = getOrCreateVisitorId();
+            const utmSource = getUrlParameter('utm_source');
+            const utmMedium = getUrlParameter('utm_medium');
+            const utmCampaign = getUrlParameter('utm_campaign');
+            const utmContent = getUrlParameter('utm_content');
+            const utmTerm = getUrlParameter('utm_term');
+            
+            const forms = document.querySelectorAll('form');
+            forms.forEach(function(form) {
+                const hiddenFields = {
+                    'visitor_id': visitorId,
+                    'utm_source': utmSource,
+                    'utm_medium': utmMedium,
+                    'utm_campaign': utmCampaign,
+                    'utm_content': utmContent,
+                    'utm_term': utmTerm
+                };
+                
+                for (let fieldName in hiddenFields) {
+                    if (!form.querySelector('[name="' + fieldName + '"]')) {
+                        const input = document.createElement('input');
+                        input.type = 'hidden';
+                        input.name = fieldName;
+                        input.value = hiddenFields[fieldName];
+                        form.appendChild(input);
+                    }
+                }
+            });
+        })();
+    </script>
+<script>window.trackEvent=window.trackEvent||function(){};(function(){var CID="glaze@vvdoh.com",SLUG="the-deal-you-saw-first-but-lost-second-mulns0lg",PTYPE="landing";var TRACK="https://victoryvision.app.n8n.cloud/webhook/engagement/track";try{var params=new URLSearchParams(window.location.search);var utm={utm_source:params.get("utm_source")||"",utm_medium:params.get("utm_medium")||"",utm_campaign:params.get("utm_campaign")||"",utm_content:params.get("utm_content")||"",utm_term:params.get("utm_term")||""};var vid=localStorage.getItem("vv_vid");if(!vid){vid="v-"+Math.random().toString(36).slice(2,10)+"-"+Date.now();localStorage.setItem("vv_vid",vid);}if(Object.values(utm).some(function(v){return v;}))sessionStorage.setItem("vv_utm",JSON.stringify(utm));var stored=sessionStorage.getItem("vv_utm");if(stored)utm=JSON.parse(stored);fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"page_view",visitor_id:vid,utm:utm,referrer:document.referrer,user_agent:navigator.userAgent,url:window.location.href})}).catch(function(){});document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("form").forEach(function(f){["utm_source","utm_medium","utm_campaign","utm_content","utm_term","visitor_id","slug"].forEach(function(n){var exists=false;for(var k=0;k<f.elements.length;k++){if(f.elements[k].name===n){exists=true;break;}}if(exists)return;var i=document.createElement("input");i.type="hidden";i.name=n;i.value=n==="visitor_id"?vid:(n==="slug"?SLUG:(utm[n]||""));f.appendChild(i);});f.addEventListener("submit",function(){fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"form_submit",visitor_id:vid,utm:utm,url:window.location.href})}).catch(function(){});});});document.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:"link_click",visitor_id:vid,utm:utm,url:a.href})}).catch(function(){});});});}catch(e){}})();</script>
+</body>
+</html>
