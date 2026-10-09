@@ -106,6 +106,18 @@ section{padding:56px 0}
 .mbar .btn{width:100%}
 body{padding-bottom:76px}
 }
+.ytw{position:absolute;inset:0;cursor:pointer;background:#000}
+.ytw img{width:100%;height:100%;object-fit:cover;display:block;opacity:.9}
+.ytw:hover img{opacity:1}
+.ytplay{position:absolute;left:50%;top:50%;width:84px;height:84px;margin:-42px 0 0 -42px;border-radius:50%;background:var(--crimson);box-shadow:0 8px 30px rgba(0,0,0,.45);transition:transform .15s}
+.ytplay::after{content:"";position:absolute;left:33px;top:26px;border-style:solid;border-width:16px 0 16px 26px;border-color:transparent transparent transparent #fff}
+.ytw:hover .ytplay,.ytw:focus .ytplay{transform:scale(1.07)}
+.ytsound{position:absolute;left:14px;bottom:14px;background:rgba(7,31,64,.85);color:#fff;font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px}
+.ytend{position:absolute;inset:0;z-index:3;background:rgba(7,31,64,.95);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;gap:14px}
+.ytend[hidden]{display:none}
+.ytend p{color:#fff;font-size:20px;font-weight:700;margin:0;max-width:440px}
+.ytend button{background:none;border:0;color:rgba(255,255,255,.8);text-decoration:underline;cursor:pointer;font:inherit;font-size:15px}
+@media(max-width:600px){.ytplay{width:68px;height:68px;margin:-34px 0 0 -34px}.ytplay::after{left:27px;top:21px;border-width:13px 0 13px 21px}.ytend p{font-size:17px}}
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18090497137"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-18090497137');</script>
@@ -116,8 +128,8 @@ body{padding-bottom:76px}
 try{var q=new URLSearchParams(location.search);var utm={utm_source:q.get("utm_source")||"",utm_medium:q.get("utm_medium")||"",utm_campaign:q.get("utm_campaign")||"",utm_content:q.get("utm_content")||"",utm_term:q.get("utm_term")||""};
 var vid=null;try{vid=localStorage.getItem("vv_vid");if(!vid){vid="v-"+Math.random().toString(36).slice(2,10)+"-"+Date.now();localStorage.setItem("vv_vid",vid);}}catch(e){vid="v-anon"}
 try{if(Object.values(utm).some(function(v){return v}))sessionStorage.setItem("vv_utm",JSON.stringify(utm));var st=sessionStorage.getItem("vv_utm");if(st)utm=JSON.parse(st);}catch(e){}
-function send(ev,extra){var b={customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:ev,visitor_id:vid,utm:utm,referrer:document.referrer,user_agent:navigator.userAgent,url:location.href};for(var k in extra)b[k]=extra[k];try{fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify(b)}).catch(function(){})}catch(e){}}
-send("page_view",{});
+function send(ev,extra){var b={customer_id:CID,slug:SLUG,page_type:PTYPE,event_type:ev,visitor_id:vid,utm:utm,referrer:document.referrer,user_agent:navigator.userAgent,url:location.href};if(cidq&&/^[0-9a-f-]{36}$/i.test(cidq))b.contact_id=cidq;if(emq&&emq.indexOf("@")>0)b.email=emq;for(var k in extra)b[k]=extra[k];try{fetch(TRACK,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify(b)}).catch(function(){})}catch(e){}}
+var cidq="",emq="";try{cidq=q.get("cid")||"";emq=q.get("e")||q.get("email")||"";if(cidq)localStorage.setItem("vv_cid",cidq);else cidq=localStorage.getItem("vv_cid")||"";if(emq)localStorage.setItem("vv_em",emq);else emq=localStorage.getItem("vv_em")||"";}catch(e){}window.vvSend=send;send("page_view",{});
 document.addEventListener("DOMContentLoaded",function(){
 var src=utm.utm_source||"vsl",camp=utm.utm_campaign||SLUG;
 document.querySelectorAll("a[data-join]").forEach(function(a){a.href=SKOOL+"?utm_source="+encodeURIComponent(src)+"&utm_medium=landing&utm_campaign="+encodeURIComponent(camp)+"&utm_content="+encodeURIComponent(a.getAttribute("data-join"));});
@@ -140,7 +152,7 @@ var items=document.querySelectorAll(".check li"),sc=document.getElementById("sco
     <p class="sub">Before you build another enormous prospect list, start with the relationships where trust already exists. Victory Vision organizes the contacts, outreach and follow-up. Weekly office hours sharpen the judgment behind it.</p>
     <div class="hero-grid">
       <div>
-        <div class="video"><iframe src="https://share.descript.com/embed/Skr2kBDMhdj" title="Win More Clients with Operator's Edge" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+        <div class="video"><div class="ytw" id="ytw" data-yt="49OiDNnAbpY" role="button" tabindex="0" aria-label="Play video: Who should you call this week"><img src="https://i.ytimg.com/vi/49OiDNnAbpY/maxresdefault.jpg" alt="" width="1280" height="720"><span class="ytplay" aria-hidden="true"></span><span class="ytsound">Click to play with sound</span></div><div class="ytend" id="ytend" hidden><p>Bring your eight relationships to office hours. Let's work on them together.</p><a class="btn" data-join="video_end" href="https://www.skool.com/victoryvision/about">Join Operator&#39;s Edge</a><button type="button" id="ytreplay">Watch again</button></div></div>
         <div class="vcap">Watch: who should you call this week, and what should you say?</div>
       </div>
       <div>
@@ -249,5 +261,26 @@ var items=document.querySelectorAll(".check li"),sc=document.getElementById("sco
 </footer>
 
 <div class="mbar"><a class="btn" data-join="mobile_sticky" href="https://www.skool.com/victoryvision/about">Join Operator's Edge</a></div>
+<script>
+(function(){
+var box=document.getElementById("ytw");if(!box)return;
+var id=box.getAttribute("data-yt"),endv=document.getElementById("ytend"),player=null,timer=null,marks={},started=false,want=false;
+function ev(t,x){try{window.vvSend&&window.vvSend(t,x||{})}catch(e){}}
+function g(n,p){try{gtag("event",n,p||{})}catch(e){}try{window.uetq&&window.uetq.push("event",n,{event_label:id})}catch(e){}}
+function tick(){if(!player||!player.getDuration)return;var d=player.getDuration(),c=player.getCurrentTime();if(!d)return;var pct=Math.floor(100*c/d);[25,50,75,90].forEach(function(m){if(pct>=m&&!marks[m]){marks[m]=1;ev("video_"+m,{element:id});g("video_progress",{video_id:id,percent:m});}});}
+function onState(e){var S=YT.PlayerState;
+if(e.data===S.PLAYING){if(!started){started=true;ev("video_play",{element:id});g("video_start",{video_id:id});}if(!timer)timer=setInterval(tick,1000);endv.hidden=true;}
+else if(e.data===S.PAUSED){tick();}
+else if(e.data===S.ENDED){tick();if(!marks[100]){marks[100]=1;ev("video_complete",{element:id});g("video_complete",{video_id:id});}clearInterval(timer);timer=null;endv.hidden=false;}}
+function make(){if(player)return;var h=document.createElement("div");h.id="ytp";box.parentNode.insertBefore(h,box);box.style.display="none";
+player=new YT.Player("ytp",{host:"https://www.youtube-nocookie.com",videoId:id,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,iv_load_policy:3,origin:location.origin},events:{onReady:function(e){try{e.target.playVideo()}catch(x){}},onStateChange:onState}});}
+var prev=window.onYouTubeIframeAPIReady;window.onYouTubeIframeAPIReady=function(){if(prev)try{prev()}catch(e){}if(want)make();};
+var s=document.createElement("script");s.src="https://www.youtube.com/iframe_api";s.async=true;document.head.appendChild(s);
+function start(){if(player)return;ev("video_click",{element:id});want=true;if(window.YT&&window.YT.Player)make();}
+box.addEventListener("click",start);
+box.addEventListener("keydown",function(k){if(k.key==="Enter"||k.key===" "){k.preventDefault();start();}});
+var rp=document.getElementById("ytreplay");if(rp)rp.addEventListener("click",function(){endv.hidden=true;if(player){player.seekTo(0,true);player.playVideo();}});
+})();
+</script>
 </body>
 </html>
